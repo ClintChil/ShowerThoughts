@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
@@ -10,11 +10,42 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="RootInterfaceController">
                     <items>
-                        <button width="1" alignment="left" title="dictate" id="qm2-IO-obd">
+                        <button width="0.29999999999999999" alignment="center" title="🎤" id="qm2-IO-obd">
+                            <color key="backgroundColor" red="0.35096574919819579" green="1" blue="0.45092655846041929" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="onDictateButtonPressed" destination="AgC-eL-Hgc" id="rIL-D8-BhM"/>
                             </connections>
                         </button>
+                        <table alignment="left" id="fVM-G3-ihG">
+                            <items>
+                                <tableRow identifier="mainFeed" id="MKG-8h-opb" customClass="MainRowType">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="Nge-mD-mn5">
+                                        <items>
+                                            <group width="1" alignment="left" id="nO4-WM-cdw">
+                                                <items>
+                                                    <label alignment="left" text="Label" numberOfLines="0" id="Yig-03-9wM">
+                                                        <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <group width="1" alignment="left" id="2Ve-qM-bQk">
+                                                <items>
+                                                    <dateLabel alignment="left" id="J8R-Zf-upa">
+                                                        <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                        <dateFormatterStyle key="dateStyle" none="YES" short="YES"/>
+                                                        <dateFormatterStyle key="timeStyle" none="YES" short="YES"/>
+                                                    </dateLabel>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="postBodyLabel" destination="Yig-03-9wM" id="5eN-t0-n2Q"/>
+                                        <outlet property="postDate" destination="J8R-Zf-upa" id="0Dt-eq-WQ0"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
                     <menu key="menu" id="dm0-rO-bVz">
                         <items>
@@ -31,9 +62,23 @@
             <objects>
                 <controller id="MLo-Xt-b0M">
                     <items>
-                        <group width="1" alignment="left" id="OV1-On-p1J">
+                        <group width="1" alignment="left" layout="vertical" id="IuS-Ng-5eE">
                             <items>
-                                <label alignment="left" text="Label" id="vsS-jJ-fHa"/>
+                                <label alignment="left" text="Label" numberOfLines="0" id="iUT-eS-sep"/>
+                                <dateLabel alignment="left" id="Bl6-gO-GWv">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                    <dateFormatterStyle key="dateStyle" none="YES" short="YES"/>
+                                    <dateFormatterStyle key="timeStyle" none="YES" short="YES"/>
+                                </dateLabel>
+                                <group width="1" alignment="left" id="kSi-wM-ilY">
+                                    <items>
+                                        <button width="0.40000000000000013" alignment="left" title="▲" id="XwF-iW-OJk"/>
+                                        <button width="0.40000000000000013" alignment="right" title="▼" id="QSF-gc-evB"/>
+                                    </items>
+                                </group>
+                                <button width="1" alignment="left" title="Save" id="O2g-oU-r01"/>
+                                <button width="1" alignment="left" title="Hide" id="jOw-SN-25x"/>
+                                <button width="1" alignment="left" title="Report" id="xbf-sq-bnb"/>
                             </items>
                         </group>
                     </items>
@@ -65,4 +110,5 @@
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.42144510531088153" green="0.80498983887829023" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

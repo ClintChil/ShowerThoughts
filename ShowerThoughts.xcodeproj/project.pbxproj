@@ -21,6 +21,7 @@
 		7A1BEE8E1AF448EC00A171C2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE8C1AF448EC00A171C2 /* Interface.storyboard */; };
 		7A1BEE901AF448EC00A171C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE8F1AF448EC00A171C2 /* Images.xcassets */; };
 		7A1BEE931AF448EC00A171C2 /* ShowerThoughts WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7A1BEE761AF448EB00A171C2 /* ShowerThoughts WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BA891EA81B05A7CE00471FA6 /* MainRowType.m in Sources */ = {isa = PBXBuildFile; fileRef = BA891EA71B05A7CE00471FA6 /* MainRowType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		7A1BEE8B1AF448EC00A171C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A1BEE8D1AF448EC00A171C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		7A1BEE8F1AF448EC00A171C2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BA891EA61B05A7CE00471FA6 /* MainRowType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainRowType.h; path = "ShowerThoughts WatchKit Extension/MainRowType.h"; sourceTree = SOURCE_ROOT; };
+		BA891EA71B05A7CE00471FA6 /* MainRowType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainRowType.m; path = "ShowerThoughts WatchKit Extension/MainRowType.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +187,8 @@
 				7A1BEE7C1AF448EC00A171C2 /* RootInterfaceController.m */,
 				7A1BEE7E1AF448EC00A171C2 /* NotificationController.h */,
 				7A1BEE7F1AF448EC00A171C2 /* NotificationController.m */,
+				BA891EA61B05A7CE00471FA6 /* MainRowType.h */,
+				BA891EA71B05A7CE00471FA6 /* MainRowType.m */,
 				7A1BEE811AF448EC00A171C2 /* Images.xcassets */,
 				7A1BEE781AF448EC00A171C2 /* Supporting Files */,
 			);
@@ -382,6 +387,7 @@
 				7A1BEE551AF448CB00A171C2 /* ViewController.m in Sources */,
 				7A1BEE521AF448CB00A171C2 /* AppDelegate.m in Sources */,
 				7A1BEE4F1AF448CB00A171C2 /* main.m in Sources */,
+				BA891EA81B05A7CE00471FA6 /* MainRowType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
