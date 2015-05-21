@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
@@ -31,7 +31,6 @@
                                     <connections>
                                         <outlet property="postBodyLabel" destination="Yig-03-9wM" id="5eN-t0-n2Q"/>
                                         <outlet property="postVoteLabel" destination="15X-1t-SQl" id="ZWi-Th-sgs"/>
-                                        <segue destination="MLo-Xt-b0M" kind="push" id="6wU-N4-Nvk"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -58,6 +57,7 @@
                     </menu>
                     <connections>
                         <outlet property="tableview" destination="fVM-G3-ihG" id="xyZ-aL-6Nu"/>
+                        <segue destination="M67-26-ONY" kind="relationship" relationship="nextPage" id="Q65-IV-ofN"/>
                     </connections>
                 </controller>
             </objects>
@@ -93,12 +93,12 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="447" y="345"/>
+            <point key="canvasLocation" x="220" y="641"/>
         </scene>
         <!--PostReview-->
         <scene sceneID="ray-Qd-0lU">
             <objects>
-                <controller identifier="PostReview" id="aUH-1T-0AO" customClass="PostReviewInterfaceController">
+                <controller identifier="PostReview" id="aUH-1T-0AO" customClass="PostReviewController">
                     <items>
                         <group width="1" height="0.80000000000000004" alignment="left" id="g9b-dn-vyd">
                             <items>
@@ -109,7 +109,7 @@
                         </group>
                         <group width="1" height="0.20000000000000001" alignment="left" verticalAlignment="bottom" id="csU-MY-hll">
                             <items>
-                                <button width="0.50000000000000011" height="1" alignment="left" title="Take X" id="PCf-ny-VZb">
+                                <button width="0.50000000000000011" height="1" alignment="left" title="Retry" id="PCf-ny-VZb">
                                     <connections>
                                         <action selector="onRetakeButtonPressed" destination="aUH-1T-0AO" id="UuU-Ha-xmQ"/>
                                     </connections>
@@ -128,6 +128,80 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="115"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Q6z-wz-RJK">
+            <objects>
+                <controller id="M67-26-ONY">
+                    <items>
+                        <label alignment="left" text="New" id="c2i-2d-Agy">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <group width="1" height="0.0" alignment="left" layout="vertical" id="N1m-xp-Kof">
+                            <items>
+                                <group width="1" alignment="left" id="8tR-0M-Yv9">
+                                    <items>
+                                        <label alignment="left" text="If my body were actually a temple, a" textAlignment="left" numberOfLines="0" id="aAz-Zi-Q5y">
+                                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <label alignment="center" text="⬆︎ 3514 ⬇︎" textAlignment="center" id="z3h-in-fb4"/>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="More" id="IqU-h4-4u7">
+                            <connections>
+                                <action selector="onMoreButtonPressed" destination="AgC-eL-Hgc" id="Zeu-14-3Aj"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <segue destination="gOp-bQ-K8o" kind="relationship" relationship="nextPage" id="COr-cI-Twj"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="408" y="345"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="vp8-LG-841">
+            <objects>
+                <controller id="gOp-bQ-K8o">
+                    <items>
+                        <label alignment="left" text="Rising" id="nJD-1t-z8g">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <group width="1" height="0.0" alignment="left" layout="vertical" id="AnV-OZ-e1l">
+                            <items>
+                                <group width="1" alignment="left" id="t6E-b8-PjT">
+                                    <items>
+                                        <label alignment="left" text="If my body were actually a temple, a" textAlignment="left" numberOfLines="0" id="dr5-QJ-a0P">
+                                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <label alignment="center" text="⬆︎ 3514 ⬇︎" textAlignment="center" id="pWA-cL-80q"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <segue destination="kiE-gh-UYa" kind="relationship" relationship="nextPage" id="KB3-AE-zqe"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="584" y="345"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="9G0-AA-E6z">
+            <objects>
+                <controller id="kiE-gh-UYa">
+                    <items>
+                        <label alignment="left" text="Top - All Time" id="knv-Ay-6f7">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="769" y="345"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.42144510531088153" green="0.80498983887829023" blue="1" alpha="1" colorSpace="calibratedRGB"/>

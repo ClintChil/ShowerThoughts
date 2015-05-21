@@ -6,18 +6,19 @@
 //  Copyright (c) 2015 Clint Chilcott. All rights reserved.
 //
 
-#import "PostReviewInterfaceController.h"
+#import "PostReviewController.h"
 
-@interface PostReviewInterfaceController ()
+@interface PostReviewController ()
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *postBodyLabel;
 
 @end
 
-@implementation PostReviewInterfaceController
+@implementation PostReviewController
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     
+    NSLog(@"%@", context);
     self.postBodyLabel.text = context;
 }
 
@@ -34,7 +35,8 @@
     [self presentTextInputControllerWithSuggestions:nil allowedInputMode:WKTextInputModePlain completion:^(NSArray *results) {
         if (results && results.count > 0) {
             NSLog(@"%@", results);
-            [self presentControllerWithName:@"PostReview" context:results];
+            self.postBodyLabel.text = results[0];
+            
         } else {
             NSLog(@"no input from user");
         }

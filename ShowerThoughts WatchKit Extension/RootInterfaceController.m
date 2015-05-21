@@ -8,6 +8,7 @@
 
 #import "RootInterfaceController.h"
 #import "MainRowType.h"
+#import "Post.h"
 
 @interface RootInterfaceController()
 @property (weak, nonatomic) IBOutlet WKInterfaceTable *tableview;
@@ -42,7 +43,7 @@
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
     
-    [self setTitle:@"ShowerThoughts"];
+    [self setTitle:@"Thoughts"];
     
     
     [self configureTableWithData:self.posts];
@@ -57,7 +58,7 @@
     [self presentTextInputControllerWithSuggestions:nil allowedInputMode:WKTextInputModePlain completion:^(NSArray *results) {
         if (results && results.count > 0) {
             NSLog(@"%@", results);
-            [self presentControllerWithName:@"PostReview" context:results];
+            [self presentControllerWithName:@"PostReview" context:results[0]];
         } else {
             NSLog(@"no input from user");
         }
