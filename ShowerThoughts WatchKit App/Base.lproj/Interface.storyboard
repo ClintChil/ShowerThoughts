@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
@@ -10,12 +10,9 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="RootInterfaceController">
                     <items>
-                        <button width="0.29999999999999999" alignment="center" title="🎤" id="qm2-IO-obd">
-                            <color key="backgroundColor" red="0.35096574919819579" green="1" blue="0.45092655846041929" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="onDictateButtonPressed" destination="AgC-eL-Hgc" id="rIL-D8-BhM"/>
-                            </connections>
-                        </button>
+                        <label alignment="left" text="Hot" id="Zre-u6-PT6">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
                         <table alignment="left" id="fVM-G3-ihG">
                             <items>
                                 <tableRow identifier="mainFeed" id="MKG-8h-opb" customClass="MainRowType">
@@ -23,36 +20,45 @@
                                         <items>
                                             <group width="1" alignment="left" id="nO4-WM-cdw">
                                                 <items>
-                                                    <label alignment="left" text="Label" numberOfLines="0" id="Yig-03-9wM">
+                                                    <label alignment="left" text="If my body were actually a temple, a" textAlignment="left" numberOfLines="0" id="Yig-03-9wM">
                                                         <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                                     </label>
                                                 </items>
                                             </group>
-                                            <group width="1" alignment="left" id="2Ve-qM-bQk">
-                                                <items>
-                                                    <dateLabel alignment="left" id="J8R-Zf-upa">
-                                                        <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                                        <dateFormatterStyle key="dateStyle" none="YES" short="YES"/>
-                                                        <dateFormatterStyle key="timeStyle" none="YES" short="YES"/>
-                                                    </dateLabel>
-                                                </items>
-                                            </group>
+                                            <label alignment="center" text="⬆︎ 3514 ⬇︎" textAlignment="center" id="15X-1t-SQl"/>
                                         </items>
                                     </group>
                                     <connections>
                                         <outlet property="postBodyLabel" destination="Yig-03-9wM" id="5eN-t0-n2Q"/>
-                                        <outlet property="postDate" destination="J8R-Zf-upa" id="0Dt-eq-WQ0"/>
+                                        <outlet property="postVoteLabel" destination="15X-1t-SQl" id="ZWi-Th-sgs"/>
+                                        <segue destination="MLo-Xt-b0M" kind="push" id="6wU-N4-Nvk"/>
                                     </connections>
                                 </tableRow>
                             </items>
                         </table>
+                        <button width="1" alignment="left" title="More" id="Pcn-bc-jng">
+                            <connections>
+                                <action selector="onMoreButtonPressed" destination="AgC-eL-Hgc" id="Wab-Ye-ZVM"/>
+                            </connections>
+                        </button>
                     </items>
                     <menu key="menu" id="dm0-rO-bVz">
                         <items>
-                            <menuItem title="Menu Item" icon="add" id="Umh-VV-niz"/>
-                            <menuItem title="Menu Item" icon="accept" id="G8X-Ce-Rqm"/>
+                            <menuItem title="New Thought" icon="add" id="Umh-VV-niz">
+                                <connections>
+                                    <action selector="onNewThoughtButtonPressed" destination="AgC-eL-Hgc" id="ra8-f1-I4c"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Drafts" icon="more" id="yHE-ah-jZl">
+                                <connections>
+                                    <action selector="onDraftsButtonPressed" destination="AgC-eL-Hgc" id="5Bi-Y1-RRm"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
+                    <connections>
+                        <outlet property="tableview" destination="fVM-G3-ihG" id="xyZ-aL-6Nu"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
@@ -64,20 +70,23 @@
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="IuS-Ng-5eE">
                             <items>
-                                <label alignment="left" text="Label" numberOfLines="0" id="iUT-eS-sep"/>
-                                <dateLabel alignment="left" id="Bl6-gO-GWv">
+                                <label alignment="left" text="If my body were actually a temple, a" numberOfLines="0" id="iUT-eS-sep"/>
+                                <label alignment="left" text="9 hrs ago" id="l8q-U2-YGM">
                                     <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                    <dateFormatterStyle key="dateStyle" none="YES" short="YES"/>
-                                    <dateFormatterStyle key="timeStyle" none="YES" short="YES"/>
-                                </dateLabel>
+                                </label>
+                                <label alignment="left" text="by RadioActivePandaBear" id="9Hn-ZU-wz7">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
                                 <group width="1" alignment="left" id="kSi-wM-ilY">
                                     <items>
-                                        <button width="0.40000000000000013" alignment="left" title="▲" id="XwF-iW-OJk"/>
-                                        <button width="0.40000000000000013" alignment="right" title="▼" id="QSF-gc-evB"/>
+                                        <button width="0.40000000000000013" alignment="left" title="⬆︎" id="XwF-iW-OJk">
+                                            <fontDescription key="font" type="system" pointSize="21"/>
+                                        </button>
+                                        <button width="0.40000000000000013" alignment="right" title="⬇︎" id="QSF-gc-evB">
+                                            <fontDescription key="font" type="system" pointSize="21"/>
+                                        </button>
                                     </items>
                                 </group>
-                                <button width="1" alignment="left" title="Save" id="O2g-oU-r01"/>
-                                <button width="1" alignment="left" title="Hide" id="jOw-SN-25x"/>
                                 <button width="1" alignment="left" title="Report" id="xbf-sq-bnb"/>
                             </items>
                         </group>
@@ -86,28 +95,39 @@
             </objects>
             <point key="canvasLocation" x="447" y="345"/>
         </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="AEw-b0-oYE">
+        <!--PostReview-->
+        <scene sceneID="ray-Qd-0lU">
             <objects>
-                <notificationController id="YCC-NB-fut">
+                <controller identifier="PostReview" id="aUH-1T-0AO" customClass="PostReviewInterfaceController">
                     <items>
-                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                        <group width="1" height="0.80000000000000004" alignment="left" id="g9b-dn-vyd">
+                            <items>
+                                <label alignment="left" text="Label" numberOfLines="0" id="zlG-xP-3R7"/>
+                            </items>
+                            <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            <edgeInsets key="margins" left="8" right="8" top="4" bottom="0.0"/>
+                        </group>
+                        <group width="1" height="0.20000000000000001" alignment="left" verticalAlignment="bottom" id="csU-MY-hll">
+                            <items>
+                                <button width="0.50000000000000011" height="1" alignment="left" title="Take X" id="PCf-ny-VZb">
+                                    <connections>
+                                        <action selector="onRetakeButtonPressed" destination="aUH-1T-0AO" id="UuU-Ha-xmQ"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" height="1" alignment="left" title="Post" id="3id-6m-rew">
+                                    <connections>
+                                        <action selector="onPostButtonPressed" destination="aUH-1T-0AO" id="sKe-Ho-yCL"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
-                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <outlet property="postBodyLabel" destination="zlG-xP-3R7" id="ojl-x8-sFd"/>
                     </connections>
-                </notificationController>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
-            <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController"/>
-            </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="220" y="115"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.42144510531088153" green="0.80498983887829023" blue="1" alpha="1" colorSpace="calibratedRGB"/>

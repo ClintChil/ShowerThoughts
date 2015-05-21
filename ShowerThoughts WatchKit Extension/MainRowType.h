@@ -12,6 +12,6 @@
 @interface MainRowType : NSObject
 
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *postBodyLabel;
-@property (weak, nonatomic) IBOutlet WKInterfaceDate *postDate;
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *postVoteLabel;
 
 @end

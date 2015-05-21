@@ -7,9 +7,13 @@
 //
 
 #import "RootInterfaceController.h"
-
+#import "MainRowType.h"
 
 @interface RootInterfaceController()
+@property (weak, nonatomic) IBOutlet WKInterfaceTable *tableview;
+
+
+@property NSArray *posts;
 
 @end
 
@@ -20,6 +24,18 @@
     [super awakeWithContext:context];
 
     // Configure interface objects here.
+    
+    
+    self.posts = @[@"Vampires are pretty well-groomed considering they did it all without a mirror.",
+                   @"We're all Internet Explorers.",
+                   @"If Jehovah's Witnesses believe there are only 144,000 spots in heaven, why do they go around telling everyone about it instead of keeping it a secret?",
+                   @"If my body were actually a temple, and I were its custodian, I probably would have been fired years ago",
+                   @"To go to sleep, you have to pretend to be asleep until you actually are.",
+                   @"A college diploma is just a receipt",
+                   @"They should legalize all drugs, but only make them available by ordering through Comcast customer support"];
+    
+//    [self.mainFeed setNumberOfRows:self.posts.count withRowType:@"mainFeed"];
+    
 }
 
 - (void)willActivate {
@@ -27,21 +43,47 @@
     [super willActivate];
     
     [self setTitle:@"ShowerThoughts"];
+    
+    
+    [self configureTableWithData:self.posts];
+    
 }
 
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
 }
-- (IBAction)onDictateButtonPressed {
+- (IBAction)onNewThoughtButtonPressed {
     [self presentTextInputControllerWithSuggestions:nil allowedInputMode:WKTextInputModePlain completion:^(NSArray *results) {
         if (results && results.count > 0) {
             NSLog(@"%@", results);
+            [self presentControllerWithName:@"PostReview" context:results];
         } else {
             NSLog(@"no input from user");
         }
+        
     }];
 }
+
+- (void)configureTableWithData:(NSArray *)dataObjects {
+    [self.tableview setNumberOfRows:[dataObjects count] withRowType:@"mainFeed"];
+    for (NSInteger i = 0; i < self.tableview.numberOfRows; i++) {
+        MainRowType *theRow = [self.tableview rowControllerAtIndex:i];
+        NSString *postString = [self.posts objectAtIndex:i];
+        
+        [theRow.postBodyLabel setText:postString];
+        
+    }
+    
+}
+- (IBAction)onMoreButtonPressed {
+    
+}
+
+- (IBAction)onDraftsButtonPressed {
+    
+}
+
 
 @end
 

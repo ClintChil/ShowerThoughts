@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A1539DD1B0C0810004A7C45 /* MainRowType.m in Sources */ = {isa = PBXBuildFile; fileRef = BA891EA71B05A7CE00471FA6 /* MainRowType.m */; };
+		7A1539E01B0D4AE4004A7C45 /* PostReviewInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1539DF1B0D4AE4004A7C45 /* PostReviewInterfaceController.m */; };
 		7A1BEE4F1AF448CB00A171C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE4E1AF448CB00A171C2 /* main.m */; };
 		7A1BEE521AF448CB00A171C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE511AF448CB00A171C2 /* AppDelegate.m */; };
 		7A1BEE551AF448CB00A171C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE541AF448CB00A171C2 /* ViewController.m */; };
@@ -63,6 +65,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7A1539DE1B0D4AE4004A7C45 /* PostReviewInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostReviewInterfaceController.h; sourceTree = "<group>"; };
+		7A1539DF1B0D4AE4004A7C45 /* PostReviewInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostReviewInterfaceController.m; sourceTree = "<group>"; };
 		7A1BEE491AF448CB00A171C2 /* ShowerThoughts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowerThoughts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1BEE4D1AF448CB00A171C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A1BEE4E1AF448CB00A171C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 			children = (
 				7A1BEE7B1AF448EC00A171C2 /* RootInterfaceController.h */,
 				7A1BEE7C1AF448EC00A171C2 /* RootInterfaceController.m */,
+				7A1539DE1B0D4AE4004A7C45 /* PostReviewInterfaceController.h */,
+				7A1539DF1B0D4AE4004A7C45 /* PostReviewInterfaceController.m */,
 				7A1BEE7E1AF448EC00A171C2 /* NotificationController.h */,
 				7A1BEE7F1AF448EC00A171C2 /* NotificationController.m */,
 				BA891EA61B05A7CE00471FA6 /* MainRowType.h */,
@@ -404,7 +410,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A1BEE801AF448EC00A171C2 /* NotificationController.m in Sources */,
+				7A1539DD1B0C0810004A7C45 /* MainRowType.m in Sources */,
 				7A1BEE7D1AF448EC00A171C2 /* RootInterfaceController.m in Sources */,
+				7A1539E01B0D4AE4004A7C45 /* PostReviewInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
