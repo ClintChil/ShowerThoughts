@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5767B2485CC571BD18ADB0A0 /* libPods-ShowerThoughts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A57A5FD59DF0CA2F18437D /* libPods-ShowerThoughts.a */; };
 		7A1539DD1B0C0810004A7C45 /* MainRowType.m in Sources */ = {isa = PBXBuildFile; fileRef = BA891EA71B05A7CE00471FA6 /* MainRowType.m */; };
 		7A1539E01B0D4AE4004A7C45 /* PostReviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1539DF1B0D4AE4004A7C45 /* PostReviewController.m */; };
 		7A1BEE4F1AF448CB00A171C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE4E1AF448CB00A171C2 /* main.m */; };
 		7A1BEE521AF448CB00A171C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE511AF448CB00A171C2 /* AppDelegate.m */; };
-		7A1BEE551AF448CB00A171C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE541AF448CB00A171C2 /* ViewController.m */; };
+		7A1BEE551AF448CB00A171C2 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE541AF448CB00A171C2 /* RootViewController.m */; };
 		7A1BEE581AF448CB00A171C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE561AF448CB00A171C2 /* Main.storyboard */; };
 		7A1BEE5A1AF448CB00A171C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE591AF448CB00A171C2 /* Images.xcassets */; };
 		7A1BEE5D1AF448CB00A171C2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE5B1AF448CB00A171C2 /* LaunchScreen.xib */; };
@@ -23,6 +24,7 @@
 		7A1BEE8E1AF448EC00A171C2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE8C1AF448EC00A171C2 /* Interface.storyboard */; };
 		7A1BEE901AF448EC00A171C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE8F1AF448EC00A171C2 /* Images.xcassets */; };
 		7A1BEE931AF448EC00A171C2 /* ShowerThoughts WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7A1BEE761AF448EB00A171C2 /* ShowerThoughts WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7A4144A71B0E571B00A9104D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4144A61B0E571B00A9104D /* LoginViewController.m */; };
 		BA891EA81B05A7CE00471FA6 /* MainRowType.m in Sources */ = {isa = PBXBuildFile; fileRef = BA891EA71B05A7CE00471FA6 /* MainRowType.m */; };
 		BAA2021B1B0D7A8100CCE4E5 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA2021A1B0D7A8100CCE4E5 /* Post.m */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04F2435B3CCF8A82C9B68651 /* Pods-ShowerThoughts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowerThoughts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowerThoughts/Pods-ShowerThoughts.debug.xcconfig"; sourceTree = "<group>"; };
 		7A1539DE1B0D4AE4004A7C45 /* PostReviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostReviewController.h; sourceTree = "<group>"; };
 		7A1539DF1B0D4AE4004A7C45 /* PostReviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostReviewController.m; sourceTree = "<group>"; };
 		7A1BEE491AF448CB00A171C2 /* ShowerThoughts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowerThoughts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,8 +76,8 @@
 		7A1BEE4E1AF448CB00A171C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A1BEE501AF448CB00A171C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7A1BEE511AF448CB00A171C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7A1BEE531AF448CB00A171C2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7A1BEE541AF448CB00A171C2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7A1BEE531AF448CB00A171C2 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		7A1BEE541AF448CB00A171C2 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		7A1BEE571AF448CB00A171C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A1BEE591AF448CB00A171C2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7A1BEE5C1AF448CB00A171C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -93,10 +96,14 @@
 		7A1BEE8B1AF448EC00A171C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A1BEE8D1AF448EC00A171C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		7A1BEE8F1AF448EC00A171C2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7A4144A51B0E571B00A9104D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		7A4144A61B0E571B00A9104D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		BA891EA61B05A7CE00471FA6 /* MainRowType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainRowType.h; path = "ShowerThoughts WatchKit Extension/MainRowType.h"; sourceTree = SOURCE_ROOT; };
 		BA891EA71B05A7CE00471FA6 /* MainRowType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainRowType.m; path = "ShowerThoughts WatchKit Extension/MainRowType.m"; sourceTree = SOURCE_ROOT; };
 		BAA202191B0D7A8100CCE4E5 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		BAA2021A1B0D7A8100CCE4E5 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		C6561BA14C642DB3B67CB3FF /* Pods-ShowerThoughts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowerThoughts.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowerThoughts/Pods-ShowerThoughts.release.xcconfig"; sourceTree = "<group>"; };
+		D2A57A5FD59DF0CA2F18437D /* libPods-ShowerThoughts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowerThoughts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5767B2485CC571BD18ADB0A0 /* libPods-ShowerThoughts.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +132,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18C89D80BCFF250EFDBAB4D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2A57A5FD59DF0CA2F18437D /* libPods-ShowerThoughts.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7A1BEE401AF448CB00A171C2 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +148,8 @@
 				7A1BEE771AF448EB00A171C2 /* ShowerThoughts WatchKit Extension */,
 				7A1BEE891AF448EC00A171C2 /* ShowerThoughts WatchKit App */,
 				7A1BEE4A1AF448CB00A171C2 /* Products */,
+				FADE2424D0DC7259FD29CEF9 /* Pods */,
+				18C89D80BCFF250EFDBAB4D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,9 +169,11 @@
 			children = (
 				7A1BEE501AF448CB00A171C2 /* AppDelegate.h */,
 				7A1BEE511AF448CB00A171C2 /* AppDelegate.m */,
-				7A1BEE531AF448CB00A171C2 /* ViewController.h */,
-				7A1BEE541AF448CB00A171C2 /* ViewController.m */,
+				7A1BEE531AF448CB00A171C2 /* RootViewController.h */,
+				7A1BEE541AF448CB00A171C2 /* RootViewController.m */,
 				7A1BEE561AF448CB00A171C2 /* Main.storyboard */,
+				7A4144A51B0E571B00A9104D /* LoginViewController.h */,
+				7A4144A61B0E571B00A9104D /* LoginViewController.m */,
 				7A1BEE591AF448CB00A171C2 /* Images.xcassets */,
 				7A1BEE5B1AF448CB00A171C2 /* LaunchScreen.xib */,
 				7A1BEE4C1AF448CB00A171C2 /* Supporting Files */,
@@ -233,6 +253,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FADE2424D0DC7259FD29CEF9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04F2435B3CCF8A82C9B68651 /* Pods-ShowerThoughts.debug.xcconfig */,
+				C6561BA14C642DB3B67CB3FF /* Pods-ShowerThoughts.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,10 +269,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A1BEE6C1AF448CB00A171C2 /* Build configuration list for PBXNativeTarget "ShowerThoughts" */;
 			buildPhases = (
+				83F787FBF3D9208AA9652224 /* Check Pods Manifest.lock */,
 				7A1BEE451AF448CB00A171C2 /* Sources */,
 				7A1BEE461AF448CB00A171C2 /* Frameworks */,
 				7A1BEE471AF448CB00A171C2 /* Resources */,
 				7A1BEE9A1AF448EC00A171C2 /* Embed App Extensions */,
+				42F132E3A96690D7FB9B2F09 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -390,15 +421,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42F132E3A96690D7FB9B2F09 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShowerThoughts/Pods-ShowerThoughts-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83F787FBF3D9208AA9652224 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7A1BEE451AF448CB00A171C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A1BEE551AF448CB00A171C2 /* ViewController.m in Sources */,
+				7A1BEE551AF448CB00A171C2 /* RootViewController.m in Sources */,
 				7A1BEE521AF448CB00A171C2 /* AppDelegate.m in Sources */,
 				7A1BEE4F1AF448CB00A171C2 /* main.m in Sources */,
 				BA891EA81B05A7CE00471FA6 /* MainRowType.m in Sources */,
+				7A4144A71B0E571B00A9104D /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +617,7 @@
 		};
 		7A1BEE6D1AF448CB00A171C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04F2435B3CCF8A82C9B68651 /* Pods-ShowerThoughts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ShowerThoughts/Info.plist;
@@ -562,6 +628,7 @@
 		};
 		7A1BEE6E1AF448CB00A171C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6561BA14C642DB3B67CB3FF /* Pods-ShowerThoughts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ShowerThoughts/Info.plist;
