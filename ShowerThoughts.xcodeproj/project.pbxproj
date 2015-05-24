@@ -711,6 +711,7 @@
 		};
 		7A1BEE981AF448EC00A171C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04F2435B3CCF8A82C9B68651 /* Pods-ShowerThoughts.debug.xcconfig */;
 			buildSettings = {
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -725,6 +726,7 @@
 		};
 		7A1BEE991AF448EC00A171C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6561BA14C642DB3B67CB3FF /* Pods-ShowerThoughts.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "ShowerThoughts WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";

@@ -33,6 +33,12 @@
         }
     }];
     
+//    [[RKClient sharedClient] submitSelfPostWithTitle:@"toost" subredditName:@"test" text:nil captchaIdentifier:nil captchaValue:nil completion:^(NSError *error) {
+//        if (error) {
+//            NSLog([NSString stringWithFormat:@"there was an error: %@", error]);
+//        }
+//    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {

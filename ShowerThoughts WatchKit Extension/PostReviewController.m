@@ -7,9 +7,12 @@
 //
 
 #import "PostReviewController.h"
+#import <RedditKit/RedditKit.h>
+
 
 @interface PostReviewController ()
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *postBodyLabel;
+@property (weak, nonatomic) NSString *postTime;
 
 @end
 
@@ -20,6 +23,7 @@
     
     NSLog(@"%@", context);
     self.postBodyLabel.text = context;
+    
 }
 
 - (void)willActivate {
@@ -36,6 +40,8 @@
         if (results && results.count > 0) {
             NSLog(@"%@", results);
             self.postBodyLabel.text = results[0];
+            self.postTime = results[0];
+            
             
         } else {
             NSLog(@"no input from user");
@@ -45,7 +51,11 @@
 
 }
 - (IBAction)onPostButtonPressed {
-    
+    NSDictionary *request = @{@"request" : @"post",
+                              @"post" : self.postTime};
+    [WKInterfaceController openParentApplication:request reply:^(NSDictionary *replyInfo, NSError *error) {
+        NSLog(@"whoops");
+    }];
 }
 
 @end
