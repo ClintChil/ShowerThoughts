@@ -9,9 +9,10 @@
 #import "RootViewController.h"
 #import <RedditKit/RedditKit.h>
 
-@interface RootViewController ()
+@interface RootViewController () <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
 
-@property NSArray *subreddits;
+@property NSArray *posts;
 
 @end
 
@@ -20,30 +21,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[RKClient sharedClient] subscribedSubredditsWithCompletion:^(NSArray *subreddits, RKPagination *pagination, NSError *error) {
-        self.subreddits = subreddits;
-        NSLog(@"Subreddits: %@", subreddits);
-        
-        RKSubreddit *subreddit = [[self subreddits] firstObject];
-        NSLog(@"%@", subreddit);
-        if (subreddit) {
-            [[RKClient sharedClient] linksInSubreddit:subreddit pagination:nil completion:^(NSArray *links, RKPagination *pagination, NSError *error) {
-                NSLog(@"Links: %@", links);
-            }];
-        }
+    [[RKClient sharedClient] subredditWithName:@"showerthoughts" completion:^(id object, NSError *error) {
+        RKSubreddit *selectedSubReddit = object;
+        [[RKClient sharedClient] linksInSubreddit:selectedSubReddit pagination:nil completion:^(NSArray *collection, RKPagination *pagination, NSError *error) {
+            self.posts = collection;
+            [self.tableview reloadData];
+
+        }];
+
+    
     }];
-    
-//    [[RKClient sharedClient] submitSelfPostWithTitle:@"toost" subredditName:@"test" text:nil captchaIdentifier:nil captchaValue:nil completion:^(NSError *error) {
-//        if (error) {
-//            NSLog([NSString stringWithFormat:@"there was an error: %@", error]);
-//        }
-//    }];
-    
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    RKLink *currentLink = [self.posts objectAtIndex:indexPath.row];
+    cell.textLabel.text = currentLink.title;
+    return cell;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.posts.count;
 }
 
 @end
