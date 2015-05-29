@@ -20,24 +20,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // enable self-sizing cells - iOS 8 only
+    self.tableview.rowHeight = UITableViewAutomaticDimension;
+    self.tableview.estimatedRowHeight = 44.0;
     
     [[RKClient sharedClient] subredditWithName:@"showerthoughts" completion:^(id object, NSError *error) {
         RKSubreddit *selectedSubReddit = object;
         [[RKClient sharedClient] linksInSubreddit:selectedSubReddit pagination:nil completion:^(NSArray *collection, RKPagination *pagination, NSError *error) {
             self.posts = collection;
             [self.tableview reloadData];
-
         }];
-
-    
     }];
 
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    cell.textLabel.numberOfLines = 0;
     RKLink *currentLink = [self.posts objectAtIndex:indexPath.row];
     cell.textLabel.text = currentLink.title;
+    cell.detailTextLabel.text = currentLink.author;
     return cell;
 }
 

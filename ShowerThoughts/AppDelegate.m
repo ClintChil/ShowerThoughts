@@ -25,14 +25,15 @@
     }];
     
     if ([[userInfo objectForKey:@"request"] isEqualToString:@"post"]) {
-        [[RKClient sharedClient] submitSelfPostWithTitle:postTime subredditName:@"test" text:nil captchaIdentifier:nil captchaValue:nil completion:^(NSError *error) {
-            if (error) {
-                NSLog(@"ERROR!");
-                NSLog([NSString stringWithFormat:@"there was an error: %@", error]);
-            } else {
-                NSLog(@"Post Success!");
-            }
-        }];
+        NSLog(@"delegate fired");
+//        [[RKClient sharedClient] submitSelfPostWithTitle:postTime subredditName:@"test" text:nil captchaIdentifier:nil captchaValue:nil completion:^(NSError *error) {
+//            if (error) {
+//                NSLog(@"ERROR!");
+//                NSLog([NSString stringWithFormat:@"there was an error: %@", error]);
+//            } else {
+//                NSLog(@"Post Success!");
+//            }
+//        }];
     }
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
