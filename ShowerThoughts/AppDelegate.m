@@ -13,36 +13,68 @@
 
 @end
 
-@implementation AppDelegate
-
-- (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply
-{
-    NSString *postTime = [userInfo objectForKey:@"post"];
-    
-    __block UIBackgroundTaskIdentifier watchKitHandler;
-    watchKitHandler = [[UIApplication sharedApplication] beginBackgroundTaskWithName:@"backgroundTask" expirationHandler:^{
-        watchKitHandler = UIBackgroundTaskInvalid;
-    }];
-    
-    if ([[userInfo objectForKey:@"request"] isEqualToString:@"post"]) {
-        NSLog(@"delegate fired");
-//        [[RKClient sharedClient] submitSelfPostWithTitle:postTime subredditName:@"test" text:nil captchaIdentifier:nil captchaValue:nil completion:^(NSError *error) {
-//            if (error) {
-//                NSLog(@"ERROR!");
-//                NSLog([NSString stringWithFormat:@"there was an error: %@", error]);
-//            } else {
-//                NSLog(@"Post Success!");
-//            }
-//        }];
-    }
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [[UIApplication sharedApplication] endBackgroundTask:watchKitHandler];
-    });
+@implementation AppDelegate {
+    UIBackgroundTaskIdentifier backgroundTaskID;
 }
 
+- (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply {
+//    NSLog(@"Delegate triggered on phone");
+//    NSDictionary *myreply = @{ @"action" : @"Delegate did trigger"};
+
+    //TODO what if watch user wants to do more than one!
+
+    if (backgroundTaskID == UIBackgroundTaskInvalid) {
+        backgroundTaskID = [application beginBackgroundTaskWithExpirationHandler:^{
+            [application endBackgroundTask:backgroundTaskID];
+            backgroundTaskID = UIBackgroundTaskInvalid;
+        }];
+        
+        [[RKClient sharedClient] submitSelfPostWithTitle:@"foodedoo" subredditName:@"test" text:@"laa" captchaIdentifier:nil captchaValue:nil completion:^(NSError *error) {
+            [application endBackgroundTask:backgroundTaskID];
+            reply(@{@"error": error});
+        }];
+    }
+}
+
+
+// OLD SHIT COPY PASTE PROBLEMS
+
+//- (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply
+//{
+////    NSString *postTime = [userInfo objectForKey:@"post"];
+////    NSString *postTime = @"Testing 123";
+//    NSLog(@"Delegate Fired");
+//    
+//    
+//    __block UIBackgroundTaskIdentifier watchKitHandler;
+//    watchKitHandler = [[UIApplication sharedApplication] beginBackgroundTaskWithName:@"backgroundTask" expirationHandler:^{
+//        watchKitHandler = UIBackgroundTaskInvalid;
+//    }];
+//    
+//    
+//    
+//    
+////    if ([[userInfo objectForKey:@"request"] isEqualToString:@"post"]) {
+////        NSLog(@"delegate fired");
+////        [[RKClient sharedClient] submitSelfPostWithTitle:postTime subredditName:@"test" text:nil captchaIdentifier:nil captchaValue:nil completion:^(NSError *error) {
+////            if (error) {
+////                NSLog(@"ERROR!");
+//////                NSLog([NSString stringWithFormat:@"there was an error: %@", error.localizedDescription]);
+////            } else {
+////                NSLog(@"Post Success!");
+////            }
+////        }];
+////    }
+//    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        [[UIApplication sharedApplication] endBackgroundTask:watchKitHandler];
+//    });
+//}
+
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    backgroundTaskID = UIBackgroundTaskInvalid;
     return YES;
 }
 
