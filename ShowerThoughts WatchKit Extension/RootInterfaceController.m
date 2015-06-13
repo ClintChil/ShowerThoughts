@@ -29,14 +29,8 @@
     [self configureTableWithData];
 }
 
-- (void)willActivate {
-    // This method is called when watch view controller is about to be visible to user
-    [super willActivate];
-    
-//    self.sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.showerModel"];
-//    NSString *username = [self.sharedDefaults stringForKey:@"username"];
-//    NSString *password = [self.sharedDefaults stringForKey:@"password"];
-
+-(void)awakeWithContext:(nullable id)context {
+    [super awakeWithContext:context];
     [self setTitle:@"Thoughts"];
 
     [self configureTableWithData];
@@ -48,8 +42,8 @@
         self.posts = posts;
     }];
     self.posts = @[[Post defaultPost]];
-
 }
+
 
 - (IBAction)onNewThoughtButtonPressed {
     [self presentTextInputControllerWithSuggestions:@[] allowedInputMode:WKTextInputModePlain completion:^(NSArray *results) {
