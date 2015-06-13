@@ -49,24 +49,18 @@
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
-    
-    self.sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.showerModel"];
-    NSString *username = [self.sharedDefaults stringForKey:@"username"];
-    NSString *password = [self.sharedDefaults stringForKey:@"password"];
-
-//    [RedditCall signInBackgroundWithUserName:username andPassword:password block:^(NSError *error) {
-//        if (error) {
-//            NSLog(@"error: %@", error.localizedDescription);
-//        }
-//    }];
 
     [self setTitle:@"Thoughts"];
 
-    [RedditCall makeCallToRedditInBackground:^(NSArray *posts, NSError *error) {
+    [RedditCall pullPostsFromRedditInBackground:^(NSArray *posts, NSError *error) {
         if (error) {
             NSLog(@"error: %@", error.localizedDescription);
         }
         [self configureTableWithData:posts];
+    } theSignUpInBackground:^(BOOL success, NSError *error) {
+        if (error) {
+            NSLog(@"Login error: %@", error.localizedDescription);
+        }
     }];
 }
 

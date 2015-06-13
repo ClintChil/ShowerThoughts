@@ -10,4 +10,7 @@
 
 @interface SharedDefaults : NSObject
 
++(void)setUsernameDefault:(NSString *)username andPasswordDefault:(NSString *)password;
++(NSString *)usernameDefault;
++(NSString *)passwordDefault;
 @end

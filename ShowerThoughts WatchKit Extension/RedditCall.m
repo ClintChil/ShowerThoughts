@@ -9,16 +9,22 @@
 #import "RedditCall.h"
 #import <RedditKit/RedditKit.h>
 #import "Post.h"
+#import "SharedDefaults.h"
 @class Post;
 
 @implementation RedditCall
 
-+(void)makeCallToRedditInBackground:(void(^)(NSArray *posts, NSError *error))completionHandler {
++(void)pullPostsFromRedditInBackground:(void(^)(NSArray *posts, NSError *error))completionHandler theSignUpInBackground:(void(^)(BOOL success, NSError *error))signedUp {
 
     [[RKClient sharedClient] subredditWithName:@"showerthoughts" completion:^(id object, NSError *error) {
         RKSubreddit *selectedSubReddit = object;
         [[RKClient sharedClient] linksInSubreddit:selectedSubReddit pagination:nil completion:^(NSArray *collection, RKPagination *pagination, NSError *error) {
             completionHandler([Post postsFromArray:collection], error);
+            if (!error) {
+                [RedditCall signInBackgroundWithUserName:[SharedDefaults usernameDefault] andPassword:[SharedDefaults passwordDefault] block:^(NSError *error) {
+                    signedUp(!error ? YES : NO, error);
+                }];
+            }
         }];
     }];
 
@@ -33,7 +39,7 @@
 
 +(void)pushPostToRedditInBackground:(void(^)(Post *post, NSError *error))completed {
     [[RKClient sharedClient] submitSelfPostWithTitle:@"testingtime" subredditName:@"test" text:nil captchaIdentifier:nil captchaValue:nil completion:^(NSError *error) {
-        
+
     }];
 }
 @end

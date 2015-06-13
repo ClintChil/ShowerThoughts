@@ -26,6 +26,8 @@
 		7A4144A71B0E571B00A9104D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4144A61B0E571B00A9104D /* LoginViewController.m */; };
 		7A4160811B1F9062009DDB22 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4160801B1F9062009DDB22 /* libPods.a */; };
 		9B8D21F61B2CD64E0055633B /* RedditCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F51B2CD64E0055633B /* RedditCall.m */; };
+		9B8D21F91B2CF1290055633B /* SharedDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F81B2CF1290055633B /* SharedDefaults.m */; };
+		9B8D21FA1B2CF2D80055633B /* SharedDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F81B2CF1290055633B /* SharedDefaults.m */; };
 		BA891EA81B05A7CE00471FA6 /* MainRowType.m in Sources */ = {isa = PBXBuildFile; fileRef = BA891EA71B05A7CE00471FA6 /* MainRowType.m */; };
 		BAA2021B1B0D7A8100CCE4E5 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA2021A1B0D7A8100CCE4E5 /* Post.m */; };
 /* End PBXBuildFile section */
@@ -93,6 +95,8 @@
 		7A7ACA901B2CB56B000DA884 /* ShowerThoughts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ShowerThoughts.entitlements; sourceTree = "<group>"; };
 		9B8D21F41B2CD64E0055633B /* RedditCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedditCall.h; sourceTree = "<group>"; };
 		9B8D21F51B2CD64E0055633B /* RedditCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedditCall.m; sourceTree = "<group>"; };
+		9B8D21F71B2CF1290055633B /* SharedDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedDefaults.h; sourceTree = "<group>"; };
+		9B8D21F81B2CF1290055633B /* SharedDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedDefaults.m; sourceTree = "<group>"; };
 		9EAC77989FDDA221678C64E5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B8849DC9DD856451BD668640 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BA891EA61B05A7CE00471FA6 /* MainRowType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainRowType.h; path = "ShowerThoughts WatchKit Extension/MainRowType.h"; sourceTree = SOURCE_ROOT; };
@@ -148,6 +152,8 @@
 		7A1BEE401AF448CB00A171C2 = {
 			isa = PBXGroup;
 			children = (
+				9B8D21F71B2CF1290055633B /* SharedDefaults.h */,
+				9B8D21F81B2CF1290055633B /* SharedDefaults.m */,
 				7A1BEE4B1AF448CB00A171C2 /* ShowerThoughts */,
 				7A1BEE771AF448EB00A171C2 /* ShowerThoughts WatchKit Extension */,
 				7A1BEE891AF448EC00A171C2 /* ShowerThoughts WatchKit App */,
@@ -531,6 +537,7 @@
 			files = (
 				7A1BEE551AF448CB00A171C2 /* RootViewController.m in Sources */,
 				7A1BEE521AF448CB00A171C2 /* AppDelegate.m in Sources */,
+				9B8D21F91B2CF1290055633B /* SharedDefaults.m in Sources */,
 				7A1BEE4F1AF448CB00A171C2 /* main.m in Sources */,
 				BA891EA81B05A7CE00471FA6 /* MainRowType.m in Sources */,
 				7A4144A71B0E571B00A9104D /* LoginViewController.m in Sources */,
@@ -547,6 +554,7 @@
 				7A1539DD1B0C0810004A7C45 /* MainRowType.m in Sources */,
 				7A1BEE7D1AF448EC00A171C2 /* RootInterfaceController.m in Sources */,
 				7A1539E01B0D4AE4004A7C45 /* PostReviewController.m in Sources */,
+				9B8D21FA1B2CF2D80055633B /* SharedDefaults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

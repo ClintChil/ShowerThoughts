@@ -10,6 +10,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import <Mantle/Mantle.h>
 #import <RedditKit/RedditKit.h>
+#import "SharedDefaults.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
@@ -25,8 +26,7 @@
     // Do any additional setup after loading the view.
     
     self.sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.showerModel"];
-    
-    
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -38,10 +38,9 @@
 - (IBAction)onSignInButtonPressed:(UIButton *)sender {
     [[RKClient sharedClient] signInWithUsername:self.usernameField.text password:self.passwordField.text completion:^(NSError *error) {
         if (!error) {
-            [self.sharedDefaults setObject:self.usernameField.text forKey:@"username"];
-            [self.sharedDefaults setObject:self.passwordField.text forKey:@"password"];
-            [self.sharedDefaults synchronize];
             
+            [SharedDefaults setUsernameDefault:self.usernameField.text
+                            andPasswordDefault:self.passwordField.text];
             NSLog(@"Successfully signed in!");
             [self performSegueWithIdentifier:@"ToRoot" sender:self];
         }
