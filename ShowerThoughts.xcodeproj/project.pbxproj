@@ -25,6 +25,7 @@
 		7A1BEE931AF448EC00A171C2 /* ShowerThoughts WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7A1BEE761AF448EB00A171C2 /* ShowerThoughts WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7A4144A71B0E571B00A9104D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4144A61B0E571B00A9104D /* LoginViewController.m */; };
 		7A4160811B1F9062009DDB22 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4160801B1F9062009DDB22 /* libPods.a */; };
+		9B8D21F61B2CD64E0055633B /* RedditCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F51B2CD64E0055633B /* RedditCall.m */; };
 		BA891EA81B05A7CE00471FA6 /* MainRowType.m in Sources */ = {isa = PBXBuildFile; fileRef = BA891EA71B05A7CE00471FA6 /* MainRowType.m */; };
 		BAA2021B1B0D7A8100CCE4E5 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA2021A1B0D7A8100CCE4E5 /* Post.m */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,8 @@
 		7A4144A61B0E571B00A9104D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		7A4160801B1F9062009DDB22 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		7A7ACA901B2CB56B000DA884 /* ShowerThoughts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ShowerThoughts.entitlements; sourceTree = "<group>"; };
+		9B8D21F41B2CD64E0055633B /* RedditCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedditCall.h; sourceTree = "<group>"; };
+		9B8D21F51B2CD64E0055633B /* RedditCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedditCall.m; sourceTree = "<group>"; };
 		9EAC77989FDDA221678C64E5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B8849DC9DD856451BD668640 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BA891EA61B05A7CE00471FA6 /* MainRowType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainRowType.h; path = "ShowerThoughts WatchKit Extension/MainRowType.h"; sourceTree = SOURCE_ROOT; };
@@ -199,6 +202,8 @@
 				7A1BEE7C1AF448EC00A171C2 /* RootInterfaceController.m */,
 				7A1539DE1B0D4AE4004A7C45 /* PostReviewController.h */,
 				7A1539DF1B0D4AE4004A7C45 /* PostReviewController.m */,
+				9B8D21F41B2CD64E0055633B /* RedditCall.h */,
+				9B8D21F51B2CD64E0055633B /* RedditCall.m */,
 				BAA202191B0D7A8100CCE4E5 /* Post.h */,
 				BAA2021A1B0D7A8100CCE4E5 /* Post.m */,
 				7A1BEE7E1AF448EC00A171C2 /* NotificationController.h */,
@@ -537,6 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAA2021B1B0D7A8100CCE4E5 /* Post.m in Sources */,
+				9B8D21F61B2CD64E0055633B /* RedditCall.m in Sources */,
 				7A1BEE801AF448EC00A171C2 /* NotificationController.m in Sources */,
 				7A1539DD1B0C0810004A7C45 /* MainRowType.m in Sources */,
 				7A1BEE7D1AF448EC00A171C2 /* RootInterfaceController.m in Sources */,
