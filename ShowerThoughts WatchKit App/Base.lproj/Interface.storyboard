@@ -79,10 +79,10 @@
                                 </label>
                                 <group width="1" alignment="left" id="kSi-wM-ilY">
                                     <items>
-                                        <button width="0.40000000000000013" alignment="left" title="⬆︎" id="XwF-iW-OJk">
+                                        <button width="0.40000000000000013" alignment="left" backgroundImage="btn_like_detail" id="XwF-iW-OJk">
                                             <fontDescription key="font" type="system" pointSize="21"/>
                                         </button>
-                                        <button width="0.40000000000000013" alignment="right" title="⬇︎" id="QSF-gc-evB">
+                                        <button width="0.40000000000000013" alignment="right" backgroundImage="btn_dislike_detail" id="QSF-gc-evB">
                                             <fontDescription key="font" type="system" pointSize="21"/>
                                         </button>
                                     </items>
