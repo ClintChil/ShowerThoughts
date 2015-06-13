@@ -7,30 +7,29 @@
 //
 
 #import "PostDetailInterfaceController.h"
+#import "Post.h"
 
 @interface PostDetailInterfaceController ()
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *postLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *timeLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *userLabel;
-
+@property (nonatomic)Post *selPost;
 @end
 
 @implementation PostDetailInterfaceController
 
+-(void)setSelPost:(Post *)selPost {
+    [self.postLabel setText:selPost.body];
+    [self.userLabel setText:selPost.author];
+    NSDateFormatter *dForm = [NSDateFormatter new];
+    dForm.dateFormat = @"MMM dd, yyyy";
+    NSString *s = [dForm stringFromDate:selPost.datePosted];
+    [self.userLabel setText:s];
+}
+
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    
-    // Configure interface objects here.
-}
-
-- (void)willActivate {
-    // This method is called when watch view controller is about to be visible to user
-    [super willActivate];
-}
-
-- (void)didDeactivate {
-    // This method is called when watch view controller is no longer visible
-    [super didDeactivate];
+    self.selPost = (Post *)context;
 }
 
 @end

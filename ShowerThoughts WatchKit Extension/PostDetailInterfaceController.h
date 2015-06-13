@@ -10,6 +10,5 @@
 #import <Foundation/Foundation.h>
 
 @interface PostDetailInterfaceController : WKInterfaceController
-@property NSString *thePost;
 
 @end
