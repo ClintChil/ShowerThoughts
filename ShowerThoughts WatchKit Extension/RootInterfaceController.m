@@ -20,6 +20,14 @@
 
 
 @implementation RootInterfaceController
+- (IBAction)onTestButtonPressed {
+    NSLog(@"Watch TestButtonPressed");
+    
+    [WKInterfaceController openParentApplication:@{@"action": @"count"} reply:^(NSDictionary *replyInfo, NSError *error) {
+        NSLog(@"Post request fired");
+        NSLog(@"Post request returned: %@", replyInfo ?: @"no reply");
+    }];
+}
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
@@ -42,6 +50,8 @@
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    
+    
     
     [self setTitle:@"Thoughts"];
     

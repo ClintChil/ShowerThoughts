@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"iPhone RootViewController viewDidLoad");
     // enable self-sizing cells - iOS 8 only
     self.tableview.rowHeight = UITableViewAutomaticDimension;
     self.tableview.estimatedRowHeight = 44.0;
@@ -45,6 +46,10 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.posts.count;
+}
+
+- (IBAction)onPoopLogButtonPressed:(UIButton *)sender {
+    NSLog(@"iPhone PoopLogButtonPressed");
 }
 
 @end
