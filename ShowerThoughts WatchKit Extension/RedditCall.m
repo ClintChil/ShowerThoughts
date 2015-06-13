@@ -8,6 +8,7 @@
 
 #import "RedditCall.h"
 #import <RedditKit/RedditKit.h>
+#import "Post.h"
 @class Post;
 
 @implementation RedditCall
@@ -17,7 +18,7 @@
     [[RKClient sharedClient] subredditWithName:@"showerthoughts" completion:^(id object, NSError *error) {
         RKSubreddit *selectedSubReddit = object;
         [[RKClient sharedClient] linksInSubreddit:selectedSubReddit pagination:nil completion:^(NSArray *collection, RKPagination *pagination, NSError *error) {
-            completionHandler(collection, error);
+            completionHandler([Post postsFromArray:collection], error);
         }];
     }];
 

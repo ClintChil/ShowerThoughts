@@ -93,6 +93,7 @@
         Post *post = [dataObjects objectAtIndex:i];
         
         [theRow.postBodyLabel setText:post.body];
+        [theRow.postVoteLabel setText:[NSString stringWithFormat:@"⬆︎%@⬇︎", post.votes]];
     }
     
 }
