@@ -10,4 +10,6 @@
 
 @interface RedditCall : NSObject
 
++(void)makeCallToRedditInBackground:(void(^)(NSArray *posts, NSError *error))completionHandler;
+
 @end

@@ -9,6 +9,7 @@
 #import "RootInterfaceController.h"
 #import "MainRowType.h"
 #import "Post.h"
+#import "RedditCall.h"
 
 @interface RootInterfaceController()
 @property (weak, nonatomic) IBOutlet WKInterfaceTable *tableview;
@@ -25,7 +26,6 @@
     [super awakeWithContext:context];
 
     // Configure interface objects here.
-    
     
     self.posts = @[@"Vampires are pretty well-groomed considering they did it all without a mirror.",
                    @"We're all Internet Explorers.",
@@ -44,7 +44,10 @@
     [super willActivate];
     
     [self setTitle:@"Thoughts"];
-    
+
+    [RedditCall makeCallToRedditInBackground:^(NSArray *posts, NSError *error) {
+
+    }];
     
     [self configureTableWithData:self.posts];
     
