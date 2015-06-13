@@ -10,4 +10,15 @@
 
 @implementation Post
 
+
+-(instancetype)initWithDictionary:(NSDictionary *)dict {
+    self = [super init];
+    return self;
+}
+
++(instancetype)postWithDictionary:(NSDictionary *)dict {
+    return [[Post alloc]initWithDictionary:dict];
+}
+
+
 @end

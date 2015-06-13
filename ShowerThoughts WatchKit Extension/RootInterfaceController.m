@@ -9,6 +9,7 @@
 #import "RootInterfaceController.h"
 #import "MainRowType.h"
 #import "Post.h"
+#import "RedditCall.h"
 #import <RedditKit/RedditKit.h>
 
 @interface RootInterfaceController()
@@ -32,7 +33,6 @@
     [super awakeWithContext:context];
 
     // Configure interface objects here.
-    
     
     self.posts = @[@"Vampires are pretty well-groomed considering they did it all without a mirror.",
                    @"We're all Internet Explorers.",
@@ -63,7 +63,10 @@
 
     
     [self setTitle:@"Thoughts"];
-    
+
+    [RedditCall makeCallToRedditInBackground:^(NSArray *posts, NSError *error) {
+
+    }];
     
     [self configureTableWithData:self.posts];
     
