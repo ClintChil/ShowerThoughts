@@ -10,9 +10,6 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="RootInterfaceController">
                     <items>
-                        <label alignment="left" text="Hot" id="Zre-u6-PT6">
-                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                        </label>
                         <table alignment="left" id="fVM-G3-ihG">
                             <items>
                                 <tableRow identifier="mainFeed" id="MKG-8h-opb" customClass="MainRowType">
