@@ -30,8 +30,6 @@
 
 - (IBAction)onPostButtonPressed {
     
-    NSLog(@"onPostButtonPressed fired! MOTHERFUCKER FUCKER CUKER");
-    
     [WKInterfaceController openParentApplication:@{@"action": @"count"} reply:^(NSDictionary *replyInfo, NSError *error) {
         NSLog(@"Post request fired");
         NSLog(@"Post request returned: %@", replyInfo ?: @"FUCK ALL");

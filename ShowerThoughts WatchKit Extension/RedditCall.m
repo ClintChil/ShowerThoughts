@@ -15,11 +15,9 @@
 
 +(void)makeCallToRedditInBackground:(void(^)(NSArray *posts, NSError *error))completionHandler {
 
-    [[RKClient sharedClient] subredditWithName:@"showerthoughts" completion:^(id object, NSError *error) {
-        RKSubreddit *selectedSubReddit = object;
-        [[RKClient sharedClient] linksInSubreddit:selectedSubReddit pagination:nil completion:^(NSArray *collection, RKPagination *pagination, NSError *error) {
-            completionHandler([Post postsFromArray:collection], error);
-        }];
+    [[RKClient sharedClient]linksInSubredditWithName:@"showerthoughts" pagination:nil completion:^(NSArray *collection, RKPagination *pagination, NSError *error) {
+
+        completionHandler([Post postsFromArray:collection], error);
     }];
 
 }
