@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E06E5551B2CE338000C5B05 /* PostDetailInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E06E5541B2CE338000C5B05 /* PostDetailInterfaceController.m */; };
 		53B1D02FDD8FDD0259BD9D12 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4AA45FACCA871FC8DC7F4E0 /* libPods.a */; };
 		7A1539DD1B0C0810004A7C45 /* MainRowType.m in Sources */ = {isa = PBXBuildFile; fileRef = BA891EA71B05A7CE00471FA6 /* MainRowType.m */; };
 		7A1539E01B0D4AE4004A7C45 /* PostReviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1539DF1B0D4AE4004A7C45 /* PostReviewController.m */; };
@@ -62,6 +63,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E06E5531B2CE338000C5B05 /* PostDetailInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDetailInterfaceController.h; sourceTree = "<group>"; };
+		3E06E5541B2CE338000C5B05 /* PostDetailInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDetailInterfaceController.m; sourceTree = "<group>"; };
 		7A1539DE1B0D4AE4004A7C45 /* PostReviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostReviewController.h; sourceTree = "<group>"; };
 		7A1539DF1B0D4AE4004A7C45 /* PostReviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostReviewController.m; sourceTree = "<group>"; };
 		7A1BEE491AF448CB00A171C2 /* ShowerThoughts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowerThoughts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +205,8 @@
 				7A1BEE7C1AF448EC00A171C2 /* RootInterfaceController.m */,
 				7A1539DE1B0D4AE4004A7C45 /* PostReviewController.h */,
 				7A1539DF1B0D4AE4004A7C45 /* PostReviewController.m */,
+				3E06E5531B2CE338000C5B05 /* PostDetailInterfaceController.h */,
+				3E06E5541B2CE338000C5B05 /* PostDetailInterfaceController.m */,
 				9B8D21F41B2CD64E0055633B /* RedditCall.h */,
 				9B8D21F51B2CD64E0055633B /* RedditCall.m */,
 				BAA202191B0D7A8100CCE4E5 /* Post.h */,
@@ -548,6 +553,7 @@
 				7A1539DD1B0C0810004A7C45 /* MainRowType.m in Sources */,
 				7A1BEE7D1AF448EC00A171C2 /* RootInterfaceController.m in Sources */,
 				7A1539E01B0D4AE4004A7C45 /* PostReviewController.m in Sources */,
+				3E06E5551B2CE338000C5B05 /* PostDetailInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

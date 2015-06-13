@@ -25,6 +25,10 @@
     // Do any additional setup after loading the view.
     
     self.sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.showerModel"];
+    NSString *username = [self.sharedDefaults objectForKey:@"username"];
+    NSString *password = [self.sharedDefaults objectForKey:@"password"];
+    self.usernameField.text = username;
+    self.passwordField.text = password;
     
     
 }

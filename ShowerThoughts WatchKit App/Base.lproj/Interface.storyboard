@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="220" y="345.5"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Post Detail Interface Controller-->
         <scene sceneID="3mq-TA-Xrk">
             <objects>
-                <controller id="MLo-Xt-b0M">
+                <controller id="MLo-Xt-b0M" customClass="PostDetailInterfaceController">
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="IuS-Ng-5eE">
                             <items>
@@ -91,6 +91,11 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="postLabel" destination="iUT-eS-sep" id="RZp-M9-jg4"/>
+                        <outlet property="timeLabel" destination="l8q-U2-YGM" id="3Dy-4P-D3y"/>
+                        <outlet property="userLabel" destination="9Hn-ZU-wz7" id="743-UL-RbT"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="423" y="345.5"/>
