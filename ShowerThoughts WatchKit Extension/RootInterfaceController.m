@@ -83,7 +83,10 @@
 }
 
 -(nullable id)contextForSegueWithIdentifier:(nonnull NSString *)segueIdentifier inTable:(nonnull WKInterfaceTable *)table rowIndex:(NSInteger)rowIndex {
-    return self.posts[rowIndex];
+    if ([segueIdentifier isEqualToString:@"ShowDetailSegue"]) {
+        return self.posts[rowIndex];
+    }
+    return nil;
 }
 
 
