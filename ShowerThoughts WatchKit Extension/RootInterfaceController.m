@@ -55,7 +55,7 @@
 }
 
 - (IBAction)onNewThoughtButtonPressed {
-    [self presentTextInputControllerWithSuggestions:nil allowedInputMode:WKTextInputModePlain completion:^(NSArray *results) {
+    [self presentTextInputControllerWithSuggestions:@[] allowedInputMode:WKTextInputModePlain completion:^(NSArray *results) {
         if (results && results.count > 0) {
             NSLog(@"%@", results);
             [self presentControllerWithName:@"PostReview" context:results[0]];
