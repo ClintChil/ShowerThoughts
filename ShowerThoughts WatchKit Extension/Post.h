@@ -13,7 +13,9 @@
 @property NSString *body;
 @property NSNumber *votes;
 @property NSString *author;
+@property NSDate *datePosted;
 
 +(NSArray *)postsFromArray:(NSArray *)array;
-
++(instancetype)defaultPost;
++(instancetype)postForError:(NSError *)error;
 @end

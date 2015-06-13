@@ -29,5 +29,16 @@
     return  [NSArray arrayWithArray:ma];
 }
 
++(instancetype)defaultPost {
+    Post *post = [Post new];
+    post.body = @"We are loading the data, give it a second.";
+    return post;
+}
+
++(instancetype)postForError:(NSError *)error {
+    Post *post = [Post new];
+    post.body = @"There was a network error, sorry we are working on this.";
+    return post;
+}
 
 @end
