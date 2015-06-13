@@ -11,9 +11,9 @@
 @interface Post : NSObject
 
 @property NSString *body;
-@property NSInteger *votes;
+@property NSNumber *votes;
 @property NSString *author;
 
-+(instancetype)postWithDictionary:(NSDictionary *)dict;
++(NSArray *)postsFromArray:(NSArray *)array;
 
 @end

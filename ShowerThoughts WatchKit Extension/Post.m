@@ -7,17 +7,26 @@
 //
 
 #import "Post.h"
+#import <RedditKit/RedditKit.h>
 
 @implementation Post
 
 
--(instancetype)initWithDictionary:(NSDictionary *)dict {
+-(instancetype)initWithLink:(RKLink *)link {
     self = [super init];
+    self.body = link.title;
+    self.author = link.author;
+    self.votes = [NSNumber numberWithInteger:link.upvotes];
     return self;
 }
 
-+(instancetype)postWithDictionary:(NSDictionary *)dict {
-    return [[Post alloc]initWithDictionary:dict];
++(NSArray *)postsFromArray:(NSArray *)array {
+    NSMutableArray *ma = [NSMutableArray new];
+    for (RKLink *link in array) {
+        Post *post = [[Post alloc]initWithLink:link];
+        [ma addObject:post];
+    }
+    return  [NSArray arrayWithArray:ma];
 }
 
 

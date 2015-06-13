@@ -10,7 +10,7 @@
 #import "MainRowType.h"
 #import "Post.h"
 #import "RedditCall.h"
-#import <RedditKit/RedditKit.h>
+//#import <RedditKit/RedditKit.h>
 
 @interface RootInterfaceController()
 @property (weak, nonatomic) IBOutlet WKInterfaceTable *tableview;
@@ -34,14 +34,14 @@
 
     // Configure interface objects here.
     
-    self.posts = @[@"Vampires are pretty well-groomed considering they did it all without a mirror.",
-                   @"We're all Internet Explorers.",
-                   @"If Jehovah's Witnesses believe there are only 144,000 spots in heaven, why do they go around telling everyone about it instead of keeping it a secret?",
-                   @"If my body were actually a temple, and I were its custodian, I probably would have been fired years ago",
-                   @"To go to sleep, you have to pretend to be asleep until you actually are.",
-                   @"A college diploma is just a receipt",
-                   @"They should legalize all drugs, but only make them available by ordering through Comcast customer support"];
-    
+//    self.posts = @[@"Vampires are pretty well-groomed considering they did it all without a mirror.",
+//                   @"We're all Internet Explorers.",
+//                   @"If Jehovah's Witnesses believe there are only 144,000 spots in heaven, why do they go around telling everyone about it instead of keeping it a secret?",
+//                   @"If my body were actually a temple, and I were its custodian, I probably would have been fired years ago",
+//                   @"To go to sleep, you have to pretend to be asleep until you actually are.",
+//                   @"A college diploma is just a receipt",
+//                   @"They should legalize all drugs, but only make them available by ordering through Comcast customer support"];
+
 //    [self.mainFeed setNumberOfRows:self.posts.count withRowType:@"mainFeed"];
     
 }
@@ -53,24 +53,21 @@
     self.sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.showerModel"];
     NSString *username = [self.sharedDefaults stringForKey:@"username"];
     NSString *password = [self.sharedDefaults stringForKey:@"password"];
-    if (username && password) {
-        [[RKClient sharedClient] signInWithUsername:username password:password completion:^(NSError *error) {
-            if (!error) {
-                NSLog(@"Successfully signed in!");
-                
-            }
-        }];
-    }
 
-    
+//    [RedditCall signInBackgroundWithUserName:username andPassword:password block:^(NSError *error) {
+//        if (error) {
+//            NSLog(@"error: %@", error.localizedDescription);
+//        }
+//    }];
+
     [self setTitle:@"Thoughts"];
 
     [RedditCall makeCallToRedditInBackground:^(NSArray *posts, NSError *error) {
-
+        if (error) {
+            NSLog(@"error: %@", error.localizedDescription);
+        }
+        [self configureTableWithData:posts];
     }];
-    
-    [self configureTableWithData:self.posts];
-    
 }
 
 - (void)didDeactivate {
@@ -93,11 +90,10 @@
     [self.tableview setNumberOfRows:[dataObjects count] withRowType:@"mainFeed"];
     for (NSInteger i = 0; i < self.tableview.numberOfRows; i++) {
         MainRowType *theRow = [self.tableview rowControllerAtIndex:i];
-        NSString *postString = [self.posts objectAtIndex:i];
+        Post *post = [dataObjects objectAtIndex:i];
         
-        [theRow.postBodyLabel setText:postString];
-        
-        
+        [theRow.postBodyLabel setText:post.body];
+        [theRow.postVoteLabel setText:[NSString stringWithFormat:@"⬆︎%@⬇︎", post.votes]];
     }
     
 }
