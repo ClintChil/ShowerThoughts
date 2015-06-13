@@ -28,9 +28,6 @@
     _posts = posts;
     [self configureTableWithData];
 }
-- (IBAction)onTestButtonPressed {
-    NSLog(@"Watch TestButtonPressed");
-}
 
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
