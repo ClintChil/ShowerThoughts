@@ -17,12 +17,17 @@
 @property NSUserDefaults *sharedDefaults;
 
 
-@property NSArray *posts;
+@property (nonatomic)NSArray *posts;
 
 @end
 
 
 @implementation RootInterfaceController
+
+-(void)setPosts:(NSArray *)posts {
+    _posts = posts;
+    [self configureTableWithData];
+}
 - (IBAction)onTestButtonPressed {
     NSLog(@"Watch TestButtonPressed");
 }
@@ -31,31 +36,30 @@
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
     
-    self.sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.showerModel"];
-    NSString *username = [self.sharedDefaults stringForKey:@"username"];
-    NSString *password = [self.sharedDefaults stringForKey:@"password"];
+//    self.sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.showerModel"];
+//    NSString *username = [self.sharedDefaults stringForKey:@"username"];
+//    NSString *password = [self.sharedDefaults stringForKey:@"password"];
 
     [self setTitle:@"Thoughts"];
 
+    [self configureTableWithData];
     [RedditCall makeCallToRedditInBackground:^(NSArray *posts, NSError *error) {
         if (error) {
-            [self configureTableWithData:@[[Post postForError:error]]];
+            self.posts = @[[Post postForError:error]];
             NSLog(@"error: %@", error.localizedDescription);
         }
-        [self configureTableWithData:posts];
+        self.posts = posts;
     }];
-    [self configureTableWithData:@[[Post defaultPost]]];
+    self.posts = @[[Post defaultPost]];
+
 }
 
-- (void)didDeactivate {
-    // This method is called when watch view controller is no longer visible
-    [super didDeactivate];
-}
 - (IBAction)onNewThoughtButtonPressed {
     [self presentTextInputControllerWithSuggestions:nil allowedInputMode:WKTextInputModePlain completion:^(NSArray *results) {
         if (results && results.count > 0) {
             NSLog(@"%@", results);
             [self presentControllerWithName:@"PostReview" context:results[0]];
+
         } else {
             NSLog(@"no input from user");
         }
@@ -63,23 +67,32 @@
     }];
 }
 
-- (void)configureTableWithData:(NSArray *)dataObjects {
-    [self.tableview setNumberOfRows:[dataObjects count] withRowType:@"mainFeed"];
+- (void)configureTableWithData {
+    [self.tableview setNumberOfRows:[self.posts count] withRowType:@"mainFeed"];
     for (NSInteger i = 0; i < self.tableview.numberOfRows; i++) {
         MainRowType *theRow = [self.tableview rowControllerAtIndex:i];
-        Post *post = [dataObjects objectAtIndex:i];
+        Post *post = [self.posts objectAtIndex:i];
         
         [theRow.postBodyLabel setText:post.body];
         [theRow.postVoteLabel setText:[NSString stringWithFormat:@"⬆︎%@⬇︎", post.votes]];
     }
     
 }
+
 - (IBAction)onMoreButtonPressed {
     
 }
 
 - (IBAction)onDraftsButtonPressed {
     
+}
+
+-(void)table:(nonnull WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex {
+    
+}
+
+-(nullable id)contextForSegueWithIdentifier:(nonnull NSString *)segueIdentifier inTable:(nonnull WKInterfaceTable *)table rowIndex:(NSInteger)rowIndex {
+    return self.posts[rowIndex];
 }
 
 

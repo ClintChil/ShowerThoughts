@@ -16,7 +16,8 @@
     self = [super init];
     self.body = link.title;
     self.author = link.author;
-    self.votes = [NSNumber numberWithInteger:link.upvotes];
+    self.votes = [NSNumber numberWithInteger:link.score];
+    self.datePosted = link.created;
     return self;
 }
 
