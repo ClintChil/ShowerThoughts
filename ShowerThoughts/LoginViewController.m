@@ -14,6 +14,7 @@
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
+@property NSUserDefaults *defaults;
 
 @end
 
@@ -21,7 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.showerModel"];
+    NSString *username = [self.defaults objectForKey:@"username"];
+    NSString *password = [self.defaults objectForKey:@"password"];
+
+    self.usernameField.text = username;
+    self.passwordField.text = password;
     
     
 }
@@ -33,8 +40,17 @@
 }
 
 - (IBAction)onSignInButtonPressed:(UIButton *)sender {
+
+    NSString *username = self.usernameField.text;
+    NSString *password = self.passwordField.text;
+
     [[RKClient sharedClient] signInWithUsername:self.usernameField.text password:self.passwordField.text completion:^(NSError *error) {
         if (!error) {
+
+            [self.defaults setObject:username forKey:@"username"];
+            [self.defaults setObject:password forKey:@"password"];
+            [self.defaults synchronize];
+
             NSLog(@"Successfully signed in!");
             [self performSegueWithIdentifier:@"ToRoot" sender:self];
         }
