@@ -1,1 +1,0 @@
-../../../../RedditKit/Classes/Model/RKVotable.h

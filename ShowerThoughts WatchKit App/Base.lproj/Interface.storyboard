@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
         <!--Root Interface Controller-->
@@ -122,38 +122,12 @@
                             </items>
                         </group>
                     </items>
-                    <menu key="menu" id="PSK-7h-vZ4">
-                        <items>
-                            <menuItem title="Select Take" icon="more" id="ypJ-dL-3vm"/>
-                        </items>
-                    </menu>
                     <connections>
                         <outlet property="postBodyLabel" destination="zlG-xP-3R7" id="ojl-x8-sFd"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="115"/>
-        </scene>
-        <!--Interface Controller-->
-        <scene sceneID="eWh-H9-FTk">
-            <objects>
-                <controller id="T8n-nH-aCb">
-                    <items>
-                        <table alignment="left" id="CoU-fD-CfR">
-                            <items>
-                                <tableRow id="Po7-eT-M8e">
-                                    <group key="rootItem" width="1" alignment="left" id="v5M-BJ-aGT">
-                                        <items>
-                                            <label alignment="left" text="Label" numberOfLines="0" id="Vna-pu-6L7"/>
-                                        </items>
-                                    </group>
-                                </tableRow>
-                            </items>
-                        </table>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="408" y="115"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="Q6z-wz-RJK">
