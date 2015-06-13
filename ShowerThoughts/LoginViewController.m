@@ -27,7 +27,6 @@
     self.sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.showerModel"];
     
     
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {

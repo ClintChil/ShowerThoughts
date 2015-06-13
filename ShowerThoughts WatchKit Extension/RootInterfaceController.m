@@ -9,9 +9,11 @@
 #import "RootInterfaceController.h"
 #import "MainRowType.h"
 #import "Post.h"
+#import <RedditKit/RedditKit.h>
 
 @interface RootInterfaceController()
 @property (weak, nonatomic) IBOutlet WKInterfaceTable *tableview;
+@property NSUserDefaults *sharedDefaults;
 
 
 @property NSArray *posts;
@@ -23,10 +25,7 @@
 - (IBAction)onTestButtonPressed {
     NSLog(@"Watch TestButtonPressed");
     
-    [WKInterfaceController openParentApplication:@{@"action": @"count"} reply:^(NSDictionary *replyInfo, NSError *error) {
-        NSLog(@"Post request fired");
-        NSLog(@"Post request returned: %@", replyInfo ?: @"no reply");
-    }];
+    
 }
 
 - (void)awakeWithContext:(id)context {
@@ -51,7 +50,17 @@
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
     
+    self.sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.showerModel"];
+    NSString *username = [self.sharedDefaults stringForKey:@"username"];
+    NSString *password = [self.sharedDefaults stringForKey:@"password"];
     
+    [[RKClient sharedClient] signInWithUsername:username password:password completion:^(NSError *error) {
+        if (!error) {
+            NSLog(@"Successfully signed in!");
+            
+        }
+    }];
+
     
     [self setTitle:@"Thoughts"];
     
@@ -83,6 +92,7 @@
         NSString *postString = [self.posts objectAtIndex:i];
         
         [theRow.postBodyLabel setText:postString];
+        
         
     }
     

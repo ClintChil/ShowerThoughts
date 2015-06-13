@@ -63,16 +63,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="QJE-Bg-IMb">
                         <nil key="title"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oeT-Hg-a9V">
-                            <rect key="frame" x="180" y="7" width="240" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Push this button to poop a log">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="onPoopLogButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uqt-aX-LgQ"/>
-                            </connections>
-                        </button>
                     </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="T7X-oX-rSE" id="Hrx-qp-9QF"/>
