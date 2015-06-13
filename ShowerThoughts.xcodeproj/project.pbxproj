@@ -362,6 +362,7 @@
 					};
 					7A1BEE751AF448EB00A171C2 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = NNYCX27J4X;
 					};
 					7A1BEE841AF448EC00A171C2 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -754,6 +755,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9EAC77989FDDA221678C64E5 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -770,6 +772,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B8849DC9DD856451BD668640 /* Pods.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "ShowerThoughts WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";

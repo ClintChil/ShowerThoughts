@@ -53,13 +53,14 @@
     self.sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.showerModel"];
     NSString *username = [self.sharedDefaults stringForKey:@"username"];
     NSString *password = [self.sharedDefaults stringForKey:@"password"];
-    
-    [[RKClient sharedClient] signInWithUsername:username password:password completion:^(NSError *error) {
-        if (!error) {
-            NSLog(@"Successfully signed in!");
-            
-        }
-    }];
+    if (username && password) {
+        [[RKClient sharedClient] signInWithUsername:username password:password completion:^(NSError *error) {
+            if (!error) {
+                NSLog(@"Successfully signed in!");
+                
+            }
+        }];
+    }
 
     
     [self setTitle:@"Thoughts"];
