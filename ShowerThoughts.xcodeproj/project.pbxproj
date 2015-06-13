@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53B1D02FDD8FDD0259BD9D12 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4AA45FACCA871FC8DC7F4E0 /* libPods.a */; };
 		7A1539DD1B0C0810004A7C45 /* MainRowType.m in Sources */ = {isa = PBXBuildFile; fileRef = BA891EA71B05A7CE00471FA6 /* MainRowType.m */; };
 		7A1539E01B0D4AE4004A7C45 /* PostReviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1539DF1B0D4AE4004A7C45 /* PostReviewController.m */; };
 		7A1BEE4F1AF448CB00A171C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE4E1AF448CB00A171C2 /* main.m */; };
 		7A1BEE521AF448CB00A171C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE511AF448CB00A171C2 /* AppDelegate.m */; };
-		7A1BEE551AF448CB00A171C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE541AF448CB00A171C2 /* ViewController.m */; };
+		7A1BEE551AF448CB00A171C2 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE541AF448CB00A171C2 /* RootViewController.m */; };
 		7A1BEE581AF448CB00A171C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE561AF448CB00A171C2 /* Main.storyboard */; };
 		7A1BEE5A1AF448CB00A171C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE591AF448CB00A171C2 /* Images.xcassets */; };
 		7A1BEE5D1AF448CB00A171C2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE5B1AF448CB00A171C2 /* LaunchScreen.xib */; };
-		7A1BEE691AF448CB00A171C2 /* ShowerThoughtsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE681AF448CB00A171C2 /* ShowerThoughtsTests.m */; };
 		7A1BEE7D1AF448EC00A171C2 /* RootInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE7C1AF448EC00A171C2 /* RootInterfaceController.m */; };
 		7A1BEE801AF448EC00A171C2 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE7F1AF448EC00A171C2 /* NotificationController.m */; };
 		7A1BEE821AF448EC00A171C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE811AF448EC00A171C2 /* Images.xcassets */; };
@@ -23,18 +23,13 @@
 		7A1BEE8E1AF448EC00A171C2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE8C1AF448EC00A171C2 /* Interface.storyboard */; };
 		7A1BEE901AF448EC00A171C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE8F1AF448EC00A171C2 /* Images.xcassets */; };
 		7A1BEE931AF448EC00A171C2 /* ShowerThoughts WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7A1BEE761AF448EB00A171C2 /* ShowerThoughts WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7A4144A71B0E571B00A9104D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4144A61B0E571B00A9104D /* LoginViewController.m */; };
+		7A4160811B1F9062009DDB22 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4160801B1F9062009DDB22 /* libPods.a */; };
 		BA891EA81B05A7CE00471FA6 /* MainRowType.m in Sources */ = {isa = PBXBuildFile; fileRef = BA891EA71B05A7CE00471FA6 /* MainRowType.m */; };
 		BAA2021B1B0D7A8100CCE4E5 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA2021A1B0D7A8100CCE4E5 /* Post.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7A1BEE631AF448CB00A171C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7A1BEE411AF448CB00A171C2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7A1BEE481AF448CB00A171C2;
-			remoteInfo = ShowerThoughts;
-		};
 		7A1BEE871AF448EC00A171C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7A1BEE411AF448CB00A171C2 /* Project object */;
@@ -73,14 +68,11 @@
 		7A1BEE4E1AF448CB00A171C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A1BEE501AF448CB00A171C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7A1BEE511AF448CB00A171C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7A1BEE531AF448CB00A171C2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7A1BEE541AF448CB00A171C2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7A1BEE531AF448CB00A171C2 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		7A1BEE541AF448CB00A171C2 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		7A1BEE571AF448CB00A171C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A1BEE591AF448CB00A171C2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7A1BEE5C1AF448CB00A171C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		7A1BEE621AF448CB00A171C2 /* ShowerThoughtsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShowerThoughtsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A1BEE671AF448CB00A171C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A1BEE681AF448CB00A171C2 /* ShowerThoughtsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowerThoughtsTests.m; sourceTree = "<group>"; };
 		7A1BEE761AF448EB00A171C2 /* ShowerThoughts WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ShowerThoughts WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1BEE791AF448EC00A171C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A1BEE7A1AF448EC00A171C2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -93,10 +85,16 @@
 		7A1BEE8B1AF448EC00A171C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A1BEE8D1AF448EC00A171C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		7A1BEE8F1AF448EC00A171C2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7A4144A51B0E571B00A9104D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		7A4144A61B0E571B00A9104D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		7A4160801B1F9062009DDB22 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		9EAC77989FDDA221678C64E5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B8849DC9DD856451BD668640 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BA891EA61B05A7CE00471FA6 /* MainRowType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainRowType.h; path = "ShowerThoughts WatchKit Extension/MainRowType.h"; sourceTree = SOURCE_ROOT; };
 		BA891EA71B05A7CE00471FA6 /* MainRowType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainRowType.m; path = "ShowerThoughts WatchKit Extension/MainRowType.m"; sourceTree = SOURCE_ROOT; };
 		BAA202191B0D7A8100CCE4E5 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		BAA2021A1B0D7A8100CCE4E5 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		E4AA45FACCA871FC8DC7F4E0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,17 +102,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7A1BEE5F1AF448CB00A171C2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				53B1D02FDD8FDD0259BD9D12 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7A1BEE731AF448EB00A171C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4160811B1F9062009DDB22 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1DBC43165DD00A392C8BF98 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -124,14 +124,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		741944B0CB4973FB56F5661F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A4160801B1F9062009DDB22 /* libPods.a */,
+				E4AA45FACCA871FC8DC7F4E0 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7A1BEE401AF448CB00A171C2 = {
 			isa = PBXGroup;
 			children = (
 				7A1BEE4B1AF448CB00A171C2 /* ShowerThoughts */,
-				7A1BEE651AF448CB00A171C2 /* ShowerThoughtsTests */,
 				7A1BEE771AF448EB00A171C2 /* ShowerThoughts WatchKit Extension */,
 				7A1BEE891AF448EC00A171C2 /* ShowerThoughts WatchKit App */,
 				7A1BEE4A1AF448CB00A171C2 /* Products */,
+				E085A20F6570C28A8B44257D /* Pods */,
+				741944B0CB4973FB56F5661F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				7A1BEE491AF448CB00A171C2 /* ShowerThoughts.app */,
-				7A1BEE621AF448CB00A171C2 /* ShowerThoughtsTests.xctest */,
 				7A1BEE761AF448EB00A171C2 /* ShowerThoughts WatchKit Extension.appex */,
 				7A1BEE851AF448EC00A171C2 /* ShowerThoughts WatchKit App.app */,
 			);
@@ -151,9 +160,11 @@
 			children = (
 				7A1BEE501AF448CB00A171C2 /* AppDelegate.h */,
 				7A1BEE511AF448CB00A171C2 /* AppDelegate.m */,
-				7A1BEE531AF448CB00A171C2 /* ViewController.h */,
-				7A1BEE541AF448CB00A171C2 /* ViewController.m */,
+				7A1BEE531AF448CB00A171C2 /* RootViewController.h */,
+				7A1BEE541AF448CB00A171C2 /* RootViewController.m */,
 				7A1BEE561AF448CB00A171C2 /* Main.storyboard */,
+				7A4144A51B0E571B00A9104D /* LoginViewController.h */,
+				7A4144A61B0E571B00A9104D /* LoginViewController.m */,
 				7A1BEE591AF448CB00A171C2 /* Images.xcassets */,
 				7A1BEE5B1AF448CB00A171C2 /* LaunchScreen.xib */,
 				7A1BEE4C1AF448CB00A171C2 /* Supporting Files */,
@@ -166,23 +177,6 @@
 			children = (
 				7A1BEE4D1AF448CB00A171C2 /* Info.plist */,
 				7A1BEE4E1AF448CB00A171C2 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7A1BEE651AF448CB00A171C2 /* ShowerThoughtsTests */ = {
-			isa = PBXGroup;
-			children = (
-				7A1BEE681AF448CB00A171C2 /* ShowerThoughtsTests.m */,
-				7A1BEE661AF448CB00A171C2 /* Supporting Files */,
-			);
-			path = ShowerThoughtsTests;
-			sourceTree = "<group>";
-		};
-		7A1BEE661AF448CB00A171C2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7A1BEE671AF448CB00A171C2 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -233,6 +227,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E085A20F6570C28A8B44257D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EAC77989FDDA221678C64E5 /* Pods.debug.xcconfig */,
+				B8849DC9DD856451BD668640 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,10 +243,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A1BEE6C1AF448CB00A171C2 /* Build configuration list for PBXNativeTarget "ShowerThoughts" */;
 			buildPhases = (
+				FE9D87B0364480061D11C9A1 /* Check Pods Manifest.lock */,
 				7A1BEE451AF448CB00A171C2 /* Sources */,
 				7A1BEE461AF448CB00A171C2 /* Frameworks */,
 				7A1BEE471AF448CB00A171C2 /* Resources */,
 				7A1BEE9A1AF448EC00A171C2 /* Embed App Extensions */,
+				1A9F4AEF63E3A396695B96F2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,31 +260,15 @@
 			productReference = 7A1BEE491AF448CB00A171C2 /* ShowerThoughts.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7A1BEE611AF448CB00A171C2 /* ShowerThoughtsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7A1BEE6F1AF448CB00A171C2 /* Build configuration list for PBXNativeTarget "ShowerThoughtsTests" */;
-			buildPhases = (
-				7A1BEE5E1AF448CB00A171C2 /* Sources */,
-				7A1BEE5F1AF448CB00A171C2 /* Frameworks */,
-				7A1BEE601AF448CB00A171C2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7A1BEE641AF448CB00A171C2 /* PBXTargetDependency */,
-			);
-			name = ShowerThoughtsTests;
-			productName = ShowerThoughtsTests;
-			productReference = 7A1BEE621AF448CB00A171C2 /* ShowerThoughtsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		7A1BEE751AF448EB00A171C2 /* ShowerThoughts WatchKit Extension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A1BEE971AF448EC00A171C2 /* Build configuration list for PBXNativeTarget "ShowerThoughts WatchKit Extension" */;
 			buildPhases = (
+				D536F71F92A6F605C45D3A78 /* Check Pods Manifest.lock */,
 				7A1BEE721AF448EB00A171C2 /* Sources */,
 				7A1BEE731AF448EB00A171C2 /* Frameworks */,
 				7A1BEE741AF448EB00A171C2 /* Resources */,
+				AD19D93187E328A1CE92FCCA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,7 +284,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A1BEE941AF448EC00A171C2 /* Build configuration list for PBXNativeTarget "ShowerThoughts WatchKit App" */;
 			buildPhases = (
+				27817C1B51C4370C71D4886F /* Check Pods Manifest.lock */,
 				7A1BEE831AF448EC00A171C2 /* Resources */,
+				C1DBC43165DD00A392C8BF98 /* Frameworks */,
+				F05B568A1AC550416D393FA9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -317,10 +309,6 @@
 				TargetAttributes = {
 					7A1BEE481AF448CB00A171C2 = {
 						CreatedOnToolsVersion = 6.3.1;
-					};
-					7A1BEE611AF448CB00A171C2 = {
-						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = 7A1BEE481AF448CB00A171C2;
 					};
 					7A1BEE751AF448EB00A171C2 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -345,7 +333,6 @@
 			projectRoot = "";
 			targets = (
 				7A1BEE481AF448CB00A171C2 /* ShowerThoughts */,
-				7A1BEE611AF448CB00A171C2 /* ShowerThoughtsTests */,
 				7A1BEE751AF448EB00A171C2 /* ShowerThoughts WatchKit Extension */,
 				7A1BEE841AF448EC00A171C2 /* ShowerThoughts WatchKit App */,
 			);
@@ -360,13 +347,6 @@
 				7A1BEE581AF448CB00A171C2 /* Main.storyboard in Resources */,
 				7A1BEE5D1AF448CB00A171C2 /* LaunchScreen.xib in Resources */,
 				7A1BEE5A1AF448CB00A171C2 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7A1BEE601AF448CB00A171C2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,23 +370,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A9F4AEF63E3A396695B96F2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27817C1B51C4370C71D4886F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AD19D93187E328A1CE92FCCA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D536F71F92A6F605C45D3A78 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F05B568A1AC550416D393FA9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE9D87B0364480061D11C9A1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7A1BEE451AF448CB00A171C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A1BEE551AF448CB00A171C2 /* ViewController.m in Sources */,
+				7A1BEE551AF448CB00A171C2 /* RootViewController.m in Sources */,
 				7A1BEE521AF448CB00A171C2 /* AppDelegate.m in Sources */,
 				7A1BEE4F1AF448CB00A171C2 /* main.m in Sources */,
 				BA891EA81B05A7CE00471FA6 /* MainRowType.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7A1BEE5E1AF448CB00A171C2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7A1BEE691AF448CB00A171C2 /* ShowerThoughtsTests.m in Sources */,
+				7A4144A71B0E571B00A9104D /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +491,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7A1BEE641AF448CB00A171C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7A1BEE481AF448CB00A171C2 /* ShowerThoughts */;
-			targetProxy = 7A1BEE631AF448CB00A171C2 /* PBXContainerItemProxy */;
-		};
 		7A1BEE881AF448EC00A171C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7A1BEE841AF448EC00A171C2 /* ShowerThoughts WatchKit App */;
@@ -552,6 +613,7 @@
 		};
 		7A1BEE6D1AF448CB00A171C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EAC77989FDDA221678C64E5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ShowerThoughts/Info.plist;
@@ -562,6 +624,7 @@
 		};
 		7A1BEE6E1AF448CB00A171C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8849DC9DD856451BD668640 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ShowerThoughts/Info.plist;
@@ -570,42 +633,9 @@
 			};
 			name = Release;
 		};
-		7A1BEE701AF448CB00A171C2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ShowerThoughtsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShowerThoughts.app/ShowerThoughts";
-			};
-			name = Debug;
-		};
-		7A1BEE711AF448CB00A171C2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ShowerThoughtsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShowerThoughts.app/ShowerThoughts";
-			};
-			name = Release;
-		};
 		7A1BEE951AF448EC00A171C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EAC77989FDDA221678C64E5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -627,6 +657,7 @@
 		};
 		7A1BEE961AF448EC00A171C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8849DC9DD856451BD668640 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -644,6 +675,7 @@
 		};
 		7A1BEE981AF448EC00A171C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EAC77989FDDA221678C64E5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -651,6 +683,10 @@
 				);
 				INFOPLIST_FILE = "ShowerThoughts WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SKIP_INSTALL = YES;
 			};
@@ -658,9 +694,14 @@
 		};
 		7A1BEE991AF448EC00A171C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8849DC9DD856451BD668640 /* Pods.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "ShowerThoughts WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SKIP_INSTALL = YES;
 			};
@@ -683,15 +724,6 @@
 			buildConfigurations = (
 				7A1BEE6D1AF448CB00A171C2 /* Debug */,
 				7A1BEE6E1AF448CB00A171C2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7A1BEE6F1AF448CB00A171C2 /* Build configuration list for PBXNativeTarget "ShowerThoughtsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7A1BEE701AF448CB00A171C2 /* Debug */,
-				7A1BEE711AF448CB00A171C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
