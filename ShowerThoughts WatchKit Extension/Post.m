@@ -20,5 +20,11 @@
     return [[Post alloc]initWithDictionary:dict];
 }
 
++(NSArray *)postsFromArray:(NSArray *)array {
+    for (<#initialization#>; <#condition#>; <#increment#>) {
+        <#statements#>
+    }
+}
+
 
 @end

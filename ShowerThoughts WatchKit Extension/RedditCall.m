@@ -22,4 +22,11 @@
     }];
 
 }
+
++(void)signInBackgroundWithUserName:(NSString *)username andPassword:(NSString *)password block:(void(^) (NSError *error))completionHandler {
+
+    [[RKClient sharedClient] signInWithUsername:username password:password completion:^(NSError *error) {
+        completionHandler(error);
+    }];
+}
 @end

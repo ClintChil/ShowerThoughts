@@ -14,6 +14,6 @@
 @property NSInteger *votes;
 @property NSString *author;
 
-+(instancetype)postWithDictionary:(NSDictionary *)dict;
++(NSArray *)postsFromArray:(NSArray *)array;
 
 @end

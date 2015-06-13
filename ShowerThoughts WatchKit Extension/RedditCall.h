@@ -12,4 +12,6 @@
 
 +(void)makeCallToRedditInBackground:(void(^)(NSArray *posts, NSError *error))completionHandler;
 
++(void)signInBackgroundWithUserName:(NSString *)username andPassword:(NSString *)password block:(void(^) (NSError *error))completionHandler;
+
 @end
