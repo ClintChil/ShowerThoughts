@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8066.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Root Interface Controller-->
@@ -76,7 +76,7 @@
                                 </label>
                                 <group width="1" alignment="left" id="kSi-wM-ilY">
                                     <items>
-                                        <button width="0.40000000000000013" alignment="left" backgroundImage="btn_like_detail" id="XwF-iW-OJk">
+                                        <button width="0.40000000000000013" height="1" alignment="left" backgroundImage="btn_like_detail" id="XwF-iW-OJk">
                                             <fontDescription key="font" type="system" pointSize="21"/>
                                         </button>
                                         <button width="0.40000000000000013" alignment="right" backgroundImage="btn_dislike_detail" id="QSF-gc-evB">
