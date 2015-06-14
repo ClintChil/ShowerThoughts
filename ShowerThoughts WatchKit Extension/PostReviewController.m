@@ -31,13 +31,14 @@
 }
 
 - (IBAction)onPostButtonPressed {
-    if (self.post) {
-        [self.post pushPostToRedditInBackground:^(NSError *error) {
-            if (error) {
-                NSLog(@"Post Error: %@", error.localizedDescription);
-            }
-        }];
-    }
+    [self dismissController];
+    //    if (self.post) {
+//        [self.post pushPostToRedditInBackground:^(NSError *error) {
+//            if (error) {
+//                NSLog(@"Post Error: %@", error.localizedDescription);
+//            }
+//        }];
+//    }
 }
 
 @end
