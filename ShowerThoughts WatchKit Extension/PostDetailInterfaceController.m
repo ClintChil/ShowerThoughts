@@ -23,7 +23,7 @@
     [self.userLabel setText:selPost.author];
     NSDateFormatter *dForm = [NSDateFormatter new];
     dForm.dateFormat = @"MMM dd, yyyy";
-    NSString *s = [dForm stringFromDate:selPost.datePosted];
+    NSString *s = [dForm stringFromDate:selPost.created];
     [self.userLabel setText:s];
 }
 

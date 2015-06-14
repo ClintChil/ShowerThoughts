@@ -560,8 +560,11 @@
 				7A1539DD1B0C0810004A7C45 /* MainRowType.m in Sources */,
 				7A1BEE7D1AF448EC00A171C2 /* RootInterfaceController.m in Sources */,
 				7A1539E01B0D4AE4004A7C45 /* PostReviewController.m in Sources */,
+<<<<<<< HEAD
 				3E06E5551B2CE338000C5B05 /* PostDetailInterfaceController.m in Sources */,
+=======
 				9B8D21FA1B2CF2D80055633B /* SharedDefaults.m in Sources */,
+>>>>>>> pullData
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,11 @@
 
 +(void)pullPostsFromRedditInBackground:(void(^)(NSArray *posts, NSError *error))completionHandler theSignUpInBackground:(void(^)(BOOL success, NSError *error))signedUp {
 
+<<<<<<< HEAD
+    [[RKClient sharedClient]linksInSubredditWithName:@"showerthoughts" pagination:nil completion:^(NSArray *collection, RKPagination *pagination, NSError *error) {
+
+        completionHandler([Post postsFromArray:collection], error);
+=======
     [[RKClient sharedClient] subredditWithName:@"showerthoughts" completion:^(id object, NSError *error) {
         RKSubreddit *selectedSubReddit = object;
         [[RKClient sharedClient] linksInSubreddit:selectedSubReddit pagination:nil completion:^(NSArray *collection, RKPagination *pagination, NSError *error) {
@@ -26,6 +31,7 @@
                 }];
             }
         }];
+>>>>>>> pullData
     }];
 
 }

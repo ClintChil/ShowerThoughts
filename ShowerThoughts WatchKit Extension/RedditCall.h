@@ -10,7 +10,7 @@
 
 @interface RedditCall : NSObject
 
-+(void)makeCallToRedditInBackground:(void(^)(NSArray *posts, NSError *error))completionHandler;
++(void)pullPostsFromRedditInBackground:(void(^)(NSArray *posts, NSError *error))completionHandler theSignUpInBackground:(void(^)(BOOL success, NSError *error))signedUp;
 
 +(void)signInBackgroundWithUserName:(NSString *)username andPassword:(NSString *)password block:(void(^) (NSError *error))completionHandler;
 
