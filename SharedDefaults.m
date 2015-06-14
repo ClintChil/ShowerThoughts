@@ -10,7 +10,7 @@
 
 @implementation SharedDefaults
 
-static NSString *const GroupName = @"group.showerModel";
+static NSString *const GroupName = @"group.com.RichFell.ShowerThoughts";
 static NSString *const UserNameKey = @"username";
 static NSString *const PasswordKey = @"password";
 
@@ -23,13 +23,15 @@ static NSString *const PasswordKey = @"password";
 
 +(NSString *)usernameDefault {
     NSUserDefaults *defaults = [[NSUserDefaults alloc]initWithSuiteName:GroupName];
-    NSString *name = (NSString *)[defaults objectForKey:UserNameKey] ? (NSString *)[defaults objectForKey:UserNameKey] : @"clintchil";
+    NSString *name = (NSString *)[defaults objectForKey:UserNameKey];
+    NSLog(@"name: %@", name);
     return name;
 }
 
 +(NSString *)passwordDefault {
     NSUserDefaults *defaults = [[NSUserDefaults alloc]initWithSuiteName:GroupName];
-    NSString *password =  (NSString *)[defaults objectForKey:PasswordKey] ? (NSString *)[defaults objectForKey:PasswordKey] : @"poopfart2";
+    NSString *password =  (NSString *)[defaults objectForKey:PasswordKey];
+    NSLog(@"pass: %@", password);
     return password;
 }
 @end
