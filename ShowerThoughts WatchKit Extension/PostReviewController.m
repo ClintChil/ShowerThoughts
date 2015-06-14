@@ -36,6 +36,7 @@
             if (error) {
                 NSLog(@"Post Error: %@", error.localizedDescription);
             }
+            [self dismissController];
         }];
     }
 }
