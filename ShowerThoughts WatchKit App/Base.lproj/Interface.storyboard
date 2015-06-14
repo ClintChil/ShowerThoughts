@@ -5,24 +5,27 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Root Interface Controller-->
+        <!--Trending-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="RootInterfaceController">
+                <controller title="Trending" id="AgC-eL-Hgc" customClass="RootInterfaceController">
                     <items>
                         <table alignment="left" id="fVM-G3-ihG">
                             <items>
                                 <tableRow identifier="mainFeed" id="MKG-8h-opb" customClass="MainRowType">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="Nge-mD-mn5">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" radius="8" id="Nge-mD-mn5">
                                         <items>
-                                            <group width="1" alignment="left" id="nO4-WM-cdw">
+                                            <label alignment="left" text="If my body were actually a temple " textAlignment="left" numberOfLines="0" id="Yig-03-9wM">
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                            </label>
+                                            <group alignment="left" id="X5t-Hl-OAN">
                                                 <items>
-                                                    <label alignment="left" text="If my body were actually a temple, a" textAlignment="left" numberOfLines="0" id="Yig-03-9wM">
-                                                        <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                                    <imageView alignment="left" image="btn_like_detail" id="hmJ-PS-B8J"/>
+                                                    <label alignment="center" verticalAlignment="center" text="3514" textAlignment="center" id="15X-1t-SQl">
+                                                        <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                                     </label>
                                                 </items>
                                             </group>
-                                            <label alignment="center" text="⬆︎ 3514 ⬇︎" textAlignment="center" id="15X-1t-SQl"/>
                                         </items>
                                     </group>
                                     <connections>
@@ -65,26 +68,32 @@
             <objects>
                 <controller id="MLo-Xt-b0M" customClass="PostDetailInterfaceController">
                     <items>
-                        <group width="1" alignment="left" layout="vertical" id="IuS-Ng-5eE">
+                        <group width="1" alignment="left" layout="vertical" radius="8" id="IuS-Ng-5eE">
                             <items>
                                 <label alignment="left" text="If my body were actually a temple, a" numberOfLines="0" id="iUT-eS-sep"/>
-                                <label alignment="left" text="9 hrs ago" id="l8q-U2-YGM">
+                                <separator alignment="left" id="9wF-Ce-Fh2">
+                                    <color key="color" red="0.12549019610000001" green="0.58039215690000001" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </separator>
+                                <label alignment="left" text="RadioActivePandaBear" id="9Hn-ZU-wz7">
                                     <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                 </label>
-                                <label alignment="left" text="by RadioActivePandaBear" id="9Hn-ZU-wz7">
+                                <label alignment="left" text="9 hrs ago" id="l8q-U2-YGM">
+                                    <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                 </label>
                                 <group width="1" alignment="left" id="kSi-wM-ilY">
                                     <items>
-                                        <button width="0.40000000000000013" height="1" alignment="left" backgroundImage="btn_like_detail" id="XwF-iW-OJk">
+                                        <button alignment="left" backgroundImage="btn_like_detail" id="XwF-iW-OJk">
                                             <fontDescription key="font" type="system" pointSize="21"/>
                                         </button>
-                                        <button width="0.40000000000000013" alignment="right" backgroundImage="btn_dislike_detail" id="QSF-gc-evB">
+                                        <label width="69" alignment="center" verticalAlignment="center" text="Label" id="hKZ-nU-wrT">
+                                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                        </label>
+                                        <button alignment="right" backgroundImage="btn_dislike_detail" id="QSF-gc-evB">
                                             <fontDescription key="font" type="system" pointSize="21"/>
                                         </button>
                                     </items>
                                 </group>
-                                <button width="1" alignment="left" title="Report" id="xbf-sq-bnb"/>
                             </items>
                         </group>
                     </items>
@@ -95,7 +104,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="423" y="345.5"/>
+            <point key="canvasLocation" x="423" y="345"/>
         </scene>
         <!--PostReview-->
         <scene sceneID="ray-Qd-0lU">
@@ -137,5 +146,5 @@
             <point key="canvasLocation" x="220" y="115"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.42144510531088153" green="0.80498983887829023" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.12549019607843137" green="0.58039215686274503" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
