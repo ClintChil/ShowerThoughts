@@ -32,20 +32,24 @@
 
 - (IBAction)onPostButtonPressed {
 <<<<<<< HEAD
-    
-    [WKInterfaceController openParentApplication:@{@"action": @"count"} reply:^(NSDictionary *replyInfo, NSError *error) {
-        NSLog(@"Post request fired");
-        NSLog(@"Post request returned: %@", replyInfo ?: @"FUCK ALL");
-    }];
+    [self dismissController];
+    //    if (self.post) {
+//        [self.post pushPostToRedditInBackground:^(NSError *error) {
+//            if (error) {
+//                NSLog(@"Post Error: %@", error.localizedDescription);
+//            }
+//        }];
+//    }
 =======
     if (self.post) {
         [self.post pushPostToRedditInBackground:^(NSError *error) {
             if (error) {
                 NSLog(@"Post Error: %@", error.localizedDescription);
             }
+            [self dismissController];
         }];
     }
->>>>>>> pullData
+>>>>>>> 15c6098b28d9df77fbed486e9893566cd3ca8dd3
 }
 
 @end
