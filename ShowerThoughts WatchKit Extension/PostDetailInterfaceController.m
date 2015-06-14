@@ -13,6 +13,7 @@
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *postLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *timeLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *userLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *postScore;
 @property (nonatomic)Post *selPost;
 @end
 
@@ -21,10 +22,11 @@
 -(void)setSelPost:(Post *)selPost {
     [self.postLabel setText:selPost.body];
     [self.userLabel setText:selPost.author];
-    NSDateFormatter *dForm = [NSDateFormatter new];
-    dForm.dateFormat = @"MMM dd, yyyy";
-    NSString *s = [dForm stringFromDate:selPost.datePosted];
-    [self.userLabel setText:s];
+    [self.postScore setText:[selPost.votes stringValue]];
+//    NSDateFormatter *dForm = [NSDateFormatter new];
+//    dForm.dateFormat = @"MMM dd, yyyy";
+//    NSString *s = [dForm stringFromDate:selPost.datePosted];
+//    [self.userLabel setText:selPost.author];
 }
 
 - (void)awakeWithContext:(id)context {

@@ -27,6 +27,7 @@
                                                 </items>
                                             </group>
                                         </items>
+                                        <edgeInsets key="margins" left="6" right="3" top="3" bottom="3"/>
                                     </group>
                                     <connections>
                                         <outlet property="postBodyLabel" destination="Yig-03-9wM" id="5eN-t0-n2Q"/>
@@ -47,11 +48,6 @@
                             <menuItem title="New Thought" icon="add" id="Umh-VV-niz">
                                 <connections>
                                     <action selector="onNewThoughtButtonPressed" destination="AgC-eL-Hgc" id="ra8-f1-I4c"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Drafts" icon="more" id="yHE-ah-jZl">
-                                <connections>
-                                    <action selector="onDraftsButtonPressed" destination="AgC-eL-Hgc" id="5Bi-Y1-RRm"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -99,6 +95,7 @@
                     </items>
                     <connections>
                         <outlet property="postLabel" destination="iUT-eS-sep" id="RZp-M9-jg4"/>
+                        <outlet property="postScore" destination="hKZ-nU-wrT" id="qbs-HO-hVu"/>
                         <outlet property="timeLabel" destination="l8q-U2-YGM" id="3Dy-4P-D3y"/>
                         <outlet property="userLabel" destination="9Hn-ZU-wz7" id="743-UL-RbT"/>
                     </connections>
