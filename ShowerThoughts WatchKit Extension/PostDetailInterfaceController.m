@@ -23,10 +23,10 @@
     [self.postLabel setText:selPost.body];
     [self.userLabel setText:selPost.author];
     [self.postScore setText:[selPost.votes stringValue]];
-//    NSDateFormatter *dForm = [NSDateFormatter new];
-//    dForm.dateFormat = @"MMM dd, yyyy";
-//    NSString *s = [dForm stringFromDate:selPost.datePosted];
-//    [self.userLabel setText:selPost.author];
+    NSDateFormatter *dForm = [NSDateFormatter new];
+    dForm.dateFormat = @"MMM dd, yyyy";
+    NSString *s = [dForm stringFromDate:selPost.datePosted];
+    [self.timeLabel setText:selPost.author];
 }
 
 - (void)awakeWithContext:(id)context {
