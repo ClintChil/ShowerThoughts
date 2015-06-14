@@ -37,9 +37,5 @@
     }];
 }
 
-+(void)pushPostToRedditInBackground:(void(^)(Post *post, NSError *error))completed {
-    [[RKClient sharedClient] submitSelfPostWithTitle:@"testingtime" subredditName:@"test" text:nil captchaIdentifier:nil captchaValue:nil completion:^(NSError *error) {
 
-    }];
-}
 @end

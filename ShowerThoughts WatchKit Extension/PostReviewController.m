@@ -1,19 +1,22 @@
 #import "PostReviewController.h"
+#import "Post.h"
 
 
 @interface PostReviewController ()
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *postBodyLabel;
-@property (weak, nonatomic) NSString *postTime;
+@property (weak, nonatomic) Post *post;
 @end
 
 
 @implementation PostReviewController
 
+
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     
     NSLog(@"%@", context);
-    self.postBodyLabel.text = context;
+    self.postBodyLabel.text = (NSString *)context;
+    self.post = [Post postWithBody:(NSString *)context];
 }
 
 - (IBAction)onRetakeButtonPressed {
@@ -21,7 +24,6 @@
         if (results.count) {
             NSLog(@"Dictation input: %@", results);
             self.postBodyLabel.text = results[0];
-            self.postTime = results[0];
         } else {
             NSLog(@"no input from user");
         }
@@ -29,13 +31,13 @@
 }
 
 - (IBAction)onPostButtonPressed {
-    
-    NSLog(@"onPostButtonPressed fired! MOTHERFUCKER FUCKER CUKER");
-    
-    [WKInterfaceController openParentApplication:@{@"action": @"count"} reply:^(NSDictionary *replyInfo, NSError *error) {
-        NSLog(@"Post request fired");
-        NSLog(@"Post request returned: %@", replyInfo ?: @"FUCK ALL");
-    }];
+    if (self.post) {
+        [self.post pushPostToRedditInBackground:^(NSError *error) {
+            if (error) {
+                NSLog(@"Post Error: %@", error.localizedDescription);
+            }
+        }];
+    }
 }
 
 @end

@@ -13,7 +13,12 @@
 @property NSString *body;
 @property NSNumber *votes;
 @property NSString *author;
+@property NSDate *created;
 
 +(NSArray *)postsFromArray:(NSArray *)array;
+
+-(void)pushPostToRedditInBackground:(void(^)(NSError *error))completed;
+
++(instancetype)postWithBody:(NSString *)body;
 
 @end

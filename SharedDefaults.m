@@ -19,17 +19,17 @@ static NSString *const PasswordKey = @"password";
     [defaults setObject:username forKey:UserNameKey];
     [defaults setObject:password forKey:PasswordKey];
     [defaults synchronize];
-
-
 }
 
 +(NSString *)usernameDefault {
     NSUserDefaults *defaults = [[NSUserDefaults alloc]initWithSuiteName:GroupName];
-    return (NSString *)[defaults objectForKey:UserNameKey];
+    NSString *name = (NSString *)[defaults objectForKey:UserNameKey] ? (NSString *)[defaults objectForKey:UserNameKey] : @"clintchil";
+    return name;
 }
 
 +(NSString *)passwordDefault {
     NSUserDefaults *defaults = [[NSUserDefaults alloc]initWithSuiteName:GroupName];
-    return (NSString *)[defaults objectForKey:PasswordKey];
+    NSString *password =  (NSString *)[defaults objectForKey:PasswordKey] ? (NSString *)[defaults objectForKey:PasswordKey] : @"poopfart2";
+    return password;
 }
 @end
