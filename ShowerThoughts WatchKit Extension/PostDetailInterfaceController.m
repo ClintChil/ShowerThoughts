@@ -25,8 +25,8 @@
     [self.postScore setText:[selPost.votes stringValue]];
     NSDateFormatter *dForm = [NSDateFormatter new];
     dForm.dateFormat = @"MMM dd, yyyy";
-    NSString *s = [dForm stringFromDate:selPost.datePosted];
-    [self.timeLabel setText:selPost.author];
+    NSString *s = [dForm stringFromDate:selPost.created];
+    [self.timeLabel setText:s];
 }
 
 - (void)awakeWithContext:(id)context {
