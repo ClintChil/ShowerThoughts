@@ -13,14 +13,20 @@
 @property NSString *body;
 @property NSNumber *votes;
 @property NSString *author;
-@property NSDate *created;
+<<<<<<< HEAD
+@property NSDate *datePosted;
 
 +(NSArray *)postsFromArray:(NSArray *)array;
 +(instancetype)defaultPost;
 +(instancetype)postForError:(NSError *)error;
+=======
+@property NSDate *created;
+
++(NSArray *)postsFromArray:(NSArray *)array;
 
 -(void)pushPostToRedditInBackground:(void(^)(NSError *error))completed;
 
 +(instancetype)postWithBody:(NSString *)body;
 
+>>>>>>> pullData
 @end

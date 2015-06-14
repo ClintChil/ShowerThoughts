@@ -33,13 +33,18 @@
     [super awakeWithContext:context];
     [self setTitle:@"Thoughts"];
 
-    [self configureTableWithData];
-    [RedditCall makeCallToRedditInBackground:^(NSArray *posts, NSError *error) {
+    [RedditCall pullPostsFromRedditInBackground:^(NSArray *posts, NSError *error) {
         if (error) {
             self.posts = @[[Post postForError:error]];
             NSLog(@"error: %@", error.localizedDescription);
         }
-        self.posts = posts;
+        else {
+            self.posts = posts;
+        }
+    } theSignUpInBackground:^(BOOL success, NSError *error) {
+        if (error) {
+            NSLog(@"Login error: %@", error.localizedDescription);
+        }
     }];
     self.posts = @[[Post defaultPost]];
 }
@@ -83,7 +88,10 @@
 }
 
 -(nullable id)contextForSegueWithIdentifier:(nonnull NSString *)segueIdentifier inTable:(nonnull WKInterfaceTable *)table rowIndex:(NSInteger)rowIndex {
-    return self.posts[rowIndex];
+    if ([segueIdentifier isEqualToString:@"ShowDetailSegue"]) {
+        return self.posts[rowIndex];
+    }
+    return nil;
 }
 
 

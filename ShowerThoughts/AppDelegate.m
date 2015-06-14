@@ -43,19 +43,19 @@
         
         
         
-        [[RKClient sharedClient] submitSelfPostWithTitle:@"testingtime" subredditName:@"test" text:nil captchaIdentifier:nil captchaValue:nil completion:^(NSError *error) {
-            [application endBackgroundTask:backgroundTaskID];
-            NSString *alertText;
-            alertText = error.localizedDescription;
-            
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"BOOM" message:alertText ?: @"Shit just got interesting" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"K" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {}];
-            [alertController addAction:defaultAction];
-            [self.window.rootViewController presentViewController:alertController animated:NO completion:nil];
-            
-            
-            reply(@{@"error": error ?: @"NO MOTHERFUCKING ERROR"});
-        }];
+//        [[RKClient sharedClient] submitSelfPostWithTitle:@"testingtime" subredditName:@"test" text:nil captchaIdentifier:nil captchaValue:nil completion:^(NSError *error) {
+//            [application endBackgroundTask:backgroundTaskID];
+//            NSString *alertText;
+//            alertText = error.localizedDescription;
+//            
+//            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"BOOM" message:alertText ?: @"Shit just got interesting" preferredStyle:UIAlertControllerStyleAlert];
+//            UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"K" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {}];
+//            [alertController addAction:defaultAction];
+//            [self.window.rootViewController presentViewController:alertController animated:NO completion:nil];
+//            
+//            
+//            reply(@{@"error": error ?: @"NO MOTHERFUCKING ERROR"});
+//        }];
     }
 }
 
