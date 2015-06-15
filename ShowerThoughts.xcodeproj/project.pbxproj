@@ -13,12 +13,11 @@
 		7A1539E01B0D4AE4004A7C45 /* PostReviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1539DF1B0D4AE4004A7C45 /* PostReviewController.m */; };
 		7A1BEE4F1AF448CB00A171C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE4E1AF448CB00A171C2 /* main.m */; };
 		7A1BEE521AF448CB00A171C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE511AF448CB00A171C2 /* AppDelegate.m */; };
-		7A1BEE551AF448CB00A171C2 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE541AF448CB00A171C2 /* RootViewController.m */; };
+		7A1BEE551AF448CB00A171C2 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE541AF448CB00A171C2 /* FeedViewController.m */; };
 		7A1BEE581AF448CB00A171C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE561AF448CB00A171C2 /* Main.storyboard */; };
 		7A1BEE5A1AF448CB00A171C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE591AF448CB00A171C2 /* Images.xcassets */; };
 		7A1BEE5D1AF448CB00A171C2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE5B1AF448CB00A171C2 /* LaunchScreen.xib */; };
 		7A1BEE7D1AF448EC00A171C2 /* RootInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE7C1AF448EC00A171C2 /* RootInterfaceController.m */; };
-		7A1BEE801AF448EC00A171C2 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1BEE7F1AF448EC00A171C2 /* NotificationController.m */; };
 		7A1BEE821AF448EC00A171C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE811AF448EC00A171C2 /* Images.xcassets */; };
 		7A1BEE861AF448EC00A171C2 /* ShowerThoughts WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE851AF448EC00A171C2 /* ShowerThoughts WatchKit App.app */; };
 		7A1BEE8E1AF448EC00A171C2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BEE8C1AF448EC00A171C2 /* Interface.storyboard */; };
@@ -26,9 +25,27 @@
 		7A1BEE931AF448EC00A171C2 /* ShowerThoughts WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7A1BEE761AF448EB00A171C2 /* ShowerThoughts WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7A4144A71B0E571B00A9104D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4144A61B0E571B00A9104D /* LoginViewController.m */; };
 		7A4160811B1F9062009DDB22 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4160801B1F9062009DDB22 /* libPods.a */; };
+		9B67BCFC1B2E46F700540991 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67BCFB1B2E46F700540991 /* Constants.m */; };
+		9B67BD061B2E470900540991 /* NSDateFormatter+STFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67BD001B2E470900540991 /* NSDateFormatter+STFormat.m */; };
+		9B67BD071B2E470900540991 /* NSString+DateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67BD021B2E470900540991 /* NSString+DateFormat.m */; };
+		9B67BD081B2E470900540991 /* UIColor+SRTColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67BD041B2E470900540991 /* UIColor+SRTColor.m */; };
+		9B76ED881B2E613F0098DCCC /* STAError.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76ED871B2E613F0098DCCC /* STAError.m */; };
+		9B76ED8C1B2E68000098DCCC /* STAError.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76ED871B2E613F0098DCCC /* STAError.m */; };
+		9B76ED8D1B2E68260098DCCC /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67BCFB1B2E46F700540991 /* Constants.m */; };
+		9B76ED931B2E720D0098DCCC /* FeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76ED921B2E720D0098DCCC /* FeedTableViewCell.m */; };
+		9B76ED951B2E75C70098DCCC /* RedditCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F51B2CD64E0055633B /* RedditCall.m */; };
+		9B76ED961B2E7D150098DCCC /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA2021A1B0D7A8100CCE4E5 /* Post.m */; };
+		9B76ED9A1B2E7E940098DCCC /* InitialNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76ED991B2E7E940098DCCC /* InitialNavController.m */; };
+		9B76ED9E1B2EA5980098DCCC /* DetailPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76ED9D1B2EA5980098DCCC /* DetailPostViewController.m */; };
+		9B76EDA21B2EB1FF0098DCCC /* PostTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76EDA11B2EB1FF0098DCCC /* PostTextView.m */; };
+		9B76EDA51B2EB3680098DCCC /* STAWButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76EDA41B2EB3680098DCCC /* STAWButton.m */; };
+		9B76EDAD1B2EB5E30098DCCC /* NewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76EDAC1B2EB5E30098DCCC /* NewPostViewController.m */; };
+		9B76EDB01B2EBD500098DCCC /* RoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76EDAF1B2EBD500098DCCC /* RoundedView.m */; };
 		9B8D21F61B2CD64E0055633B /* RedditCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F51B2CD64E0055633B /* RedditCall.m */; };
 		9B8D21F91B2CF1290055633B /* SharedDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F81B2CF1290055633B /* SharedDefaults.m */; };
 		9B8D21FA1B2CF2D80055633B /* SharedDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F81B2CF1290055633B /* SharedDefaults.m */; };
+		9BC09CBA1B2E486600C0A57C /* STAAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC09CB91B2E486600C0A57C /* STAAlert.m */; };
+		9BC09CC11B2E4C8200C0A57C /* STAButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC09CC01B2E4C8200C0A57C /* STAButton.m */; };
 		BA891EA81B05A7CE00471FA6 /* MainRowType.m in Sources */ = {isa = PBXBuildFile; fileRef = BA891EA71B05A7CE00471FA6 /* MainRowType.m */; };
 		BAA2021B1B0D7A8100CCE4E5 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA2021A1B0D7A8100CCE4E5 /* Post.m */; };
 /* End PBXBuildFile section */
@@ -74,8 +91,8 @@
 		7A1BEE4E1AF448CB00A171C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A1BEE501AF448CB00A171C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7A1BEE511AF448CB00A171C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7A1BEE531AF448CB00A171C2 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		7A1BEE541AF448CB00A171C2 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		7A1BEE531AF448CB00A171C2 /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		7A1BEE541AF448CB00A171C2 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		7A1BEE571AF448CB00A171C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A1BEE591AF448CB00A171C2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7A1BEE5C1AF448CB00A171C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -84,8 +101,6 @@
 		7A1BEE7A1AF448EC00A171C2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		7A1BEE7B1AF448EC00A171C2 /* RootInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootInterfaceController.h; sourceTree = "<group>"; };
 		7A1BEE7C1AF448EC00A171C2 /* RootInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootInterfaceController.m; sourceTree = "<group>"; };
-		7A1BEE7E1AF448EC00A171C2 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
-		7A1BEE7F1AF448EC00A171C2 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		7A1BEE811AF448EC00A171C2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7A1BEE851AF448EC00A171C2 /* ShowerThoughts WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShowerThoughts WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1BEE8B1AF448EC00A171C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,16 +112,45 @@
 		7A4160801B1F9062009DDB22 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		7A67B0561B2D252600DB7C65 /* ShowerThoughts WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ShowerThoughts WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		7A7ACA901B2CB56B000DA884 /* ShowerThoughts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ShowerThoughts.entitlements; sourceTree = "<group>"; };
-		9B8D21F41B2CD64E0055633B /* RedditCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedditCall.h; sourceTree = "<group>"; };
-		9B8D21F51B2CD64E0055633B /* RedditCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedditCall.m; sourceTree = "<group>"; };
+		9B67BCFA1B2E46F700540991 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		9B67BCFB1B2E46F700540991 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		9B67BCFF1B2E470900540991 /* NSDateFormatter+STFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+STFormat.h"; sourceTree = "<group>"; };
+		9B67BD001B2E470900540991 /* NSDateFormatter+STFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+STFormat.m"; sourceTree = "<group>"; };
+		9B67BD011B2E470900540991 /* NSString+DateFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DateFormat.h"; sourceTree = "<group>"; };
+		9B67BD021B2E470900540991 /* NSString+DateFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DateFormat.m"; sourceTree = "<group>"; };
+		9B67BD031B2E470900540991 /* UIColor+SRTColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SRTColor.h"; sourceTree = "<group>"; };
+		9B67BD041B2E470900540991 /* UIColor+SRTColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SRTColor.m"; sourceTree = "<group>"; };
+		9B76ED811B2E52290098DCCC /* ShowerThoughts WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ShowerThoughts WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		9B76ED861B2E613F0098DCCC /* STAError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAError.h; sourceTree = "<group>"; };
+		9B76ED871B2E613F0098DCCC /* STAError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAError.m; sourceTree = "<group>"; };
+		9B76ED911B2E720D0098DCCC /* FeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewCell.h; sourceTree = "<group>"; };
+		9B76ED921B2E720D0098DCCC /* FeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewCell.m; sourceTree = "<group>"; };
+		9B76ED981B2E7E940098DCCC /* InitialNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialNavController.h; sourceTree = "<group>"; };
+		9B76ED991B2E7E940098DCCC /* InitialNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialNavController.m; sourceTree = "<group>"; };
+		9B76ED9C1B2EA5980098DCCC /* DetailPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPostViewController.h; sourceTree = "<group>"; };
+		9B76ED9D1B2EA5980098DCCC /* DetailPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPostViewController.m; sourceTree = "<group>"; };
+		9B76EDA01B2EB1FF0098DCCC /* PostTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostTextView.h; sourceTree = "<group>"; };
+		9B76EDA11B2EB1FF0098DCCC /* PostTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostTextView.m; sourceTree = "<group>"; };
+		9B76EDA31B2EB3680098DCCC /* STAWButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAWButton.h; sourceTree = "<group>"; };
+		9B76EDA41B2EB3680098DCCC /* STAWButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAWButton.m; sourceTree = "<group>"; };
+		9B76EDAB1B2EB5E30098DCCC /* NewPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPostViewController.h; sourceTree = "<group>"; };
+		9B76EDAC1B2EB5E30098DCCC /* NewPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPostViewController.m; sourceTree = "<group>"; };
+		9B76EDAE1B2EBD500098DCCC /* RoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedView.h; sourceTree = "<group>"; };
+		9B76EDAF1B2EBD500098DCCC /* RoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedView.m; sourceTree = "<group>"; };
+		9B8D21F41B2CD64E0055633B /* RedditCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedditCall.h; path = "ShowerThoughts WatchKit Extension/RedditCall.h"; sourceTree = "<group>"; };
+		9B8D21F51B2CD64E0055633B /* RedditCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedditCall.m; path = "ShowerThoughts WatchKit Extension/RedditCall.m"; sourceTree = "<group>"; };
 		9B8D21F71B2CF1290055633B /* SharedDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedDefaults.h; sourceTree = "<group>"; };
 		9B8D21F81B2CF1290055633B /* SharedDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedDefaults.m; sourceTree = "<group>"; };
+		9BC09CB81B2E486600C0A57C /* STAAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAAlert.h; sourceTree = "<group>"; };
+		9BC09CB91B2E486600C0A57C /* STAAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAAlert.m; sourceTree = "<group>"; };
+		9BC09CBF1B2E4C8200C0A57C /* STAButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAButton.h; sourceTree = "<group>"; };
+		9BC09CC01B2E4C8200C0A57C /* STAButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAButton.m; sourceTree = "<group>"; };
 		9EAC77989FDDA221678C64E5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B8849DC9DD856451BD668640 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BA891EA61B05A7CE00471FA6 /* MainRowType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainRowType.h; path = "ShowerThoughts WatchKit Extension/MainRowType.h"; sourceTree = SOURCE_ROOT; };
 		BA891EA71B05A7CE00471FA6 /* MainRowType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainRowType.m; path = "ShowerThoughts WatchKit Extension/MainRowType.m"; sourceTree = SOURCE_ROOT; };
-		BAA202191B0D7A8100CCE4E5 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
-		BAA2021A1B0D7A8100CCE4E5 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		BAA202191B0D7A8100CCE4E5 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Post.h; path = "ShowerThoughts WatchKit Extension/Post.h"; sourceTree = "<group>"; };
+		BAA2021A1B0D7A8100CCE4E5 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = "ShowerThoughts WatchKit Extension/Post.m"; sourceTree = "<group>"; };
 		E4AA45FACCA871FC8DC7F4E0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -156,11 +200,14 @@
 		7A1BEE401AF448CB00A171C2 = {
 			isa = PBXGroup;
 			children = (
-				9B8D21F71B2CF1290055633B /* SharedDefaults.h */,
-				9B8D21F81B2CF1290055633B /* SharedDefaults.m */,
 				7A1BEE4B1AF448CB00A171C2 /* ShowerThoughts */,
 				7A1BEE771AF448EB00A171C2 /* ShowerThoughts WatchKit Extension */,
 				7A1BEE891AF448EC00A171C2 /* ShowerThoughts WatchKit App */,
+				9B76ED891B2E632B0098DCCC /* STAError */,
+				9B76ED821B2E55270098DCCC /* Model Objects */,
+				9BC09CB71B2E483F00C0A57C /* Constants */,
+				9BC09CB61B2E482C00C0A57C /* SharedDefaults */,
+				9BC09CB51B2E481800C0A57C /* Categories */,
 				7A1BEE4A1AF448CB00A171C2 /* Products */,
 				E085A20F6570C28A8B44257D /* Pods */,
 				741944B0CB4973FB56F5661F /* Frameworks */,
@@ -181,14 +228,15 @@
 		7A1BEE4B1AF448CB00A171C2 /* ShowerThoughts */ = {
 			isa = PBXGroup;
 			children = (
+				9B76EDA91B2EB58E0098DCCC /* UI */,
+				9B76ED9F1B2EA5B10098DCCC /* ViewControllers */,
+				9B76ED971B2E7D230098DCCC /* STAButton */,
+				9B76ED941B2E73200098DCCC /* FeedTableViewCell */,
+				9BC09CC21B2E4CF400C0A57C /* STAAlert */,
 				7A7ACA901B2CB56B000DA884 /* ShowerThoughts.entitlements */,
 				7A1BEE501AF448CB00A171C2 /* AppDelegate.h */,
 				7A1BEE511AF448CB00A171C2 /* AppDelegate.m */,
 				7A1BEE561AF448CB00A171C2 /* Main.storyboard */,
-				7A1BEE531AF448CB00A171C2 /* RootViewController.h */,
-				7A1BEE541AF448CB00A171C2 /* RootViewController.m */,
-				7A4144A51B0E571B00A9104D /* LoginViewController.h */,
-				7A4144A61B0E571B00A9104D /* LoginViewController.m */,
 				7A1BEE591AF448CB00A171C2 /* Images.xcassets */,
 				7A1BEE5B1AF448CB00A171C2 /* LaunchScreen.xib */,
 				7A1BEE4C1AF448CB00A171C2 /* Supporting Files */,
@@ -208,21 +256,11 @@
 		7A1BEE771AF448EB00A171C2 /* ShowerThoughts WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				7A67B0561B2D252600DB7C65 /* ShowerThoughts WatchKit Extension.entitlements */,
-				7A1BEE7B1AF448EC00A171C2 /* RootInterfaceController.h */,
-				7A1BEE7C1AF448EC00A171C2 /* RootInterfaceController.m */,
-				7A1539DE1B0D4AE4004A7C45 /* PostReviewController.h */,
-				7A1539DF1B0D4AE4004A7C45 /* PostReviewController.m */,
-				3E06E5531B2CE338000C5B05 /* PostDetailInterfaceController.h */,
-				3E06E5541B2CE338000C5B05 /* PostDetailInterfaceController.m */,
-				9B8D21F41B2CD64E0055633B /* RedditCall.h */,
-				9B8D21F51B2CD64E0055633B /* RedditCall.m */,
-				BAA202191B0D7A8100CCE4E5 /* Post.h */,
-				BAA2021A1B0D7A8100CCE4E5 /* Post.m */,
-				7A1BEE7E1AF448EC00A171C2 /* NotificationController.h */,
-				7A1BEE7F1AF448EC00A171C2 /* NotificationController.m */,
-				BA891EA61B05A7CE00471FA6 /* MainRowType.h */,
-				BA891EA71B05A7CE00471FA6 /* MainRowType.m */,
+				9B76ED831B2E5D7E0098DCCC /* RootController */,
+				9B76ED8B1B2E644E0098DCCC /* PostDetailInterfaceController */,
+				9B76ED8A1B2E643F0098DCCC /* PostReviewController */,
+				9B76ED811B2E52290098DCCC /* ShowerThoughts WatchKit Extension.entitlements */,
+				9B76ED841B2E5DAB0098DCCC /* MainRowType */,
 				7A1BEE811AF448EC00A171C2 /* Images.xcassets */,
 				7A1BEE781AF448EC00A171C2 /* Supporting Files */,
 			);
@@ -254,6 +292,190 @@
 				7A1BEE8B1AF448EC00A171C2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9B76ED821B2E55270098DCCC /* Model Objects */ = {
+			isa = PBXGroup;
+			children = (
+				9B8D21F41B2CD64E0055633B /* RedditCall.h */,
+				9B8D21F51B2CD64E0055633B /* RedditCall.m */,
+				BAA202191B0D7A8100CCE4E5 /* Post.h */,
+				BAA2021A1B0D7A8100CCE4E5 /* Post.m */,
+			);
+			name = "Model Objects";
+			sourceTree = "<group>";
+		};
+		9B76ED831B2E5D7E0098DCCC /* RootController */ = {
+			isa = PBXGroup;
+			children = (
+				7A1BEE7B1AF448EC00A171C2 /* RootInterfaceController.h */,
+				7A1BEE7C1AF448EC00A171C2 /* RootInterfaceController.m */,
+			);
+			name = RootController;
+			sourceTree = "<group>";
+		};
+		9B76ED841B2E5DAB0098DCCC /* MainRowType */ = {
+			isa = PBXGroup;
+			children = (
+				BA891EA61B05A7CE00471FA6 /* MainRowType.h */,
+				BA891EA71B05A7CE00471FA6 /* MainRowType.m */,
+			);
+			name = MainRowType;
+			sourceTree = "<group>";
+		};
+		9B76ED891B2E632B0098DCCC /* STAError */ = {
+			isa = PBXGroup;
+			children = (
+				9B76ED861B2E613F0098DCCC /* STAError.h */,
+				9B76ED871B2E613F0098DCCC /* STAError.m */,
+			);
+			name = STAError;
+			sourceTree = "<group>";
+		};
+		9B76ED8A1B2E643F0098DCCC /* PostReviewController */ = {
+			isa = PBXGroup;
+			children = (
+				7A1539DE1B0D4AE4004A7C45 /* PostReviewController.h */,
+				7A1539DF1B0D4AE4004A7C45 /* PostReviewController.m */,
+			);
+			name = PostReviewController;
+			sourceTree = "<group>";
+		};
+		9B76ED8B1B2E644E0098DCCC /* PostDetailInterfaceController */ = {
+			isa = PBXGroup;
+			children = (
+				3E06E5531B2CE338000C5B05 /* PostDetailInterfaceController.h */,
+				3E06E5541B2CE338000C5B05 /* PostDetailInterfaceController.m */,
+			);
+			name = PostDetailInterfaceController;
+			sourceTree = "<group>";
+		};
+		9B76ED941B2E73200098DCCC /* FeedTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9B76ED911B2E720D0098DCCC /* FeedTableViewCell.h */,
+				9B76ED921B2E720D0098DCCC /* FeedTableViewCell.m */,
+			);
+			name = FeedTableViewCell;
+			sourceTree = "<group>";
+		};
+		9B76ED971B2E7D230098DCCC /* STAButton */ = {
+			isa = PBXGroup;
+			children = (
+				9BC09CBF1B2E4C8200C0A57C /* STAButton.h */,
+				9BC09CC01B2E4C8200C0A57C /* STAButton.m */,
+			);
+			name = STAButton;
+			sourceTree = "<group>";
+		};
+		9B76ED9B1B2E84400098DCCC /* InitialNavController */ = {
+			isa = PBXGroup;
+			children = (
+				9B76ED981B2E7E940098DCCC /* InitialNavController.h */,
+				9B76ED991B2E7E940098DCCC /* InitialNavController.m */,
+			);
+			name = InitialNavController;
+			sourceTree = "<group>";
+		};
+		9B76ED9F1B2EA5B10098DCCC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9B76EDAA1B2EB5AD0098DCCC /* NewPostVC */,
+				9B76EDA81B2EB5740098DCCC /* DetailPostVC */,
+				9B76EDA71B2EB5690098DCCC /* LoginVC */,
+				9B76EDA61B2EB55C0098DCCC /* FeedVC */,
+				9B76ED9B1B2E84400098DCCC /* InitialNavController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9B76EDA61B2EB55C0098DCCC /* FeedVC */ = {
+			isa = PBXGroup;
+			children = (
+				7A1BEE531AF448CB00A171C2 /* FeedViewController.h */,
+				7A1BEE541AF448CB00A171C2 /* FeedViewController.m */,
+			);
+			name = FeedVC;
+			sourceTree = "<group>";
+		};
+		9B76EDA71B2EB5690098DCCC /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				7A4144A51B0E571B00A9104D /* LoginViewController.h */,
+				7A4144A61B0E571B00A9104D /* LoginViewController.m */,
+			);
+			name = LoginVC;
+			sourceTree = "<group>";
+		};
+		9B76EDA81B2EB5740098DCCC /* DetailPostVC */ = {
+			isa = PBXGroup;
+			children = (
+				9B76ED9C1B2EA5980098DCCC /* DetailPostViewController.h */,
+				9B76ED9D1B2EA5980098DCCC /* DetailPostViewController.m */,
+			);
+			name = DetailPostVC;
+			sourceTree = "<group>";
+		};
+		9B76EDA91B2EB58E0098DCCC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9B76EDA01B2EB1FF0098DCCC /* PostTextView.h */,
+				9B76EDA11B2EB1FF0098DCCC /* PostTextView.m */,
+				9B76EDA31B2EB3680098DCCC /* STAWButton.h */,
+				9B76EDA41B2EB3680098DCCC /* STAWButton.m */,
+				9B76EDAE1B2EBD500098DCCC /* RoundedView.h */,
+				9B76EDAF1B2EBD500098DCCC /* RoundedView.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		9B76EDAA1B2EB5AD0098DCCC /* NewPostVC */ = {
+			isa = PBXGroup;
+			children = (
+				9B76EDAB1B2EB5E30098DCCC /* NewPostViewController.h */,
+				9B76EDAC1B2EB5E30098DCCC /* NewPostViewController.m */,
+			);
+			name = NewPostVC;
+			sourceTree = "<group>";
+		};
+		9BC09CB51B2E481800C0A57C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9B67BCFF1B2E470900540991 /* NSDateFormatter+STFormat.h */,
+				9B67BD001B2E470900540991 /* NSDateFormatter+STFormat.m */,
+				9B67BD011B2E470900540991 /* NSString+DateFormat.h */,
+				9B67BD021B2E470900540991 /* NSString+DateFormat.m */,
+				9B67BD031B2E470900540991 /* UIColor+SRTColor.h */,
+				9B67BD041B2E470900540991 /* UIColor+SRTColor.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		9BC09CB61B2E482C00C0A57C /* SharedDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				9B8D21F71B2CF1290055633B /* SharedDefaults.h */,
+				9B8D21F81B2CF1290055633B /* SharedDefaults.m */,
+			);
+			name = SharedDefaults;
+			sourceTree = "<group>";
+		};
+		9BC09CB71B2E483F00C0A57C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9B67BCFA1B2E46F700540991 /* Constants.h */,
+				9B67BCFB1B2E46F700540991 /* Constants.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		9BC09CC21B2E4CF400C0A57C /* STAAlert */ = {
+			isa = PBXGroup;
+			children = (
+				9BC09CB81B2E486600C0A57C /* STAAlert.h */,
+				9BC09CB91B2E486600C0A57C /* STAAlert.m */,
+			);
+			name = STAAlert;
 			sourceTree = "<group>";
 		};
 		E085A20F6570C28A8B44257D /* Pods */ = {
@@ -366,7 +588,7 @@
 				TargetAttributes = {
 					7A1BEE481AF448CB00A171C2 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = NNYCX27J4X;
+						DevelopmentTeam = S38456XTSR;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -375,7 +597,7 @@
 					};
 					7A1BEE751AF448EB00A171C2 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = NNYCX27J4X;
+						DevelopmentTeam = S38456XTSR;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -384,7 +606,7 @@
 					};
 					7A1BEE841AF448EC00A171C2 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = NNYCX27J4X;
+						DevelopmentTeam = S38456XTSR;
 					};
 					7A212E9E1B2CAB9E0009906F = {
 						CreatedOnToolsVersion = 7.0;
@@ -548,12 +770,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A1BEE551AF448CB00A171C2 /* RootViewController.m in Sources */,
+				9B76EDAD1B2EB5E30098DCCC /* NewPostViewController.m in Sources */,
+				9B76ED9A1B2E7E940098DCCC /* InitialNavController.m in Sources */,
+				7A1BEE551AF448CB00A171C2 /* FeedViewController.m in Sources */,
 				7A1BEE521AF448CB00A171C2 /* AppDelegate.m in Sources */,
+				9B67BD081B2E470900540991 /* UIColor+SRTColor.m in Sources */,
 				9B8D21F91B2CF1290055633B /* SharedDefaults.m in Sources */,
+				9B67BD061B2E470900540991 /* NSDateFormatter+STFormat.m in Sources */,
+				9B76EDA51B2EB3680098DCCC /* STAWButton.m in Sources */,
 				7A1BEE4F1AF448CB00A171C2 /* main.m in Sources */,
+				9B76ED9E1B2EA5980098DCCC /* DetailPostViewController.m in Sources */,
 				BA891EA81B05A7CE00471FA6 /* MainRowType.m in Sources */,
+				9B76ED961B2E7D150098DCCC /* Post.m in Sources */,
+				9BC09CBA1B2E486600C0A57C /* STAAlert.m in Sources */,
+				9B76EDA21B2EB1FF0098DCCC /* PostTextView.m in Sources */,
+				9B67BCFC1B2E46F700540991 /* Constants.m in Sources */,
+				9B67BD071B2E470900540991 /* NSString+DateFormat.m in Sources */,
+				9B76ED951B2E75C70098DCCC /* RedditCall.m in Sources */,
+				9B76ED881B2E613F0098DCCC /* STAError.m in Sources */,
+				9B76EDB01B2EBD500098DCCC /* RoundedView.m in Sources */,
+				9B76ED931B2E720D0098DCCC /* FeedTableViewCell.m in Sources */,
 				7A4144A71B0E571B00A9104D /* LoginViewController.m in Sources */,
+				9BC09CC11B2E4C8200C0A57C /* STAButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,12 +801,13 @@
 			files = (
 				BAA2021B1B0D7A8100CCE4E5 /* Post.m in Sources */,
 				9B8D21F61B2CD64E0055633B /* RedditCall.m in Sources */,
-				7A1BEE801AF448EC00A171C2 /* NotificationController.m in Sources */,
 				7A1539DD1B0C0810004A7C45 /* MainRowType.m in Sources */,
 				7A1BEE7D1AF448EC00A171C2 /* RootInterfaceController.m in Sources */,
 				7A1539E01B0D4AE4004A7C45 /* PostReviewController.m in Sources */,
 				3E06E5551B2CE338000C5B05 /* PostDetailInterfaceController.m in Sources */,
 				9B8D21FA1B2CF2D80055633B /* SharedDefaults.m in Sources */,
+				9B76ED8C1B2E68000098DCCC /* STAError.m in Sources */,
+				9B76ED8D1B2E68260098DCCC /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

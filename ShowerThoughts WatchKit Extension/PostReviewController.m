@@ -1,5 +1,6 @@
 #import "PostReviewController.h"
 #import "Post.h"
+#import "Constants.h"
 
 
 @interface PostReviewController ()
@@ -13,8 +14,7 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    
-    NSLog(@"%@", context);
+
     self.postBodyLabel.text = (NSString *)context;
     self.post = [Post postWithBody:(NSString *)context];
 }
@@ -31,14 +31,16 @@
 }
 
 - (IBAction)onPostButtonPressed {
-    [self dismissController];
-    //    if (self.post) {
-//        [self.post pushPostToRedditInBackground:^(NSError *error) {
-//            if (error) {
-//                NSLog(@"Post Error: %@", error.localizedDescription);
-//            }
-//        }];
-//    }
+    if (self.post) {
+        [self.post pushPostToRedditInBackground:^(NSError *error) {
+            if (error) {
+                NSLog(@"error: %@", error.localizedDescription);
+            }
+            [self dismissController];
+        }];
+    }else {
+        [self dismissController];
+    }
 }
 
 @end

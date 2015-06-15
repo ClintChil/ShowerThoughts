@@ -13,5 +13,6 @@
 
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *postBodyLabel;
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *postVoteLabel;
+@property (weak, nonatomic) IBOutlet WKInterfaceImage *upArrowImage;
 
 @end
