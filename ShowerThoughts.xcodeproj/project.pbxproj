@@ -110,7 +110,6 @@
 		7A4144A51B0E571B00A9104D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		7A4144A61B0E571B00A9104D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		7A4160801B1F9062009DDB22 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
-		7A67B0561B2D252600DB7C65 /* ShowerThoughts WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ShowerThoughts WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		7A7ACA901B2CB56B000DA884 /* ShowerThoughts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ShowerThoughts.entitlements; sourceTree = "<group>"; };
 		9B67BCFA1B2E46F700540991 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		9B67BCFB1B2E46F700540991 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
@@ -588,7 +587,7 @@
 				TargetAttributes = {
 					7A1BEE481AF448CB00A171C2 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = S38456XTSR;
+						DevelopmentTeam = NNYCX27J4X;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -597,7 +596,7 @@
 					};
 					7A1BEE751AF448EB00A171C2 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = S38456XTSR;
+						DevelopmentTeam = NNYCX27J4X;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -606,7 +605,7 @@
 					};
 					7A1BEE841AF448EC00A171C2 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = S38456XTSR;
+						DevelopmentTeam = NNYCX27J4X;
 					};
 					7A212E9E1B2CAB9E0009906F = {
 						CreatedOnToolsVersion = 7.0;

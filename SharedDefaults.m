@@ -10,7 +10,7 @@
 
 @implementation SharedDefaults
 
-static NSString *const GroupName = @"group.com.RichFell.ShowerThoughts";
+static NSString *const GroupName = @"group.com.crisafisoft.ShowerThoughts";
 static NSString *const UserNameKey = @"username";
 static NSString *const PasswordKey = @"password";
 static NSString *const HasSignedInKey = @"HasSignedIn";
