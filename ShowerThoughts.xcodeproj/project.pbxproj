@@ -36,6 +36,10 @@
 		9B76ED951B2E75C70098DCCC /* RedditCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F51B2CD64E0055633B /* RedditCall.m */; };
 		9B76ED961B2E7D150098DCCC /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA2021A1B0D7A8100CCE4E5 /* Post.m */; };
 		9B76ED9A1B2E7E940098DCCC /* InitialNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76ED991B2E7E940098DCCC /* InitialNavController.m */; };
+		9B76ED9E1B2EA5980098DCCC /* DetailPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76ED9D1B2EA5980098DCCC /* DetailPostViewController.m */; };
+		9B76EDA21B2EB1FF0098DCCC /* PostTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76EDA11B2EB1FF0098DCCC /* PostTextView.m */; };
+		9B76EDA51B2EB3680098DCCC /* STAWButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76EDA41B2EB3680098DCCC /* STAWButton.m */; };
+		9B76EDAD1B2EB5E30098DCCC /* NewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76EDAC1B2EB5E30098DCCC /* NewPostViewController.m */; };
 		9B8D21F61B2CD64E0055633B /* RedditCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F51B2CD64E0055633B /* RedditCall.m */; };
 		9B8D21F91B2CF1290055633B /* SharedDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F81B2CF1290055633B /* SharedDefaults.m */; };
 		9B8D21FA1B2CF2D80055633B /* SharedDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F81B2CF1290055633B /* SharedDefaults.m */; };
@@ -121,6 +125,14 @@
 		9B76ED921B2E720D0098DCCC /* FeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewCell.m; sourceTree = "<group>"; };
 		9B76ED981B2E7E940098DCCC /* InitialNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialNavController.h; sourceTree = "<group>"; };
 		9B76ED991B2E7E940098DCCC /* InitialNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialNavController.m; sourceTree = "<group>"; };
+		9B76ED9C1B2EA5980098DCCC /* DetailPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPostViewController.h; sourceTree = "<group>"; };
+		9B76ED9D1B2EA5980098DCCC /* DetailPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPostViewController.m; sourceTree = "<group>"; };
+		9B76EDA01B2EB1FF0098DCCC /* PostTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostTextView.h; sourceTree = "<group>"; };
+		9B76EDA11B2EB1FF0098DCCC /* PostTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostTextView.m; sourceTree = "<group>"; };
+		9B76EDA31B2EB3680098DCCC /* STAWButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAWButton.h; sourceTree = "<group>"; };
+		9B76EDA41B2EB3680098DCCC /* STAWButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAWButton.m; sourceTree = "<group>"; };
+		9B76EDAB1B2EB5E30098DCCC /* NewPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPostViewController.h; sourceTree = "<group>"; };
+		9B76EDAC1B2EB5E30098DCCC /* NewPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPostViewController.m; sourceTree = "<group>"; };
 		9B8D21F41B2CD64E0055633B /* RedditCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedditCall.h; path = "ShowerThoughts WatchKit Extension/RedditCall.h"; sourceTree = "<group>"; };
 		9B8D21F51B2CD64E0055633B /* RedditCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedditCall.m; path = "ShowerThoughts WatchKit Extension/RedditCall.m"; sourceTree = "<group>"; };
 		9B8D21F71B2CF1290055633B /* SharedDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedDefaults.h; sourceTree = "<group>"; };
@@ -212,7 +224,8 @@
 		7A1BEE4B1AF448CB00A171C2 /* ShowerThoughts */ = {
 			isa = PBXGroup;
 			children = (
-				9B76ED9B1B2E84400098DCCC /* InitialNavController */,
+				9B76EDA91B2EB58E0098DCCC /* UI */,
+				9B76ED9F1B2EA5B10098DCCC /* ViewControllers */,
 				9B76ED971B2E7D230098DCCC /* STAButton */,
 				9B76ED941B2E73200098DCCC /* FeedTableViewCell */,
 				9BC09CC21B2E4CF400C0A57C /* STAAlert */,
@@ -220,10 +233,6 @@
 				7A1BEE501AF448CB00A171C2 /* AppDelegate.h */,
 				7A1BEE511AF448CB00A171C2 /* AppDelegate.m */,
 				7A1BEE561AF448CB00A171C2 /* Main.storyboard */,
-				7A1BEE531AF448CB00A171C2 /* FeedViewController.h */,
-				7A1BEE541AF448CB00A171C2 /* FeedViewController.m */,
-				7A4144A51B0E571B00A9104D /* LoginViewController.h */,
-				7A4144A61B0E571B00A9104D /* LoginViewController.m */,
 				7A1BEE591AF448CB00A171C2 /* Images.xcassets */,
 				7A1BEE5B1AF448CB00A171C2 /* LaunchScreen.xib */,
 				7A1BEE4C1AF448CB00A171C2 /* Supporting Files */,
@@ -362,6 +371,65 @@
 				9B76ED991B2E7E940098DCCC /* InitialNavController.m */,
 			);
 			name = InitialNavController;
+			sourceTree = "<group>";
+		};
+		9B76ED9F1B2EA5B10098DCCC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9B76EDAA1B2EB5AD0098DCCC /* NewPostVC */,
+				9B76EDA81B2EB5740098DCCC /* DetailPostVC */,
+				9B76EDA71B2EB5690098DCCC /* LoginVC */,
+				9B76EDA61B2EB55C0098DCCC /* FeedVC */,
+				9B76ED9B1B2E84400098DCCC /* InitialNavController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9B76EDA61B2EB55C0098DCCC /* FeedVC */ = {
+			isa = PBXGroup;
+			children = (
+				7A1BEE531AF448CB00A171C2 /* FeedViewController.h */,
+				7A1BEE541AF448CB00A171C2 /* FeedViewController.m */,
+			);
+			name = FeedVC;
+			sourceTree = "<group>";
+		};
+		9B76EDA71B2EB5690098DCCC /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				7A4144A51B0E571B00A9104D /* LoginViewController.h */,
+				7A4144A61B0E571B00A9104D /* LoginViewController.m */,
+			);
+			name = LoginVC;
+			sourceTree = "<group>";
+		};
+		9B76EDA81B2EB5740098DCCC /* DetailPostVC */ = {
+			isa = PBXGroup;
+			children = (
+				9B76ED9C1B2EA5980098DCCC /* DetailPostViewController.h */,
+				9B76ED9D1B2EA5980098DCCC /* DetailPostViewController.m */,
+			);
+			name = DetailPostVC;
+			sourceTree = "<group>";
+		};
+		9B76EDA91B2EB58E0098DCCC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9B76EDA01B2EB1FF0098DCCC /* PostTextView.h */,
+				9B76EDA11B2EB1FF0098DCCC /* PostTextView.m */,
+				9B76EDA31B2EB3680098DCCC /* STAWButton.h */,
+				9B76EDA41B2EB3680098DCCC /* STAWButton.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		9B76EDAA1B2EB5AD0098DCCC /* NewPostVC */ = {
+			isa = PBXGroup;
+			children = (
+				9B76EDAB1B2EB5E30098DCCC /* NewPostViewController.h */,
+				9B76EDAC1B2EB5E30098DCCC /* NewPostViewController.m */,
+			);
+			name = NewPostVC;
 			sourceTree = "<group>";
 		};
 		9BC09CB51B2E481800C0A57C /* Categories */ = {
@@ -696,16 +764,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B76EDAD1B2EB5E30098DCCC /* NewPostViewController.m in Sources */,
 				9B76ED9A1B2E7E940098DCCC /* InitialNavController.m in Sources */,
 				7A1BEE551AF448CB00A171C2 /* FeedViewController.m in Sources */,
 				7A1BEE521AF448CB00A171C2 /* AppDelegate.m in Sources */,
 				9B67BD081B2E470900540991 /* UIColor+SRTColor.m in Sources */,
 				9B8D21F91B2CF1290055633B /* SharedDefaults.m in Sources */,
 				9B67BD061B2E470900540991 /* NSDateFormatter+STFormat.m in Sources */,
+				9B76EDA51B2EB3680098DCCC /* STAWButton.m in Sources */,
 				7A1BEE4F1AF448CB00A171C2 /* main.m in Sources */,
+				9B76ED9E1B2EA5980098DCCC /* DetailPostViewController.m in Sources */,
 				BA891EA81B05A7CE00471FA6 /* MainRowType.m in Sources */,
 				9B76ED961B2E7D150098DCCC /* Post.m in Sources */,
 				9BC09CBA1B2E486600C0A57C /* STAAlert.m in Sources */,
+				9B76EDA21B2EB1FF0098DCCC /* PostTextView.m in Sources */,
 				9B67BCFC1B2E46F700540991 /* Constants.m in Sources */,
 				9B67BD071B2E470900540991 /* NSString+DateFormat.m in Sources */,
 				9B76ED951B2E75C70098DCCC /* RedditCall.m in Sources */,

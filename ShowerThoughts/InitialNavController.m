@@ -10,6 +10,7 @@
 #import "SharedDefaults.h"
 #import "LoginViewController.h"
 #import "UIColor+SRTColor.h"
+#import "RedditCall.h"
 
 @interface InitialNavController ()
 
@@ -25,6 +26,17 @@
     [super viewDidAppear:YES];
     if (![SharedDefaults hasSignedIn]) {
         [self presentViewController:[LoginViewController storyboardInstance] animated:YES completion:nil];
+    }
+}
+
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    if (![SharedDefaults hasSignedIn]) {
+        [RedditCall signInBackgroundWithUserName:[SharedDefaults usernameDefault] andPassword:[SharedDefaults passwordDefault] block:^(NSError *error) {
+            if (error) {
+                NSLog(@"Couldn't sign them up");
+            }
+        }];
     }
 }
 

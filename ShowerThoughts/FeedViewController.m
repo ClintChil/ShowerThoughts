@@ -11,6 +11,7 @@
 #import "RedditCall.h"
 #import "FeedTableViewCell.h"
 #import "STAAlert.h"
+#import "DetailPostViewController.h"
 
 @interface FeedViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
@@ -55,6 +56,13 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.destinationViewController isKindOfClass:[DetailPostViewController class]]) {
+        DetailPostViewController *dVC = segue.destinationViewController;
+        dVC.post = self.posts[[self.tableview indexPathForSelectedRow].row];
+    }
 }
 
 @end
