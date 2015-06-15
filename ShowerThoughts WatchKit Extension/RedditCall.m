@@ -24,7 +24,7 @@
 }
 
 +(void)checkIfCanSignIn {
-    if ([SharedDefaults usernameDefault] && [SharedDefaults passwordDefault]) {
+    if ([SharedDefaults hasSignedIn]) {
         [self signInBackgroundWithUserName:[SharedDefaults usernameDefault] andPassword:[SharedDefaults passwordDefault] block:^(NSError *error) {
             NSLog(@"error: %@", error.localizedDescription);
         }];

@@ -8,7 +8,7 @@
 
 #import "UIColor+SRTColor.h"
 
-@implementation UIColor (SRTColor)
+@implementation UIColor (STAColor)
 
 +(UIColor *)backgroundColor {
     return [UIColor colorWithRed:245/255 green:245/255 blue:245/255 alpha:1.0];

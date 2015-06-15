@@ -12,7 +12,6 @@
 #import <RedditKit/RedditKit.h>
 #import "SharedDefaults.h"
 #import "STAAlert.h"
-#import "PhoneDefaults.h"
 
 
 @interface LoginViewController ()
@@ -25,7 +24,7 @@
 @implementation LoginViewController
 
 - (void)viewDidAppear:(BOOL)animated {
-    if (![PhoneDefaults hasSignedIn]) {
+    if (![SharedDefaults hasSignedIn]) {
         [STAAlert presentOneButtonAlertWithTitle:@"Hi lets get you setup."
                                          message:@"In order to allow you to post your ShowerThoughts, we need to sign you into Reddit. You should only ever have to do this once."
                                             onVC:self];
@@ -42,7 +41,7 @@
 
                                              [SharedDefaults setUsernameDefault:self.usernameField.text
                                                              andPasswordDefault:self.passwordField.text];
-                                             [PhoneDefaults markAsSignedIn];
+                                             [SharedDefaults markAsSignedIn];
                                              [self.view endEditing:YES];
                                              [self performSegueWithIdentifier:@"ToRoot" sender:self];
                                          }

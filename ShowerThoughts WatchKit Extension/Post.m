@@ -52,9 +52,13 @@
 }
 
 -(void)pushPostToRedditInBackground:(void(^)(NSError *error))completed {
-    [[RKClient sharedClient] submitSelfPostWithTitle:self.body subredditName:@"test" text:nil captchaIdentifier:nil captchaValue:nil completion:^(NSError *error) {
-        completed(error);
-    }];
+    if ([SharedDefaults hasSignedIn]) {
+        [[RKClient sharedClient] submitSelfPostWithTitle:self.body subredditName:@"test" text:nil captchaIdentifier:nil captchaValue:nil completion:^(NSError *error) {
+            completed(error);
+        }];
+    } else {
+        completed([STAError notSignedInError]);
+    }
 }
 
 @end

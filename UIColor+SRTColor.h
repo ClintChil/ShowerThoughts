@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor (SRTColor)
+@interface UIColor (STAColor)
 
 +(UIColor *)backgroundColor;
 +(UIColor *)staBlueColor;

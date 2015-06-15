@@ -9,3 +9,6 @@
 #import <Foundation/Foundation.h>
 
 extern NSString *const ShowerThoughts;
+extern NSString *const NewPostNotification;
+
+extern NSInteger const STANotSignedInErrorCode;

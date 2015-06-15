@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "STAError.h"
 
 @interface Post : NSObject
 

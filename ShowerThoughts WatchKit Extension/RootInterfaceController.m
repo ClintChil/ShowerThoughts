@@ -52,9 +52,7 @@
 - (IBAction)onNewThoughtButtonPressed {
     [self presentTextInputControllerWithSuggestions:@[] allowedInputMode:WKTextInputModePlain completion:^(NSArray *results) {
         if (results && results.count > 0) {
-            NSLog(@"%@", results);
             [self presentControllerWithName:@"PostReview" context:results[0]];
-
         } else {
             NSLog(@"no input from user");
         }
@@ -74,10 +72,6 @@
 }
 
 - (IBAction)onMoreButtonPressed {
-    
-}
-
-- (IBAction)onDraftsButtonPressed {
     
 }
 

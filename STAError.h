@@ -1,5 +1,5 @@
 //
-//  PhoneDefaults.h
+//  STAError.h
 //  ShowerThoughts
 //
 //  Created by Rich Fellure on 6/14/15.
@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Constants.h"
 
-@interface PhoneDefaults : NSObject
+@interface STAError : NSObject
 
-+(BOOL)hasSignedIn;
-+(void)markAsSignedIn;
++(NSError *)notSignedInError;
 
 @end

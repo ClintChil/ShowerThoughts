@@ -13,6 +13,7 @@
 static NSString *const GroupName = @"group.com.RichFell.ShowerThoughts";
 static NSString *const UserNameKey = @"username";
 static NSString *const PasswordKey = @"password";
+static NSString *const HasSignedInKey = @"HasSignedIn";
 
 +(void)setUsernameDefault:(NSString *)username andPasswordDefault:(NSString *)password{
     NSUserDefaults *defaults = [[NSUserDefaults alloc]initWithSuiteName:GroupName];
@@ -33,5 +34,16 @@ static NSString *const PasswordKey = @"password";
     NSString *password =  (NSString *)[defaults objectForKey:PasswordKey];
     NSLog(@"pass: %@", password);
     return password;
+}
+
++(BOOL)hasSignedIn {
+    NSUserDefaults *d = [[NSUserDefaults alloc]initWithSuiteName:GroupName];
+    return [(NSNumber *)[d objectForKey:HasSignedInKey] boolValue];
+}
+
++(void)markAsSignedIn {
+    NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:GroupName];
+    [defaults setObject:@(YES) forKey:HasSignedInKey];
+    [defaults synchronize];
 }
 @end

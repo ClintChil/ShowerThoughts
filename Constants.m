@@ -10,3 +10,5 @@
 #import "Constants.h"
 
 NSString *const ShowerThoughts = @"showerthoughts";
+NSInteger const STANotSignedInErrorCode = 420;
+NSString *const NewPostNotification = @"NewPostNotification";
