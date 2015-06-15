@@ -31,7 +31,7 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    if (![SharedDefaults hasSignedIn]) {
+    if ([SharedDefaults hasSignedIn]) {
         [RedditCall signInBackgroundWithUserName:[SharedDefaults usernameDefault] andPassword:[SharedDefaults passwordDefault] block:^(NSError *error) {
             if (error) {
                 NSLog(@"Couldn't sign them up");

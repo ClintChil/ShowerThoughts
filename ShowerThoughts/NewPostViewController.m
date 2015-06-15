@@ -16,6 +16,10 @@
 
 @implementation NewPostViewController
 
+-(UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.postButton.enabled = NO;
@@ -26,6 +30,7 @@
 }
 
 - (IBAction)cancelOnTap:(id)sender {
+    [self.textView resignFirstResponder];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
