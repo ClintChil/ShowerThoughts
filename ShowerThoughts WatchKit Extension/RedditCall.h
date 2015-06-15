@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Post.h"
 
 @interface RedditCall : NSObject
 

@@ -8,9 +8,7 @@
 
 #import "RedditCall.h"
 #import <RedditKit/RedditKit.h>
-#import "Post.h"
 #import "SharedDefaults.h"
-@class Post;
 
 @implementation RedditCall
 
