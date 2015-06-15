@@ -9,6 +9,7 @@
 #import "InitialNavController.h"
 #import "SharedDefaults.h"
 #import "LoginViewController.h"
+#import "UIColor+SRTColor.h"
 
 @interface InitialNavController ()
 
@@ -16,9 +17,8 @@
 
 @implementation InitialNavController
 
--(void)viewDidLoad {
-    [super viewDidLoad];
-    self.navigationBar.barTintColor = [UIColor blackColor];
+-(UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 -(void)viewDidAppear:(BOOL)animated {

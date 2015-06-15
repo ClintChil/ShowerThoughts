@@ -27,6 +27,7 @@
                                                 </items>
                                             </group>
                                         </items>
+                                        <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                         <edgeInsets key="margins" left="6" right="3" top="3" bottom="3"/>
                                     </group>
                                     <connections>

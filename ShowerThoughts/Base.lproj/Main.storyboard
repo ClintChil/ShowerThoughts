@@ -14,12 +14,14 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="T7X-oX-rSE">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="T7X-oX-rSE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <color key="backgroundColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" name="selectedTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="sectionIndexBackgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="95" id="U9a-kB-Quj" customClass="FeedTableViewCell">
                                         <rect key="frame" x="0.0" y="86" width="600" height="44"/>
@@ -30,7 +32,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6w-Pc-07s">
                                                     <rect key="frame" x="8" y="8" width="304" height="31"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
                                                     <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -42,17 +44,17 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3514" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDu-wb-VVp">
-                                                    <rect key="frame" x="46" y="56" width="39" height="21"/>
+                                                    <rect key="frame" x="46" y="56" width="95" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="UZG-Zh-wLf"/>
-                                                        <constraint firstAttribute="width" constant="39" id="nc0-dc-vw1"/>
+                                                        <constraint firstAttribute="width" constant="95" id="nc0-dc-vw1"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" name="selectedTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="Jgh-TG-xxO" firstAttribute="leading" secondItem="gNX-J3-VSV" secondAttribute="leadingMargin" id="JCF-tt-dkE"/>
                                                 <constraint firstItem="Jgh-TG-xxO" firstAttribute="top" secondItem="d6w-Pc-07s" secondAttribute="bottom" constant="13" id="ba4-jl-qkC"/>
@@ -170,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYf-lj-Gn3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1912" y="221"/>
+            <point key="canvasLocation" x="2206" y="210"/>
         </scene>
         <!--Initial Nav Controller-->
         <scene sceneID="1GD-CU-iPG">
@@ -178,9 +180,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EKj-04-NhB" customClass="InitialNavController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="daC-3u-xeE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="daC-3u-xeE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.10980392160000001" green="0.4941176471" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.28627450980392155" green="0.25882352941176473" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -189,7 +193,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yGN-Wm-8uu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1907" y="850"/>
+            <point key="canvasLocation" x="2206" y="850"/>
         </scene>
     </scenes>
     <resources>
