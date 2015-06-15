@@ -40,6 +40,7 @@
 		9B76EDA21B2EB1FF0098DCCC /* PostTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76EDA11B2EB1FF0098DCCC /* PostTextView.m */; };
 		9B76EDA51B2EB3680098DCCC /* STAWButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76EDA41B2EB3680098DCCC /* STAWButton.m */; };
 		9B76EDAD1B2EB5E30098DCCC /* NewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76EDAC1B2EB5E30098DCCC /* NewPostViewController.m */; };
+		9B76EDB01B2EBD500098DCCC /* RoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B76EDAF1B2EBD500098DCCC /* RoundedView.m */; };
 		9B8D21F61B2CD64E0055633B /* RedditCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F51B2CD64E0055633B /* RedditCall.m */; };
 		9B8D21F91B2CF1290055633B /* SharedDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F81B2CF1290055633B /* SharedDefaults.m */; };
 		9B8D21FA1B2CF2D80055633B /* SharedDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F81B2CF1290055633B /* SharedDefaults.m */; };
@@ -133,6 +134,8 @@
 		9B76EDA41B2EB3680098DCCC /* STAWButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAWButton.m; sourceTree = "<group>"; };
 		9B76EDAB1B2EB5E30098DCCC /* NewPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPostViewController.h; sourceTree = "<group>"; };
 		9B76EDAC1B2EB5E30098DCCC /* NewPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPostViewController.m; sourceTree = "<group>"; };
+		9B76EDAE1B2EBD500098DCCC /* RoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedView.h; sourceTree = "<group>"; };
+		9B76EDAF1B2EBD500098DCCC /* RoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedView.m; sourceTree = "<group>"; };
 		9B8D21F41B2CD64E0055633B /* RedditCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedditCall.h; path = "ShowerThoughts WatchKit Extension/RedditCall.h"; sourceTree = "<group>"; };
 		9B8D21F51B2CD64E0055633B /* RedditCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedditCall.m; path = "ShowerThoughts WatchKit Extension/RedditCall.m"; sourceTree = "<group>"; };
 		9B8D21F71B2CF1290055633B /* SharedDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedDefaults.h; sourceTree = "<group>"; };
@@ -419,6 +422,8 @@
 				9B76EDA11B2EB1FF0098DCCC /* PostTextView.m */,
 				9B76EDA31B2EB3680098DCCC /* STAWButton.h */,
 				9B76EDA41B2EB3680098DCCC /* STAWButton.m */,
+				9B76EDAE1B2EBD500098DCCC /* RoundedView.h */,
+				9B76EDAF1B2EBD500098DCCC /* RoundedView.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -782,6 +787,7 @@
 				9B67BD071B2E470900540991 /* NSString+DateFormat.m in Sources */,
 				9B76ED951B2E75C70098DCCC /* RedditCall.m in Sources */,
 				9B76ED881B2E613F0098DCCC /* STAError.m in Sources */,
+				9B76EDB01B2EBD500098DCCC /* RoundedView.m in Sources */,
 				9B76ED931B2E720D0098DCCC /* FeedTableViewCell.m in Sources */,
 				7A4144A71B0E571B00A9104D /* LoginViewController.m in Sources */,
 				9BC09CC11B2E4C8200C0A57C /* STAButton.m in Sources */,
