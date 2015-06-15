@@ -13,55 +13,11 @@
 
 @end
 
-@implementation AppDelegate {
-    UIBackgroundTaskIdentifier backgroundTaskID;
-}
-
-- (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply {
-
-//    NSDictionary *myreply = @{ @"action" : @"Delegate did trigger"};
-    NSString *alertText;
-    
-    
-    
-    //TODO what if watch user wants to do more than one!
-
-    if (backgroundTaskID == UIBackgroundTaskInvalid) {
-        backgroundTaskID = [application beginBackgroundTaskWithExpirationHandler:^{
-            [application endBackgroundTask:backgroundTaskID];
-            backgroundTaskID = UIBackgroundTaskInvalid;
-        }];
-        
-        if ([[RKClient sharedClient] isSignedIn]) {
-            alertText = @"User is signed in";
-        }
-        
-//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"BOOM" message:alertText ?: @"Shit just got interesting" preferredStyle:UIAlertControllerStyleAlert];
-//        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"K" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {}];
-//        [alertController addAction:defaultAction];
-//        [self.window.rootViewController presentViewController:alertController animated:NO completion:nil];
-        
-        
-        
-//        [[RKClient sharedClient] submitSelfPostWithTitle:@"testingtime" subredditName:@"test" text:nil captchaIdentifier:nil captchaValue:nil completion:^(NSError *error) {
-//            [application endBackgroundTask:backgroundTaskID];
-//            NSString *alertText;
-//            alertText = error.localizedDescription;
-//            
-//            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"BOOM" message:alertText ?: @"Shit just got interesting" preferredStyle:UIAlertControllerStyleAlert];
-//            UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"K" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {}];
-//            [alertController addAction:defaultAction];
-//            [self.window.rootViewController presentViewController:alertController animated:NO completion:nil];
-//            
-//            
-//            reply(@{@"error": error ?: @"NO MOTHERFUCKING ERROR"});
-//        }];
-    }
-}
-
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    backgroundTaskID = UIBackgroundTaskInvalid;
+
+
     return YES;
 }
 
