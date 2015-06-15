@@ -26,9 +26,16 @@
 		7A1BEE931AF448EC00A171C2 /* ShowerThoughts WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7A1BEE761AF448EB00A171C2 /* ShowerThoughts WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7A4144A71B0E571B00A9104D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4144A61B0E571B00A9104D /* LoginViewController.m */; };
 		7A4160811B1F9062009DDB22 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4160801B1F9062009DDB22 /* libPods.a */; };
+		9B67BCFC1B2E46F700540991 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67BCFB1B2E46F700540991 /* Constants.m */; };
+		9B67BD061B2E470900540991 /* NSDateFormatter+STFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67BD001B2E470900540991 /* NSDateFormatter+STFormat.m */; };
+		9B67BD071B2E470900540991 /* NSString+DateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67BD021B2E470900540991 /* NSString+DateFormat.m */; };
+		9B67BD081B2E470900540991 /* UIColor+SRTColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67BD041B2E470900540991 /* UIColor+SRTColor.m */; };
 		9B8D21F61B2CD64E0055633B /* RedditCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F51B2CD64E0055633B /* RedditCall.m */; };
 		9B8D21F91B2CF1290055633B /* SharedDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F81B2CF1290055633B /* SharedDefaults.m */; };
 		9B8D21FA1B2CF2D80055633B /* SharedDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D21F81B2CF1290055633B /* SharedDefaults.m */; };
+		9BC09CBA1B2E486600C0A57C /* STAAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC09CB91B2E486600C0A57C /* STAAlert.m */; };
+		9BC09CBE1B2E496200C0A57C /* PhoneDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC09CBD1B2E496200C0A57C /* PhoneDefaults.m */; };
+		9BC09CC11B2E4C8200C0A57C /* STAButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC09CC01B2E4C8200C0A57C /* STAButton.m */; };
 		BA891EA81B05A7CE00471FA6 /* MainRowType.m in Sources */ = {isa = PBXBuildFile; fileRef = BA891EA71B05A7CE00471FA6 /* MainRowType.m */; };
 		BAA2021B1B0D7A8100CCE4E5 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA2021A1B0D7A8100CCE4E5 /* Post.m */; };
 /* End PBXBuildFile section */
@@ -96,16 +103,31 @@
 		7A4144A61B0E571B00A9104D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		7A4160801B1F9062009DDB22 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		7A7ACA901B2CB56B000DA884 /* ShowerThoughts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ShowerThoughts.entitlements; sourceTree = "<group>"; };
-		9B8D21F41B2CD64E0055633B /* RedditCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedditCall.h; sourceTree = "<group>"; };
-		9B8D21F51B2CD64E0055633B /* RedditCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedditCall.m; sourceTree = "<group>"; };
+		9B67BCFA1B2E46F700540991 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		9B67BCFB1B2E46F700540991 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		9B67BCFF1B2E470900540991 /* NSDateFormatter+STFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+STFormat.h"; sourceTree = "<group>"; };
+		9B67BD001B2E470900540991 /* NSDateFormatter+STFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+STFormat.m"; sourceTree = "<group>"; };
+		9B67BD011B2E470900540991 /* NSString+DateFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DateFormat.h"; sourceTree = "<group>"; };
+		9B67BD021B2E470900540991 /* NSString+DateFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DateFormat.m"; sourceTree = "<group>"; };
+		9B67BD031B2E470900540991 /* UIColor+SRTColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SRTColor.h"; sourceTree = "<group>"; };
+		9B67BD041B2E470900540991 /* UIColor+SRTColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SRTColor.m"; sourceTree = "<group>"; };
+		9B76ED811B2E52290098DCCC /* ShowerThoughts WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ShowerThoughts WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		9B8D21F41B2CD64E0055633B /* RedditCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedditCall.h; path = "ShowerThoughts WatchKit Extension/RedditCall.h"; sourceTree = "<group>"; };
+		9B8D21F51B2CD64E0055633B /* RedditCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedditCall.m; path = "ShowerThoughts WatchKit Extension/RedditCall.m"; sourceTree = "<group>"; };
 		9B8D21F71B2CF1290055633B /* SharedDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedDefaults.h; sourceTree = "<group>"; };
 		9B8D21F81B2CF1290055633B /* SharedDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedDefaults.m; sourceTree = "<group>"; };
+		9BC09CB81B2E486600C0A57C /* STAAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAAlert.h; sourceTree = "<group>"; };
+		9BC09CB91B2E486600C0A57C /* STAAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAAlert.m; sourceTree = "<group>"; };
+		9BC09CBC1B2E496200C0A57C /* PhoneDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneDefaults.h; sourceTree = "<group>"; };
+		9BC09CBD1B2E496200C0A57C /* PhoneDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneDefaults.m; sourceTree = "<group>"; };
+		9BC09CBF1B2E4C8200C0A57C /* STAButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAButton.h; sourceTree = "<group>"; };
+		9BC09CC01B2E4C8200C0A57C /* STAButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAButton.m; sourceTree = "<group>"; };
 		9EAC77989FDDA221678C64E5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B8849DC9DD856451BD668640 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BA891EA61B05A7CE00471FA6 /* MainRowType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainRowType.h; path = "ShowerThoughts WatchKit Extension/MainRowType.h"; sourceTree = SOURCE_ROOT; };
 		BA891EA71B05A7CE00471FA6 /* MainRowType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainRowType.m; path = "ShowerThoughts WatchKit Extension/MainRowType.m"; sourceTree = SOURCE_ROOT; };
-		BAA202191B0D7A8100CCE4E5 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
-		BAA2021A1B0D7A8100CCE4E5 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		BAA202191B0D7A8100CCE4E5 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Post.h; path = "ShowerThoughts WatchKit Extension/Post.h"; sourceTree = "<group>"; };
+		BAA2021A1B0D7A8100CCE4E5 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = "ShowerThoughts WatchKit Extension/Post.m"; sourceTree = "<group>"; };
 		E4AA45FACCA871FC8DC7F4E0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -155,8 +177,10 @@
 		7A1BEE401AF448CB00A171C2 = {
 			isa = PBXGroup;
 			children = (
-				9B8D21F71B2CF1290055633B /* SharedDefaults.h */,
-				9B8D21F81B2CF1290055633B /* SharedDefaults.m */,
+				9B76ED821B2E55270098DCCC /* Model Objects */,
+				9BC09CB71B2E483F00C0A57C /* Constants */,
+				9BC09CB61B2E482C00C0A57C /* SharedDefaults */,
+				9BC09CB51B2E481800C0A57C /* Categories */,
 				7A1BEE4B1AF448CB00A171C2 /* ShowerThoughts */,
 				7A1BEE771AF448EB00A171C2 /* ShowerThoughts WatchKit Extension */,
 				7A1BEE891AF448EC00A171C2 /* ShowerThoughts WatchKit App */,
@@ -180,6 +204,8 @@
 		7A1BEE4B1AF448CB00A171C2 /* ShowerThoughts */ = {
 			isa = PBXGroup;
 			children = (
+				9BC09CC21B2E4CF400C0A57C /* STAAlert */,
+				9BC09CBB1B2E492F00C0A57C /* PhoneDefaults */,
 				7A7ACA901B2CB56B000DA884 /* ShowerThoughts.entitlements */,
 				7A1BEE501AF448CB00A171C2 /* AppDelegate.h */,
 				7A1BEE511AF448CB00A171C2 /* AppDelegate.m */,
@@ -191,6 +217,8 @@
 				7A1BEE591AF448CB00A171C2 /* Images.xcassets */,
 				7A1BEE5B1AF448CB00A171C2 /* LaunchScreen.xib */,
 				7A1BEE4C1AF448CB00A171C2 /* Supporting Files */,
+				9BC09CBF1B2E4C8200C0A57C /* STAButton.h */,
+				9BC09CC01B2E4C8200C0A57C /* STAButton.m */,
 			);
 			path = ShowerThoughts;
 			sourceTree = "<group>";
@@ -207,16 +235,13 @@
 		7A1BEE771AF448EB00A171C2 /* ShowerThoughts WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9B76ED811B2E52290098DCCC /* ShowerThoughts WatchKit Extension.entitlements */,
 				7A1BEE7B1AF448EC00A171C2 /* RootInterfaceController.h */,
 				7A1BEE7C1AF448EC00A171C2 /* RootInterfaceController.m */,
 				7A1539DE1B0D4AE4004A7C45 /* PostReviewController.h */,
 				7A1539DF1B0D4AE4004A7C45 /* PostReviewController.m */,
 				3E06E5531B2CE338000C5B05 /* PostDetailInterfaceController.h */,
 				3E06E5541B2CE338000C5B05 /* PostDetailInterfaceController.m */,
-				9B8D21F41B2CD64E0055633B /* RedditCall.h */,
-				9B8D21F51B2CD64E0055633B /* RedditCall.m */,
-				BAA202191B0D7A8100CCE4E5 /* Post.h */,
-				BAA2021A1B0D7A8100CCE4E5 /* Post.m */,
 				7A1BEE7E1AF448EC00A171C2 /* NotificationController.h */,
 				7A1BEE7F1AF448EC00A171C2 /* NotificationController.m */,
 				BA891EA61B05A7CE00471FA6 /* MainRowType.h */,
@@ -252,6 +277,66 @@
 				7A1BEE8B1AF448EC00A171C2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9B76ED821B2E55270098DCCC /* Model Objects */ = {
+			isa = PBXGroup;
+			children = (
+				9B8D21F41B2CD64E0055633B /* RedditCall.h */,
+				9B8D21F51B2CD64E0055633B /* RedditCall.m */,
+				BAA202191B0D7A8100CCE4E5 /* Post.h */,
+				BAA2021A1B0D7A8100CCE4E5 /* Post.m */,
+			);
+			name = "Model Objects";
+			sourceTree = "<group>";
+		};
+		9BC09CB51B2E481800C0A57C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9B67BCFF1B2E470900540991 /* NSDateFormatter+STFormat.h */,
+				9B67BD001B2E470900540991 /* NSDateFormatter+STFormat.m */,
+				9B67BD011B2E470900540991 /* NSString+DateFormat.h */,
+				9B67BD021B2E470900540991 /* NSString+DateFormat.m */,
+				9B67BD031B2E470900540991 /* UIColor+SRTColor.h */,
+				9B67BD041B2E470900540991 /* UIColor+SRTColor.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		9BC09CB61B2E482C00C0A57C /* SharedDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				9B8D21F71B2CF1290055633B /* SharedDefaults.h */,
+				9B8D21F81B2CF1290055633B /* SharedDefaults.m */,
+			);
+			name = SharedDefaults;
+			sourceTree = "<group>";
+		};
+		9BC09CB71B2E483F00C0A57C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9B67BCFA1B2E46F700540991 /* Constants.h */,
+				9B67BCFB1B2E46F700540991 /* Constants.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		9BC09CBB1B2E492F00C0A57C /* PhoneDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				9BC09CBC1B2E496200C0A57C /* PhoneDefaults.h */,
+				9BC09CBD1B2E496200C0A57C /* PhoneDefaults.m */,
+			);
+			name = PhoneDefaults;
+			sourceTree = "<group>";
+		};
+		9BC09CC21B2E4CF400C0A57C /* STAAlert */ = {
+			isa = PBXGroup;
+			children = (
+				9BC09CB81B2E486600C0A57C /* STAAlert.h */,
+				9BC09CB91B2E486600C0A57C /* STAAlert.m */,
+			);
+			name = STAAlert;
 			sourceTree = "<group>";
 		};
 		E085A20F6570C28A8B44257D /* Pods */ = {
@@ -364,7 +449,7 @@
 				TargetAttributes = {
 					7A1BEE481AF448CB00A171C2 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = NNYCX27J4X;
+						DevelopmentTeam = S38456XTSR;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -373,11 +458,16 @@
 					};
 					7A1BEE751AF448EB00A171C2 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = NNYCX27J4X;
+						DevelopmentTeam = S38456XTSR;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					7A1BEE841AF448EC00A171C2 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = NNYCX27J4X;
+						DevelopmentTeam = S38456XTSR;
 					};
 					7A212E9E1B2CAB9E0009906F = {
 						CreatedOnToolsVersion = 7.0;
@@ -541,12 +631,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BC09CBE1B2E496200C0A57C /* PhoneDefaults.m in Sources */,
 				7A1BEE551AF448CB00A171C2 /* RootViewController.m in Sources */,
 				7A1BEE521AF448CB00A171C2 /* AppDelegate.m in Sources */,
+				9B67BD081B2E470900540991 /* UIColor+SRTColor.m in Sources */,
 				9B8D21F91B2CF1290055633B /* SharedDefaults.m in Sources */,
+				9B67BD061B2E470900540991 /* NSDateFormatter+STFormat.m in Sources */,
 				7A1BEE4F1AF448CB00A171C2 /* main.m in Sources */,
 				BA891EA81B05A7CE00471FA6 /* MainRowType.m in Sources */,
+				9BC09CBA1B2E486600C0A57C /* STAAlert.m in Sources */,
+				9B67BCFC1B2E46F700540991 /* Constants.m in Sources */,
+				9B67BD071B2E470900540991 /* NSString+DateFormat.m in Sources */,
 				7A4144A71B0E571B00A9104D /* LoginViewController.m in Sources */,
+				9BC09CC11B2E4C8200C0A57C /* STAButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,7 +866,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9EAC77989FDDA221678C64E5 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ShowerThoughts WatchKit Extension/ShowerThoughts WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -778,6 +877,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -786,11 +886,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B8849DC9DD856451BD668640 /* Pods.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ShowerThoughts WatchKit Extension/ShowerThoughts WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ShowerThoughts WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

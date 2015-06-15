@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HfS-c4-hpr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HfS-c4-hpr">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -15,11 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="T7X-oX-rSE">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="qWD-bw-Ocd" detailTextLabel="5Hy-QX-gWf" style="IBUITableViewCellStyleSubtitle" id="U9a-kB-Quj">
@@ -81,32 +80,39 @@
                         <viewControllerLayoutGuide type="bottom" id="fe2-zo-Fh4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CDf-es-PMt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="clintchil" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z0i-wW-yBX">
-                                <rect key="frame" x="16" y="72" width="568" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="clintchil" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z0i-wW-yBX">
+                                <rect key="frame" x="16" y="390" width="288" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="muc-Ke-IPB"/>
+                                    <constraint firstAttribute="height" constant="30" id="Bd6-CL-mOa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="poopfart2" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QNz-ob-D9A">
-                                <rect key="frame" x="16" y="110" width="568" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="poopfart2" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QNz-ob-D9A">
+                                <rect key="frame" x="16" y="428" width="288" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="bQ8-Fy-asT"/>
+                                    <constraint firstAttribute="height" constant="30" id="Hn5-z7-5uZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TW2-Ig-Hot">
-                                <rect key="frame" x="276" y="161" width="48" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="fxz-HJ-44D">
+                                <rect key="frame" x="40" y="94" width="240" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="0VW-Ak-CVG"/>
-                                    <constraint firstAttribute="height" constant="30" id="7gI-w3-IOv"/>
+                                    <constraint firstAttribute="width" constant="240" id="dmL-n9-Z84"/>
+                                    <constraint firstAttribute="height" constant="240" id="yQ4-Sd-60H"/>
                                 </constraints>
-                                <state key="normal" title="Sign In">
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TW2-Ig-Hot" customClass="STAButton">
+                                <rect key="frame" x="64" y="484" width="192" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="him-XL-r9F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="SIGN IN">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -114,19 +120,24 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="z0i-wW-yBX" firstAttribute="top" secondItem="BJs-NA-23F" secondAttribute="bottom" constant="8" id="4Rr-IC-aBO"/>
-                            <constraint firstItem="TW2-Ig-Hot" firstAttribute="top" secondItem="QNz-ob-D9A" secondAttribute="bottom" constant="21" id="C8I-yl-TlE"/>
-                            <constraint firstItem="z0i-wW-yBX" firstAttribute="trailing" secondItem="CDf-es-PMt" secondAttribute="trailingMargin" id="a7f-9V-D8e"/>
-                            <constraint firstItem="QNz-ob-D9A" firstAttribute="trailing" secondItem="CDf-es-PMt" secondAttribute="trailingMargin" id="bEx-AE-Lvz"/>
-                            <constraint firstItem="QNz-ob-D9A" firstAttribute="top" secondItem="z0i-wW-yBX" secondAttribute="bottom" constant="8" id="c0h-y3-OjR"/>
-                            <constraint firstItem="QNz-ob-D9A" firstAttribute="leading" secondItem="CDf-es-PMt" secondAttribute="leadingMargin" id="sON-sD-kqm"/>
-                            <constraint firstItem="z0i-wW-yBX" firstAttribute="leading" secondItem="CDf-es-PMt" secondAttribute="leadingMargin" id="ucM-20-t3Z"/>
-                            <constraint firstAttribute="centerX" secondItem="TW2-Ig-Hot" secondAttribute="centerX" id="zAl-6A-lTJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TW2-Ig-Hot" secondAttribute="trailing" constant="48" id="A5q-ZT-PXO"/>
+                            <constraint firstItem="z0i-wW-yBX" firstAttribute="leading" secondItem="CDf-es-PMt" secondAttribute="leadingMargin" id="Gty-ZQ-TWI"/>
+                            <constraint firstItem="fxz-HJ-44D" firstAttribute="top" secondItem="BJs-NA-23F" secondAttribute="bottom" constant="30" id="Mpo-7w-3tv"/>
+                            <constraint firstItem="TW2-Ig-Hot" firstAttribute="leading" secondItem="CDf-es-PMt" secondAttribute="leadingMargin" constant="48" id="RXg-oh-xGf"/>
+                            <constraint firstItem="fe2-zo-Fh4" firstAttribute="top" secondItem="TW2-Ig-Hot" secondAttribute="bottom" constant="54" id="Ruc-vX-2sv"/>
+                            <constraint firstItem="QNz-ob-D9A" firstAttribute="leading" secondItem="CDf-es-PMt" secondAttribute="leadingMargin" id="SMh-cO-1Lb"/>
+                            <constraint firstItem="QNz-ob-D9A" firstAttribute="top" secondItem="z0i-wW-yBX" secondAttribute="bottom" constant="8" id="Tny-wX-QNw"/>
+                            <constraint firstItem="z0i-wW-yBX" firstAttribute="trailing" secondItem="CDf-es-PMt" secondAttribute="trailingMargin" id="k7L-Vg-WJ1"/>
+                            <constraint firstAttribute="centerX" secondItem="fxz-HJ-44D" secondAttribute="centerX" id="pGJ-TK-eHC"/>
+                            <constraint firstItem="QNz-ob-D9A" firstAttribute="trailing" secondItem="CDf-es-PMt" secondAttribute="trailingMargin" id="uFI-Az-ceL"/>
+                            <constraint firstItem="TW2-Ig-Hot" firstAttribute="top" secondItem="QNz-ob-D9A" secondAttribute="bottom" constant="26" id="w50-ce-lmC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cFh-0n-ocn"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="passwordField" destination="QNz-ob-D9A" id="G4Z-pi-pks"/>
                         <outlet property="usernameField" destination="z0i-wW-yBX" id="oKf-nz-ir3"/>
@@ -156,4 +167,7 @@
             <point key="canvasLocation" x="587" y="155"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Icon" width="512" height="512"/>
+    </resources>
 </document>

@@ -10,10 +10,12 @@
 #import "MainRowType.h"
 #import "Post.h"
 #import "RedditCall.h"
-//#import <RedditKit/RedditKit.h>
 
 @interface RootInterfaceController()
+
 @property (weak, nonatomic) IBOutlet WKInterfaceTable *tableview;
+@property (weak, nonatomic) IBOutlet WKInterfaceButton *moreButton;
+
 @property NSUserDefaults *sharedDefaults;
 
 
@@ -32,7 +34,7 @@
 -(void)awakeWithContext:(nullable id)context {
     [super awakeWithContext:context];
     [self setTitle:@"Thoughts"];
-
+    [self.moreButton setHidden:YES];
     [RedditCall pullPostsFromRedditInBackground:^(NSArray *posts, NSError *error) {
         if (error) {
             self.posts = @[[Post postForError:error]];
@@ -40,10 +42,7 @@
         }
         else {
             self.posts = posts;
-        }
-    } theSignUpInBackground:^(BOOL success, NSError *error) {
-        if (error) {
-            NSLog(@"Login error: %@", error.localizedDescription);
+            [self.moreButton setHidden:NO];
         }
     }];
     self.posts = @[[Post defaultPost]];
@@ -59,7 +58,6 @@
         } else {
             NSLog(@"no input from user");
         }
-        
     }];
 }
 
@@ -70,9 +68,9 @@
         Post *post = [self.posts objectAtIndex:i];
         
         [theRow.postBodyLabel setText:post.body];
-        [theRow.postVoteLabel setText:[NSString stringWithFormat:@"%@", post.votes]];
+        [theRow.postVoteLabel setText:[NSString stringWithFormat:@"%@", post.votes] ? :@""];
+        [theRow.upArrowImage setHidden:post.votes ? NO : YES];
     }
-    
 }
 
 - (IBAction)onMoreButtonPressed {
@@ -88,10 +86,7 @@
 }
 
 -(nullable id)contextForSegueWithIdentifier:(nonnull NSString *)segueIdentifier inTable:(nonnull WKInterfaceTable *)table rowIndex:(NSInteger)rowIndex {
-//    if ([segueIdentifier isEqualToString:@"ShowDetailSegue"]) {
-        return self.posts[rowIndex];
-//    }
-//    return nil;
+    return self.posts[rowIndex];
 }
 
 
