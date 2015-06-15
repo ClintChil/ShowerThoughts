@@ -288,7 +288,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1nM-c8-JTV" customClass="PostTextView">
-                                <rect key="frame" x="16" y="85" width="288" height="186"/>
+                                <rect key="frame" x="16" y="45" width="288" height="186"/>
                                 <color key="backgroundColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
@@ -297,8 +297,19 @@
                                     <outlet property="delegate" destination="qO7-LY-MfL" id="1vC-61-Z5D"/>
                                 </connections>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoh-ML-Xnr" customClass="STAWButton">
+                                <rect key="frame" x="16" y="252" width="121" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postOnTap:" destination="qO7-LY-MfL" eventType="touchUpInside" id="1At-5s-nAK"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KnP-Sh-WCA" customClass="STAWButton">
-                                <rect key="frame" x="183" y="302" width="121" height="33"/>
+                                <rect key="frame" x="183" y="252" width="121" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="inz-Ak-5g4"/>
                                 </constraints>
@@ -311,30 +322,19 @@
                                     <action selector="cancelOnTap:" destination="qO7-LY-MfL" eventType="touchUpInside" id="Hik-E9-zmI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoh-ML-Xnr" customClass="STAWButton">
-                                <rect key="frame" x="16" y="304" width="121" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Post">
-                                    <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="postOnTap:" destination="qO7-LY-MfL" eventType="touchUpInside" id="1At-5s-nAK"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" name="selectedTextColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
-                            <constraint firstItem="hoh-ML-Xnr" firstAttribute="top" secondItem="1nM-c8-JTV" secondAttribute="bottom" constant="33" id="6eQ-Fd-e0j"/>
+                            <constraint firstItem="hoh-ML-Xnr" firstAttribute="top" secondItem="1nM-c8-JTV" secondAttribute="bottom" constant="21" id="6eQ-Fd-e0j"/>
                             <constraint firstItem="KnP-Sh-WCA" firstAttribute="trailing" secondItem="GUK-Yv-tC7" secondAttribute="trailingMargin" id="7n7-dy-lF0"/>
                             <constraint firstItem="1nM-c8-JTV" firstAttribute="leading" secondItem="GUK-Yv-tC7" secondAttribute="leadingMargin" id="8ig-fX-Nt3"/>
                             <constraint firstItem="hoh-ML-Xnr" firstAttribute="width" secondItem="KnP-Sh-WCA" secondAttribute="width" id="EPP-Gv-FRj"/>
-                            <constraint firstItem="KnP-Sh-WCA" firstAttribute="top" secondItem="1nM-c8-JTV" secondAttribute="bottom" constant="31" id="G4H-Nz-Rya"/>
+                            <constraint firstItem="KnP-Sh-WCA" firstAttribute="top" secondItem="1nM-c8-JTV" secondAttribute="bottom" constant="21" id="G4H-Nz-Rya"/>
                             <constraint firstItem="1nM-c8-JTV" firstAttribute="trailing" secondItem="GUK-Yv-tC7" secondAttribute="trailingMargin" id="IVZ-ya-EDP"/>
                             <constraint firstItem="KnP-Sh-WCA" firstAttribute="leading" secondItem="hoh-ML-Xnr" secondAttribute="trailing" constant="46" id="YRi-MN-aoV"/>
-                            <constraint firstAttribute="centerY" secondItem="hoh-ML-Xnr" secondAttribute="centerY" constant="-35" id="anb-lY-K6z"/>
-                            <constraint firstItem="1nM-c8-JTV" firstAttribute="top" secondItem="tkw-Pv-3rj" secondAttribute="bottom" constant="65" id="e6u-51-WeK"/>
-                            <constraint firstItem="hoh-ML-Xnr" firstAttribute="top" secondItem="KnP-Sh-WCA" secondAttribute="top" constant="2" id="o8q-FO-pJz"/>
+                            <constraint firstAttribute="centerY" secondItem="hoh-ML-Xnr" secondAttribute="centerY" constant="17" id="anb-lY-K6z"/>
+                            <constraint firstItem="1nM-c8-JTV" firstAttribute="top" secondItem="tkw-Pv-3rj" secondAttribute="bottom" constant="25" id="e6u-51-WeK"/>
+                            <constraint firstItem="hoh-ML-Xnr" firstAttribute="top" secondItem="KnP-Sh-WCA" secondAttribute="top" id="o8q-FO-pJz"/>
                             <constraint firstItem="hoh-ML-Xnr" firstAttribute="leading" secondItem="GUK-Yv-tC7" secondAttribute="leadingMargin" id="t10-a3-UPy"/>
                         </constraints>
                     </view>
