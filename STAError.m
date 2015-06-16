@@ -19,4 +19,12 @@
                            userInfo:errorDetail];
 }
 
++(NSError *)checkCaptchaError {
+    NSMutableDictionary *errorDetail = [NSMutableDictionary dictionary];
+    [errorDetail setValue:@"Error checking if user needs captcha."
+                   forKey:NSLocalizedDescriptionKey];
+    return [NSError errorWithDomain:@"myDomain"
+                               code:STACaptchaError
+                           userInfo:errorDetail];
+}
 @end

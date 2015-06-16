@@ -10,6 +10,6 @@
 
 @interface CaptchaViewController : UIViewController
 
-+(instancetype)fromNib;
++(instancetype)fromNibWithImage:(UIImage *)image;
 
 @end

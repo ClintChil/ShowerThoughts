@@ -12,5 +12,6 @@
 @interface STAError : NSObject
 
 +(NSError *)notSignedInError;
++(NSError *)checkCaptchaError;
 
 @end

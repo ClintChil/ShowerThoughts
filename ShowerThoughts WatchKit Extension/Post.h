@@ -8,9 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "STAError.h"
+@class Post, Captcha;
+
+@protocol PostDelegate <NSObject>
+
+-(Captcha *)needCaptchaFromImage:(UIImage *)image forPost:(Post *)post;
+
+@end
 
 
-typedef void(^PostBlockType) (UIImage *image, NSError *error);
+typedef void(^PostBlockType) (BOOL result, NSError *error);
 
 
 @interface Post : NSObject
@@ -19,6 +26,7 @@ typedef void(^PostBlockType) (UIImage *image, NSError *error);
 @property NSNumber *votes;
 @property NSString *author;
 @property NSDate *created;
+@property id<PostDelegate>delegate;
 
 +(NSArray *)postsFromArray:(NSArray *)array;
 +(instancetype)defaultPost;
@@ -30,7 +38,7 @@ typedef void(^PostBlockType) (UIImage *image, NSError *error);
  @param: captchaVal: This is the value the user will input to verify the captcha
  @param: block: The block with parameters of a UIImage, which is the image of the captcha, if the user has to display a captcha to post, and a NSError to display the specific error.
  */
--(void)pushPostToRedditInBackgroundWithCaptchaId:(NSString *)captchaId captchaVal:(NSString *)val block:(PostBlockType)completed;
+-(void)postOnRedditInBackground:(PostBlockType)complete;
 
 +(instancetype)postWithBody:(NSString *)body;
 

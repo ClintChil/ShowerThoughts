@@ -9,6 +9,7 @@
 #import "Post.h"
 #import <RedditKit/RedditKit.h>
 #import "SharedDefaults.h"
+#import "Captcha.h"
 
 @implementation Post
 
@@ -50,44 +51,64 @@
     return post;
 }
 
--(void)pushPostToRedditInBackgroundWithCaptchaId:(NSString *)captchaId captchaVal:(NSString *)val block:(PostBlockType)completed{
+-(void)postOnRedditInBackground:(PostBlockType)complete {
     if ([SharedDefaults hasSignedIn]) {
         if ([SharedDefaults needsCaptcha]) {
-            [self checkIfNeedCAPTCHAInBackground:^(UIImage *image, NSError *error) {
-                completed(image, error);
+            [self checkIfNeedCAPTCHAInBackground:^(BOOL result, UIImage *image) {
+                if (result) {
+                    Captcha *captcha = [self.delegate needCaptchaFromImage:image
+                                                                            forPost:self];
+                    [self postToRedditWithCaptchaID:captcha.captchaID
+                                      andcaptchaVal:captcha.captchaValue
+                                              block:^(NSError *error) {
+                                                  complete(error ? NO : YES, error);
+
+                    }];
+                }else {
+                    complete(result, [STAError checkCaptchaError]);
+                }
             }];
         }else {
-            [self postToRedditWithCaptchaID:captchaId andcaptchaVal:val block:^(NSError *error) {
-                completed(nil, error);
+            [self postToRedditWithCaptchaID:nil andcaptchaVal:nil block:^(NSError *error) {
+                complete(error ? NO : YES, error);
             }];
         }
     } else {
-        completed(nil,[STAError notSignedInError]);
+        complete(nil,[STAError notSignedInError]);
     }
+
 }
 
 -(void)postToRedditWithCaptchaID:(NSString *)captchaId andcaptchaVal:(NSString *)captchaVal block:(void(^)(NSError *error))completed {
-    [[RKClient sharedClient] submitSelfPostWithTitle:self.body subredditName:@"test" text:nil captchaIdentifier:captchaId captchaValue:captchaVal completion:^(NSError *error) {
-        completed(error);
+    [[RKClient sharedClient] submitSelfPostWithTitle:self.body
+                                       subredditName:@"test"
+                                                text:nil
+                                   captchaIdentifier:captchaId
+                                        captchaValue:captchaVal
+                                          completion:^(NSError *error) {
+                                                completed(error);
     }];
 }
 
--(void)checkIfNeedCAPTCHAInBackground:(PostBlockType)completed {
+-(void)checkIfNeedCAPTCHAInBackground:(void(^)(BOOL result, UIImage *image))completed {
     RKClient *client = [RKClient sharedClient];
     [client needsCaptchaWithCompletion:^(BOOL result, NSError *error) {
         if (result) {
             [client newCaptchaIdentifierWithCompletion:^(id object, NSError *error) {
                 if (!error) {
                     [client imageForCaptchaIdentifier:object completion:^(id object, NSError *error) {
-                        completed((UIImage *)object, error);
+                        completed(YES, (UIImage *)object);
                     }];
                 }else {
-                    completed(nil,error);
+                    completed(YES, nil);
                 }
             }];
-        } else {
+        }else {
             [SharedDefaults setNeedsCaptcha:NO];
-            completed(nil,error);
+            completed(NO, nil);
+        }
+        if (!result && error) {
+            completed(NO, nil);
         }
     }];
 }

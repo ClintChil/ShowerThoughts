@@ -9,8 +9,10 @@
 #import "NewPostViewController.h"
 #import "Post.h"
 #import "STAAlert.h"
+#import "CaptchaViewController.h"
+#import "Captcha.h"
 
-@interface NewPostViewController ()<UITextViewDelegate>
+@interface NewPostViewController ()<UITextViewDelegate, PostDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIButton *postButton;
 
@@ -28,12 +30,12 @@
     [self.textView becomeFirstResponder];
 }
 
+#pragma mark - Actions
 - (IBAction)postOnTap:(id)sender {
     Post *post = [Post postWithBody:self.textView.text];
-    [post pushPostToRedditInBackgroundWithCaptchaId:nil captchaVal:nil block:^(UIImage *image, NSError *error) {
-        if (image) {
-            //TODO: Show a view to allow the user to input the captcha.
-        } else if (error){
+    post.delegate = self;
+    [post postOnRedditInBackground:^(BOOL result, NSError *error) {
+        if (error) {
             [STAAlert presentOneButtonAlertWithTitle:@"Sorry we had an issue with your post"
                                              message:@"Make sure you have logged in."
                                                 onVC:self];
@@ -48,9 +50,15 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - TextViewDelegate
 -(void)textViewDidChange:(UITextView *)textView {
     if (textView.text.length > 0) {
         self.postButton.enabled = YES;
     }
+}
+
+#pragma mark - PostDelegate
+-(Captcha *)needCaptchaFromImage:(UIImage *)image forPost:(Post *)post {
+    return nil;
 }
 @end

@@ -8,7 +8,7 @@
 
 #import "CaptchaViewController.h"
 
-@interface CaptchaViewController ()
+@interface CaptchaViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 
@@ -26,8 +26,14 @@
     return cVC;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (IBAction)submitCaptchaOnTap:(UIButton *)sender {
+    //TODO: Submit captcha somewhere when submit is tapped, for now will just dismiss
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
