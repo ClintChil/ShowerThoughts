@@ -6,8 +6,12 @@
 //  Copyright (c) 2015 Clint Chilcott. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "STAError.h"
+
+
+typedef void(^PostBlockType) (UIImage *image, NSError *error);
+
 
 @interface Post : NSObject
 
@@ -20,7 +24,13 @@
 +(instancetype)defaultPost;
 +(instancetype)postForError:(NSError *)error;
 
--(void)pushPostToRedditInBackground:(void(^)(NSError *error))completed;
+/**
+ :Description: Method to call on an instance of Post, checks to see if the user is able to just post, or if they need a captcha. If they need a captcha, it will return the image of the captcha, so it can be desplayed, then this method called again with the correct captcha info
+ @param: captchaId: This is the id of the captcha that is being displayed, or nil if no captcha.
+ @param: captchaVal: This is the value the user will input to verify the captcha
+ @param: block: The block with parameters of a UIImage, which is the image of the captcha, if the user has to display a captcha to post, and a NSError to display the specific error.
+ */
+-(void)pushPostToRedditInBackgroundWithCaptchaId:(NSString *)captchaId captchaVal:(NSString *)val block:(PostBlockType)completed;
 
 +(instancetype)postWithBody:(NSString *)body;
 

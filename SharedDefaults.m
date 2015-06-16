@@ -14,6 +14,8 @@ static NSString *const GroupName = @"group.com.crisafisoft.ShowerThoughts";
 static NSString *const UserNameKey = @"username";
 static NSString *const PasswordKey = @"password";
 static NSString *const HasSignedInKey = @"HasSignedIn";
+static NSString *const NeedsCaptchaKey = @"NeedsCaptcha";
+
 
 +(void)setUsernameDefault:(NSString *)username andPasswordDefault:(NSString *)password{
     NSUserDefaults *defaults = [[NSUserDefaults alloc]initWithSuiteName:GroupName];
@@ -45,5 +47,15 @@ static NSString *const HasSignedInKey = @"HasSignedIn";
     NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:GroupName];
     [defaults setObject:@(YES) forKey:HasSignedInKey];
     [defaults synchronize];
+}
+
++(BOOL)needsCaptcha {
+    NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:GroupName];
+    return [(NSNumber *)[defaults objectForKey:NeedsCaptchaKey] boolValue];
+}
+
++(void)setNeedsCaptcha:(BOOL)needs {
+    NSUserDefaults *defaults = [[NSUserDefaults alloc]initWithSuiteName:GroupName];
+    [defaults setObject:@(needs) forKey:NeedsCaptchaKey];
 }
 @end

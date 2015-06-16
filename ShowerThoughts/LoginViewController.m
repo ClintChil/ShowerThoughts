@@ -32,6 +32,7 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    [SharedDefaults setNeedsCaptcha:YES];
     [[NSNotificationCenter defaultCenter] addObserverForName:UIKeyboardWillChangeFrameNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
         NSDictionary *dict = [note userInfo];
         NSValue *keyboardFrame = dict[UIKeyboardFrameEndUserInfoKey];

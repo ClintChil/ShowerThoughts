@@ -7,6 +7,8 @@
 //
 
 #import "NewPostViewController.h"
+#import "Post.h"
+#import "STAAlert.h"
 
 @interface NewPostViewController ()<UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *textView;
@@ -27,6 +29,18 @@
 }
 
 - (IBAction)postOnTap:(id)sender {
+    Post *post = [Post postWithBody:self.textView.text];
+    [post pushPostToRedditInBackgroundWithCaptchaId:nil captchaVal:nil block:^(UIImage *image, NSError *error) {
+        if (image) {
+            //TODO: Show a view to allow the user to input the captcha.
+        } else if (error){
+            [STAAlert presentOneButtonAlertWithTitle:@"Sorry we had an issue with your post"
+                                             message:@"Make sure you have logged in."
+                                                onVC:self];
+        } else {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+    }];
 }
 
 - (IBAction)cancelOnTap:(id)sender {
