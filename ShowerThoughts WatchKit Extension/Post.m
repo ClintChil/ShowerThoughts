@@ -12,7 +12,6 @@
 
 @implementation Post
 
-
 -(instancetype)initWithLink:(RKLink *)link {
     self = [super init];
     self.body = link.title;
@@ -51,14 +50,46 @@
     return post;
 }
 
--(void)pushPostToRedditInBackground:(void(^)(NSError *error))completed {
+-(void)pushPostToRedditInBackgroundWithCaptchaId:(NSString *)captchaId captchaVal:(NSString *)val block:(PostBlockType)completed{
     if ([SharedDefaults hasSignedIn]) {
-        [[RKClient sharedClient] submitSelfPostWithTitle:self.body subredditName:@"test" text:nil captchaIdentifier:nil captchaValue:nil completion:^(NSError *error) {
-            completed(error);
-        }];
+        if ([SharedDefaults needsCaptcha]) {
+            [self checkIfNeedCAPTCHAInBackground:^(UIImage *image, NSError *error) {
+                completed(image, error);
+            }];
+        }else {
+            [self postToRedditWithCaptchaID:captchaId andcaptchaVal:val block:^(NSError *error) {
+                completed(nil, error);
+            }];
+        }
     } else {
-        completed([STAError notSignedInError]);
+        completed(nil,[STAError notSignedInError]);
     }
+}
+
+-(void)postToRedditWithCaptchaID:(NSString *)captchaId andcaptchaVal:(NSString *)captchaVal block:(void(^)(NSError *error))completed {
+    [[RKClient sharedClient] submitSelfPostWithTitle:self.body subredditName:@"test" text:nil captchaIdentifier:captchaId captchaValue:captchaVal completion:^(NSError *error) {
+        completed(error);
+    }];
+}
+
+-(void)checkIfNeedCAPTCHAInBackground:(PostBlockType)completed {
+    RKClient *client = [RKClient sharedClient];
+    [client needsCaptchaWithCompletion:^(BOOL result, NSError *error) {
+        if (result) {
+            [client newCaptchaIdentifierWithCompletion:^(id object, NSError *error) {
+                if (!error) {
+                    [client imageForCaptchaIdentifier:object completion:^(id object, NSError *error) {
+                        completed((UIImage *)object, error);
+                    }];
+                }else {
+                    completed(nil,error);
+                }
+            }];
+        } else {
+            [SharedDefaults setNeedsCaptcha:NO];
+            completed(nil,error);
+        }
+    }];
 }
 
 @end

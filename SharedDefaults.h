@@ -15,4 +15,6 @@
 +(NSString *)passwordDefault;
 +(BOOL)hasSignedIn;
 +(void)markAsSignedIn;
++(BOOL)needsCaptcha;
++(void)setNeedsCaptcha:(BOOL)needs;
 @end

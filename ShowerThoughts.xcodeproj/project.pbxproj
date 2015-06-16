@@ -25,6 +25,8 @@
 		7A1BEE931AF448EC00A171C2 /* ShowerThoughts WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7A1BEE761AF448EB00A171C2 /* ShowerThoughts WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7A4144A71B0E571B00A9104D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4144A61B0E571B00A9104D /* LoginViewController.m */; };
 		7A4160811B1F9062009DDB22 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4160801B1F9062009DDB22 /* libPods.a */; };
+		9B3E1E211B2F9D7D008D285D /* CaptchaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E1E1F1B2F9D7D008D285D /* CaptchaViewController.m */; };
+		9B3E1E221B2F9D7D008D285D /* CaptchaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E1E201B2F9D7D008D285D /* CaptchaViewController.xib */; };
 		9B67BCFC1B2E46F700540991 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67BCFB1B2E46F700540991 /* Constants.m */; };
 		9B67BD061B2E470900540991 /* NSDateFormatter+STFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67BD001B2E470900540991 /* NSDateFormatter+STFormat.m */; };
 		9B67BD071B2E470900540991 /* NSString+DateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67BD021B2E470900540991 /* NSString+DateFormat.m */; };
@@ -111,6 +113,9 @@
 		7A4144A61B0E571B00A9104D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		7A4160801B1F9062009DDB22 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		7A7ACA901B2CB56B000DA884 /* ShowerThoughts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ShowerThoughts.entitlements; sourceTree = "<group>"; };
+		9B3E1E1E1B2F9D7D008D285D /* CaptchaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptchaViewController.h; sourceTree = "<group>"; };
+		9B3E1E1F1B2F9D7D008D285D /* CaptchaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptchaViewController.m; sourceTree = "<group>"; };
+		9B3E1E201B2F9D7D008D285D /* CaptchaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CaptchaViewController.xib; sourceTree = "<group>"; };
 		9B67BCFA1B2E46F700540991 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		9B67BCFB1B2E46F700540991 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		9B67BCFF1B2E470900540991 /* NSDateFormatter+STFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+STFormat.h"; sourceTree = "<group>"; };
@@ -239,6 +244,9 @@
 				7A1BEE591AF448CB00A171C2 /* Images.xcassets */,
 				7A1BEE5B1AF448CB00A171C2 /* LaunchScreen.xib */,
 				7A1BEE4C1AF448CB00A171C2 /* Supporting Files */,
+				9B3E1E1E1B2F9D7D008D285D /* CaptchaViewController.h */,
+				9B3E1E1F1B2F9D7D008D285D /* CaptchaViewController.m */,
+				9B3E1E201B2F9D7D008D285D /* CaptchaViewController.xib */,
 			);
 			path = ShowerThoughts;
 			sourceTree = "<group>";
@@ -639,6 +647,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A1BEE581AF448CB00A171C2 /* Main.storyboard in Resources */,
+				9B3E1E221B2F9D7D008D285D /* CaptchaViewController.xib in Resources */,
 				7A1BEE5D1AF448CB00A171C2 /* LaunchScreen.xib in Resources */,
 				7A1BEE5A1AF448CB00A171C2 /* Images.xcassets in Resources */,
 			);
@@ -783,6 +792,7 @@
 				9B76ED961B2E7D150098DCCC /* Post.m in Sources */,
 				9BC09CBA1B2E486600C0A57C /* STAAlert.m in Sources */,
 				9B76EDA21B2EB1FF0098DCCC /* PostTextView.m in Sources */,
+				9B3E1E211B2F9D7D008D285D /* CaptchaViewController.m in Sources */,
 				9B67BCFC1B2E46F700540991 /* Constants.m in Sources */,
 				9B67BD071B2E470900540991 /* NSString+DateFormat.m in Sources */,
 				9B76ED951B2E75C70098DCCC /* RedditCall.m in Sources */,
