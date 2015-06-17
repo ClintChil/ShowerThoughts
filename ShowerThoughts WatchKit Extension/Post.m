@@ -51,66 +51,52 @@
     return post;
 }
 
--(void)postOnRedditInBackground:(PostBlockType)complete {
-    if ([SharedDefaults hasSignedIn]) {
-        if ([SharedDefaults needsCaptcha]) {
-            [self checkIfNeedCAPTCHAInBackground:^(BOOL result, UIImage *image) {
-                if (result) {
-                    Captcha *captcha = [self.delegate needCaptchaFromImage:image
-                                                                            forPost:self];
-                    [self postToRedditWithCaptchaID:captcha.captchaID
-                                      andcaptchaVal:captcha.captchaValue
-                                              block:^(NSError *error) {
-                                                  complete(error ? NO : YES, error);
 
-                    }];
-                }else {
-                    complete(result, [STAError checkCaptchaError]);
-                }
-            }];
-        }else {
-            [self postToRedditWithCaptchaID:nil andcaptchaVal:nil block:^(NSError *error) {
-                complete(error ? NO : YES, error);
-            }];
-        }
-    } else {
-        complete(nil,[STAError notSignedInError]);
+-(void)postOnRedditWithBlock:(PostBlockType)complete {
+    if (!self.captcha) {
+        self.captcha = [Captcha new];
     }
-
-}
-
--(void)postToRedditWithCaptchaID:(NSString *)captchaId andcaptchaVal:(NSString *)captchaVal block:(void(^)(NSError *error))completed {
     [[RKClient sharedClient] submitSelfPostWithTitle:self.body
                                        subredditName:@"test"
                                                 text:nil
-                                   captchaIdentifier:captchaId
-                                        captchaValue:captchaVal
+                                   captchaIdentifier:self.captcha.captchaID
+                                        captchaValue:self.captcha.captchaValue
                                           completion:^(NSError *error) {
-                                                completed(error);
+                                              complete(error ? NO : YES, error);
     }];
 }
 
--(void)checkIfNeedCAPTCHAInBackground:(void(^)(BOOL result, UIImage *image))completed {
-    RKClient *client = [RKClient sharedClient];
-    [client needsCaptchaWithCompletion:^(BOOL result, NSError *error) {
-        if (result) {
-            [client newCaptchaIdentifierWithCompletion:^(id object, NSError *error) {
-                if (!error) {
-                    [client imageForCaptchaIdentifier:object completion:^(id object, NSError *error) {
-                        completed(YES, (UIImage *)object);
+-(void)checkIfNeedCAPTCHAInBackground:(void(^)(BOOL result, UIImage *image, NSError *error))completed {
+    if ([SharedDefaults hasSignedIn]) {
+        if ([SharedDefaults needsCaptcha]) {
+            RKClient *client = [RKClient sharedClient];
+            [client needsCaptchaWithCompletion:^(BOOL result, NSError *error) {
+                if (result) {
+                    [client newCaptchaIdentifierWithCompletion:^(id object, NSError *error) {
+                        if (!error) {
+                            self.captcha = [Captcha captchaWithID:(NSString *)object];
+                            [client imageForCaptchaIdentifier:object completion:^(id object, NSError *error) {
+                                completed(YES, (UIImage *)object, error);
+                            }];
+                        }else {
+                            completed(YES, nil, error);
+                        }
                     }];
                 }else {
-                    completed(YES, nil);
+                    [SharedDefaults setNeedsCaptcha:NO];
+                    completed(NO, nil, error);
+                }
+                if (!result && error) {
+                    completed(NO, nil, error);
                 }
             }];
         }else {
-            [SharedDefaults setNeedsCaptcha:NO];
-            completed(NO, nil);
+            completed(NO, nil, nil);
         }
-        if (!result && error) {
-            completed(NO, nil);
-        }
-    }];
+    } else {
+        completed(YES, nil, [STAError notSignedInError]);
+    }
+
 }
 
 @end
