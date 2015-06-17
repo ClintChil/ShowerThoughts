@@ -67,36 +67,34 @@
 }
 
 -(void)checkIfNeedCAPTCHAInBackground:(void(^)(BOOL result, UIImage *image, NSError *error))completed {
-    if ([SharedDefaults hasSignedIn]) {
-        if ([SharedDefaults needsCaptcha]) {
-            RKClient *client = [RKClient sharedClient];
-            [client needsCaptchaWithCompletion:^(BOOL result, NSError *error) {
-                if (result) {
-                    [client newCaptchaIdentifierWithCompletion:^(id object, NSError *error) {
-                        if (!error) {
-                            self.captcha = [Captcha captchaWithID:(NSString *)object];
-                            [client imageForCaptchaIdentifier:object completion:^(id object, NSError *error) {
-                                completed(YES, (UIImage *)object, error);
-                            }];
-                        }else {
-                            completed(YES, nil, error);
-                        }
+    if (![SharedDefaults hasSignedIn]) {
+        completed(nil, nil, [STAError notSignedInError]);
+        return;
+    }
+    if (![SharedDefaults needsCaptcha]) {
+        completed(NO, nil, nil);
+        return;
+    }
+    RKClient *client = [RKClient sharedClient];
+    [client needsCaptchaWithCompletion:^(BOOL result, NSError *error) {
+        if (result) {
+            [client newCaptchaIdentifierWithCompletion:^(id object, NSError *error) {
+                if (!error) {
+                    self.captcha = [Captcha captchaWithID:(NSString *)object];
+                    [client imageForCaptchaIdentifier:self.captcha.captchaID completion:^(id object, NSError *error) {
+                        completed(YES, (UIImage *)object, error);
                     }];
                 }else {
-                    [SharedDefaults setNeedsCaptcha:NO];
-                    completed(NO, nil, error);
-                }
-                if (!result && error) {
-                    completed(NO, nil, error);
+                    completed(YES, nil, error);
                 }
             }];
+        }else if(!result && !error){
+            [SharedDefaults setNeedsCaptcha:NO];
+            completed(NO, nil, error);
         }else {
-            completed(NO, nil, nil);
+            completed(YES, nil, error);
         }
-    } else {
-        completed(YES, nil, [STAError notSignedInError]);
-    }
-
+    }];
 }
 
 @end
