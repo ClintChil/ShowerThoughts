@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "STAError.h"
+@class Post, Captcha;
 
-
-typedef void(^PostBlockType) (UIImage *image, NSError *error);
+typedef void(^PostBlockType) (BOOL result, NSError *error);
 
 
 @interface Post : NSObject
@@ -19,6 +19,7 @@ typedef void(^PostBlockType) (UIImage *image, NSError *error);
 @property NSNumber *votes;
 @property NSString *author;
 @property NSDate *created;
+@property Captcha *captcha;
 
 +(NSArray *)postsFromArray:(NSArray *)array;
 +(instancetype)defaultPost;
@@ -26,12 +27,12 @@ typedef void(^PostBlockType) (UIImage *image, NSError *error);
 
 /**
  :Description: Method to call on an instance of Post, checks to see if the user is able to just post, or if they need a captcha. If they need a captcha, it will return the image of the captcha, so it can be desplayed, then this method called again with the correct captcha info
- @param: captchaId: This is the id of the captcha that is being displayed, or nil if no captcha.
- @param: captchaVal: This is the value the user will input to verify the captcha
  @param: block: The block with parameters of a UIImage, which is the image of the captcha, if the user has to display a captcha to post, and a NSError to display the specific error.
  */
--(void)pushPostToRedditInBackgroundWithCaptchaId:(NSString *)captchaId captchaVal:(NSString *)val block:(PostBlockType)completed;
+-(void)postOnRedditWithBlock:(PostBlockType)complete;
 
 +(instancetype)postWithBody:(NSString *)body;
+
+-(void)checkIfNeedCAPTCHAInBackground:(void(^)(BOOL result, UIImage *image, NSError *error))completed;
 
 @end

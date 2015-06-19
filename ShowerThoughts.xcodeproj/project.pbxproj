@@ -27,6 +27,8 @@
 		7A4160811B1F9062009DDB22 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4160801B1F9062009DDB22 /* libPods.a */; };
 		9B3E1E211B2F9D7D008D285D /* CaptchaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E1E1F1B2F9D7D008D285D /* CaptchaViewController.m */; };
 		9B3E1E221B2F9D7D008D285D /* CaptchaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E1E201B2F9D7D008D285D /* CaptchaViewController.xib */; };
+		9B3E1E2A1B30E149008D285D /* Captcha.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E1E291B30E149008D285D /* Captcha.m */; };
+		9B3E1E2B1B30E168008D285D /* Captcha.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E1E291B30E149008D285D /* Captcha.m */; };
 		9B67BCFC1B2E46F700540991 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67BCFB1B2E46F700540991 /* Constants.m */; };
 		9B67BD061B2E470900540991 /* NSDateFormatter+STFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67BD001B2E470900540991 /* NSDateFormatter+STFormat.m */; };
 		9B67BD071B2E470900540991 /* NSString+DateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B67BD021B2E470900540991 /* NSString+DateFormat.m */; };
@@ -116,6 +118,8 @@
 		9B3E1E1E1B2F9D7D008D285D /* CaptchaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptchaViewController.h; sourceTree = "<group>"; };
 		9B3E1E1F1B2F9D7D008D285D /* CaptchaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptchaViewController.m; sourceTree = "<group>"; };
 		9B3E1E201B2F9D7D008D285D /* CaptchaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CaptchaViewController.xib; sourceTree = "<group>"; };
+		9B3E1E281B30E149008D285D /* Captcha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Captcha.h; path = ShowerThoughts/Captcha.h; sourceTree = "<group>"; };
+		9B3E1E291B30E149008D285D /* Captcha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Captcha.m; path = ShowerThoughts/Captcha.m; sourceTree = "<group>"; };
 		9B67BCFA1B2E46F700540991 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		9B67BCFB1B2E46F700540991 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		9B67BCFF1B2E470900540991 /* NSDateFormatter+STFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+STFormat.h"; sourceTree = "<group>"; };
@@ -237,16 +241,8 @@
 				9B76ED971B2E7D230098DCCC /* STAButton */,
 				9B76ED941B2E73200098DCCC /* FeedTableViewCell */,
 				9BC09CC21B2E4CF400C0A57C /* STAAlert */,
-				7A7ACA901B2CB56B000DA884 /* ShowerThoughts.entitlements */,
-				7A1BEE501AF448CB00A171C2 /* AppDelegate.h */,
-				7A1BEE511AF448CB00A171C2 /* AppDelegate.m */,
-				7A1BEE561AF448CB00A171C2 /* Main.storyboard */,
-				7A1BEE591AF448CB00A171C2 /* Images.xcassets */,
-				7A1BEE5B1AF448CB00A171C2 /* LaunchScreen.xib */,
+				9B3E1E241B30AB27008D285D /* Resources */,
 				7A1BEE4C1AF448CB00A171C2 /* Supporting Files */,
-				9B3E1E1E1B2F9D7D008D285D /* CaptchaViewController.h */,
-				9B3E1E1F1B2F9D7D008D285D /* CaptchaViewController.m */,
-				9B3E1E201B2F9D7D008D285D /* CaptchaViewController.xib */,
 			);
 			path = ShowerThoughts;
 			sourceTree = "<group>";
@@ -301,6 +297,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9B3E1E231B308914008D285D /* CaptchaVC */ = {
+			isa = PBXGroup;
+			children = (
+				9B3E1E1E1B2F9D7D008D285D /* CaptchaViewController.h */,
+				9B3E1E1F1B2F9D7D008D285D /* CaptchaViewController.m */,
+				9B3E1E201B2F9D7D008D285D /* CaptchaViewController.xib */,
+			);
+			name = CaptchaVC;
+			sourceTree = "<group>";
+		};
+		9B3E1E241B30AB27008D285D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7A7ACA901B2CB56B000DA884 /* ShowerThoughts.entitlements */,
+				7A1BEE501AF448CB00A171C2 /* AppDelegate.h */,
+				7A1BEE511AF448CB00A171C2 /* AppDelegate.m */,
+				7A1BEE561AF448CB00A171C2 /* Main.storyboard */,
+				7A1BEE591AF448CB00A171C2 /* Images.xcassets */,
+				7A1BEE5B1AF448CB00A171C2 /* LaunchScreen.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		9B76ED821B2E55270098DCCC /* Model Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +327,8 @@
 				9B8D21F51B2CD64E0055633B /* RedditCall.m */,
 				BAA202191B0D7A8100CCE4E5 /* Post.h */,
 				BAA2021A1B0D7A8100CCE4E5 /* Post.m */,
+				9B3E1E281B30E149008D285D /* Captcha.h */,
+				9B3E1E291B30E149008D285D /* Captcha.m */,
 			);
 			name = "Model Objects";
 			sourceTree = "<group>";
@@ -387,6 +408,7 @@
 		9B76ED9F1B2EA5B10098DCCC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9B3E1E231B308914008D285D /* CaptchaVC */,
 				9B76EDAA1B2EB5AD0098DCCC /* NewPostVC */,
 				9B76EDA81B2EB5740098DCCC /* DetailPostVC */,
 				9B76EDA71B2EB5690098DCCC /* LoginVC */,
@@ -786,6 +808,7 @@
 				9B8D21F91B2CF1290055633B /* SharedDefaults.m in Sources */,
 				9B67BD061B2E470900540991 /* NSDateFormatter+STFormat.m in Sources */,
 				9B76EDA51B2EB3680098DCCC /* STAWButton.m in Sources */,
+				9B3E1E2A1B30E149008D285D /* Captcha.m in Sources */,
 				7A1BEE4F1AF448CB00A171C2 /* main.m in Sources */,
 				9B76ED9E1B2EA5980098DCCC /* DetailPostViewController.m in Sources */,
 				BA891EA81B05A7CE00471FA6 /* MainRowType.m in Sources */,
@@ -814,6 +837,7 @@
 				7A1BEE7D1AF448EC00A171C2 /* RootInterfaceController.m in Sources */,
 				7A1539E01B0D4AE4004A7C45 /* PostReviewController.m in Sources */,
 				3E06E5551B2CE338000C5B05 /* PostDetailInterfaceController.m in Sources */,
+				9B3E1E2B1B30E168008D285D /* Captcha.m in Sources */,
 				9B8D21FA1B2CF2D80055633B /* SharedDefaults.m in Sources */,
 				9B76ED8C1B2E68000098DCCC /* STAError.m in Sources */,
 				9B76ED8D1B2E68260098DCCC /* Constants.m in Sources */,

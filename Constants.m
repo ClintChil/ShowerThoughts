@@ -10,5 +10,11 @@
 #import "Constants.h"
 
 NSString *const ShowerThoughts = @"showerthoughts";
-NSInteger const STANotSignedInErrorCode = 420;
 NSString *const NewPostNotification = @"NewPostNotification";
+
+NSInteger const STANotSignedInErrorCode = 420;
+NSInteger const STACaptchaError = 421;
+
+#pragma mark - Captcha
+NSString *const CaptchaIdKey = @"CaptchaID";
+NSString *const CaptchaValueKey = @"CaptchaValue";

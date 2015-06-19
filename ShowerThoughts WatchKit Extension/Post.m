@@ -9,6 +9,7 @@
 #import "Post.h"
 #import <RedditKit/RedditKit.h>
 #import "SharedDefaults.h"
+#import "Captcha.h"
 
 @implementation Post
 
@@ -50,44 +51,48 @@
     return post;
 }
 
--(void)pushPostToRedditInBackgroundWithCaptchaId:(NSString *)captchaId captchaVal:(NSString *)val block:(PostBlockType)completed{
-    if ([SharedDefaults hasSignedIn]) {
-        if ([SharedDefaults needsCaptcha]) {
-            [self checkIfNeedCAPTCHAInBackground:^(UIImage *image, NSError *error) {
-                completed(image, error);
-            }];
-        }else {
-            [self postToRedditWithCaptchaID:captchaId andcaptchaVal:val block:^(NSError *error) {
-                completed(nil, error);
-            }];
-        }
-    } else {
-        completed(nil,[STAError notSignedInError]);
-    }
-}
 
--(void)postToRedditWithCaptchaID:(NSString *)captchaId andcaptchaVal:(NSString *)captchaVal block:(void(^)(NSError *error))completed {
-    [[RKClient sharedClient] submitSelfPostWithTitle:self.body subredditName:@"test" text:nil captchaIdentifier:captchaId captchaValue:captchaVal completion:^(NSError *error) {
-        completed(error);
+-(void)postOnRedditWithBlock:(PostBlockType)complete {
+    if (!self.captcha) {
+        self.captcha = [Captcha new];
+    }
+    [[RKClient sharedClient] submitSelfPostWithTitle:self.body
+                                       subredditName:@"test"
+                                                text:nil
+                                   captchaIdentifier:self.captcha.captchaID
+                                        captchaValue:self.captcha.captchaValue
+                                          completion:^(NSError *error) {
+                                              complete(error ? NO : YES, error);
     }];
 }
 
--(void)checkIfNeedCAPTCHAInBackground:(PostBlockType)completed {
+-(void)checkIfNeedCAPTCHAInBackground:(void(^)(BOOL result, UIImage *image, NSError *error))completed {
+    if (![SharedDefaults hasSignedIn]) {
+        completed(nil, nil, [STAError notSignedInError]);
+        return;
+    }
+    if (![SharedDefaults needsCaptcha]) {
+        completed(NO, nil, nil);
+        return;
+    }
     RKClient *client = [RKClient sharedClient];
     [client needsCaptchaWithCompletion:^(BOOL result, NSError *error) {
         if (result) {
             [client newCaptchaIdentifierWithCompletion:^(id object, NSError *error) {
                 if (!error) {
-                    [client imageForCaptchaIdentifier:object completion:^(id object, NSError *error) {
-                        completed((UIImage *)object, error);
+                    self.captcha = [Captcha captchaWithID:(NSString *)object];
+                    [client imageForCaptchaIdentifier:self.captcha.captchaID completion:^(id object, NSError *error) {
+                        completed(YES, (UIImage *)object, error);
                     }];
                 }else {
-                    completed(nil,error);
+                    completed(YES, nil, error);
                 }
             }];
-        } else {
+        }else if(!result && !error){
             [SharedDefaults setNeedsCaptcha:NO];
-            completed(nil,error);
+            completed(NO, nil, error);
+        }else {
+            completed(YES, nil, error);
         }
     }];
 }
