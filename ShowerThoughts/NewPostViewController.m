@@ -4,7 +4,7 @@
 #import "CaptchaViewController.h"
 #import "Captcha.h"
 
-@interface NewPostViewController ()<UITextViewDelegate, CaptchaVCDelegate>
+@interface NewPostViewController ()<UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIButton *postButton;
 @property Post *post;
@@ -70,22 +70,6 @@
         self.postButton.enabled = YES;
     }
 }
-
-#pragma mark - CaptchaVCDelegate
--(void)captchaVC:(CaptchaViewController *)vc didEnterCaptchaValue:(NSString *)value {
-    self.post.captcha.captchaValue = value;
-    [self.post postOnRedditWithBlock:^(BOOL result, NSError *error) {
-        if (error) {
-            NSLog(@"error: %@", error.localizedDescription);
-            [capVC.view removeFromSuperview];
-        }else {
-            [self dismissViewControllerAnimated:YES completion:nil];
-        }
-    }];
-//    [self.post];
-}
-
-
 
 
 @end
