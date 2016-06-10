@@ -120,17 +120,17 @@
 		9B3E1E201B2F9D7D008D285D /* CaptchaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CaptchaViewController.xib; sourceTree = "<group>"; };
 		9B3E1E281B30E149008D285D /* Captcha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Captcha.h; path = ShowerThoughts/Captcha.h; sourceTree = "<group>"; };
 		9B3E1E291B30E149008D285D /* Captcha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Captcha.m; path = ShowerThoughts/Captcha.m; sourceTree = "<group>"; };
-		9B67BCFA1B2E46F700540991 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		9B67BCFB1B2E46F700540991 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
-		9B67BCFF1B2E470900540991 /* NSDateFormatter+STFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+STFormat.h"; sourceTree = "<group>"; };
-		9B67BD001B2E470900540991 /* NSDateFormatter+STFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+STFormat.m"; sourceTree = "<group>"; };
-		9B67BD011B2E470900540991 /* NSString+DateFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DateFormat.h"; sourceTree = "<group>"; };
-		9B67BD021B2E470900540991 /* NSString+DateFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DateFormat.m"; sourceTree = "<group>"; };
-		9B67BD031B2E470900540991 /* UIColor+SRTColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SRTColor.h"; sourceTree = "<group>"; };
-		9B67BD041B2E470900540991 /* UIColor+SRTColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SRTColor.m"; sourceTree = "<group>"; };
+		9B67BCFA1B2E46F700540991 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Constants.h; sourceTree = "<group>"; };
+		9B67BCFB1B2E46F700540991 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = ../Constants.m; sourceTree = "<group>"; };
+		9B67BCFF1B2E470900540991 /* NSDateFormatter+STFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDateFormatter+STFormat.h"; path = "../NSDateFormatter+STFormat.h"; sourceTree = "<group>"; };
+		9B67BD001B2E470900540991 /* NSDateFormatter+STFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDateFormatter+STFormat.m"; path = "../NSDateFormatter+STFormat.m"; sourceTree = "<group>"; };
+		9B67BD011B2E470900540991 /* NSString+DateFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+DateFormat.h"; path = "../NSString+DateFormat.h"; sourceTree = "<group>"; };
+		9B67BD021B2E470900540991 /* NSString+DateFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+DateFormat.m"; path = "../NSString+DateFormat.m"; sourceTree = "<group>"; };
+		9B67BD031B2E470900540991 /* UIColor+SRTColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+SRTColor.h"; path = "../UIColor+SRTColor.h"; sourceTree = "<group>"; };
+		9B67BD041B2E470900540991 /* UIColor+SRTColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+SRTColor.m"; path = "../UIColor+SRTColor.m"; sourceTree = "<group>"; };
 		9B76ED811B2E52290098DCCC /* ShowerThoughts WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ShowerThoughts WatchKit Extension.entitlements"; sourceTree = "<group>"; };
-		9B76ED861B2E613F0098DCCC /* STAError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAError.h; sourceTree = "<group>"; };
-		9B76ED871B2E613F0098DCCC /* STAError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAError.m; sourceTree = "<group>"; };
+		9B76ED861B2E613F0098DCCC /* STAError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STAError.h; path = ../STAError.h; sourceTree = "<group>"; };
+		9B76ED871B2E613F0098DCCC /* STAError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STAError.m; path = ../STAError.m; sourceTree = "<group>"; };
 		9B76ED911B2E720D0098DCCC /* FeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewCell.h; sourceTree = "<group>"; };
 		9B76ED921B2E720D0098DCCC /* FeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewCell.m; sourceTree = "<group>"; };
 		9B76ED981B2E7E940098DCCC /* InitialNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialNavController.h; sourceTree = "<group>"; };
@@ -211,7 +211,6 @@
 				7A1BEE4B1AF448CB00A171C2 /* ShowerThoughts */,
 				7A1BEE771AF448EB00A171C2 /* ShowerThoughts WatchKit Extension */,
 				7A1BEE891AF448EC00A171C2 /* ShowerThoughts WatchKit App */,
-				9BC09CB61B2E482C00C0A57C /* SharedDefaults */,
 				7A1BEE4A1AF448CB00A171C2 /* Products */,
 				E085A20F6570C28A8B44257D /* Pods */,
 				741944B0CB4973FB56F5661F /* Frameworks */,
@@ -237,7 +236,6 @@
 				9B76EDA91B2EB58E0098DCCC /* UI */,
 				9B76ED9F1B2EA5B10098DCCC /* ViewControllers */,
 				7AA29F8B1D0AE06100AB56FD /* Support */,
-				9B3E1E241B30AB27008D285D /* Resources */,
 				7A1BEE4C1AF448CB00A171C2 /* Supporting Files */,
 				7A1BEE501AF448CB00A171C2 /* AppDelegate.h */,
 				7A1BEE511AF448CB00A171C2 /* AppDelegate.m */,
@@ -251,6 +249,7 @@
 			children = (
 				7A1BEE4D1AF448CB00A171C2 /* Info.plist */,
 				7A1BEE4E1AF448CB00A171C2 /* main.m */,
+				7A7ACA901B2CB56B000DA884 /* ShowerThoughts.entitlements */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -303,6 +302,8 @@
 		7AA29F8A1D0ADF8900AB56FD /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				7A1BEE561AF448CB00A171C2 /* Main.storyboard */,
+				7A1BEE5B1AF448CB00A171C2 /* LaunchScreen.xib */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -310,45 +311,34 @@
 		7AA29F8B1D0AE06100AB56FD /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				9BC09CB51B2E481800C0A57C /* Categories */,
-				9B76ED891B2E632B0098DCCC /* STAError */,
-				9BC09CB71B2E483F00C0A57C /* Constants */,
-				9BC09CC21B2E4CF400C0A57C /* STAAlert */,
+				9B67BCFA1B2E46F700540991 /* Constants.h */,
+				9B67BCFB1B2E46F700540991 /* Constants.m */,
+				9B67BCFF1B2E470900540991 /* NSDateFormatter+STFormat.h */,
+				9B67BD001B2E470900540991 /* NSDateFormatter+STFormat.m */,
+				9B67BD011B2E470900540991 /* NSString+DateFormat.h */,
+				9B67BD021B2E470900540991 /* NSString+DateFormat.m */,
+				9BC09CB81B2E486600C0A57C /* STAAlert.h */,
+				9BC09CB91B2E486600C0A57C /* STAAlert.m */,
+				9B76ED861B2E613F0098DCCC /* STAError.h */,
+				9B76ED871B2E613F0098DCCC /* STAError.m */,
+				9B67BD031B2E470900540991 /* UIColor+SRTColor.h */,
+				9B67BD041B2E470900540991 /* UIColor+SRTColor.m */,
 			);
 			name = Support;
-			sourceTree = "<group>";
-		};
-		9B3E1E241B30AB27008D285D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				7A7ACA901B2CB56B000DA884 /* ShowerThoughts.entitlements */,
-				7A1BEE561AF448CB00A171C2 /* Main.storyboard */,
-				7A1BEE5B1AF448CB00A171C2 /* LaunchScreen.xib */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		9B76ED821B2E55270098DCCC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9B8D21F41B2CD64E0055633B /* RedditCall.h */,
-				9B8D21F51B2CD64E0055633B /* RedditCall.m */,
-				BAA202191B0D7A8100CCE4E5 /* Post.h */,
-				BAA2021A1B0D7A8100CCE4E5 /* Post.m */,
+				9BC09CB61B2E482C00C0A57C /* SharedDefaults */,
 				9B3E1E281B30E149008D285D /* Captcha.h */,
 				9B3E1E291B30E149008D285D /* Captcha.m */,
+				BAA202191B0D7A8100CCE4E5 /* Post.h */,
+				BAA2021A1B0D7A8100CCE4E5 /* Post.m */,
+				9B8D21F41B2CD64E0055633B /* RedditCall.h */,
+				9B8D21F51B2CD64E0055633B /* RedditCall.m */,
 			);
 			name = Model;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		9B76ED891B2E632B0098DCCC /* STAError */ = {
-			isa = PBXGroup;
-			children = (
-				9B76ED861B2E613F0098DCCC /* STAError.h */,
-				9B76ED871B2E613F0098DCCC /* STAError.m */,
-			);
-			name = STAError;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -358,16 +348,16 @@
 				9B3E1E1E1B2F9D7D008D285D /* CaptchaViewController.h */,
 				9B3E1E1F1B2F9D7D008D285D /* CaptchaViewController.m */,
 				9B3E1E201B2F9D7D008D285D /* CaptchaViewController.xib */,
-				9B76EDAB1B2EB5E30098DCCC /* NewPostViewController.h */,
-				9B76EDAC1B2EB5E30098DCCC /* NewPostViewController.m */,
 				9B76ED9C1B2EA5980098DCCC /* DetailPostViewController.h */,
 				9B76ED9D1B2EA5980098DCCC /* DetailPostViewController.m */,
-				7A4144A51B0E571B00A9104D /* LoginViewController.h */,
-				7A4144A61B0E571B00A9104D /* LoginViewController.m */,
 				7A1BEE531AF448CB00A171C2 /* FeedViewController.h */,
 				7A1BEE541AF448CB00A171C2 /* FeedViewController.m */,
 				9B76ED981B2E7E940098DCCC /* InitialNavController.h */,
 				9B76ED991B2E7E940098DCCC /* InitialNavController.m */,
+				7A4144A51B0E571B00A9104D /* LoginViewController.h */,
+				7A4144A61B0E571B00A9104D /* LoginViewController.m */,
+				9B76EDAB1B2EB5E30098DCCC /* NewPostViewController.h */,
+				9B76EDAC1B2EB5E30098DCCC /* NewPostViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -375,32 +365,18 @@
 		9B76EDA91B2EB58E0098DCCC /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9B76EDA01B2EB1FF0098DCCC /* PostTextView.h */,
-				9B76EDA11B2EB1FF0098DCCC /* PostTextView.m */,
-				9B76EDA31B2EB3680098DCCC /* STAWButton.h */,
-				9B76EDA41B2EB3680098DCCC /* STAWButton.m */,
-				9BC09CBF1B2E4C8200C0A57C /* STAButton.h */,
-				9BC09CC01B2E4C8200C0A57C /* STAButton.m */,
-				9B76EDAE1B2EBD500098DCCC /* RoundedView.h */,
-				9B76EDAF1B2EBD500098DCCC /* RoundedView.m */,
 				9B76ED911B2E720D0098DCCC /* FeedTableViewCell.h */,
 				9B76ED921B2E720D0098DCCC /* FeedTableViewCell.m */,
+				9B76EDA01B2EB1FF0098DCCC /* PostTextView.h */,
+				9B76EDA11B2EB1FF0098DCCC /* PostTextView.m */,
+				9B76EDAE1B2EBD500098DCCC /* RoundedView.h */,
+				9B76EDAF1B2EBD500098DCCC /* RoundedView.m */,
+				9BC09CBF1B2E4C8200C0A57C /* STAButton.h */,
+				9BC09CC01B2E4C8200C0A57C /* STAButton.m */,
+				9B76EDA31B2EB3680098DCCC /* STAWButton.h */,
+				9B76EDA41B2EB3680098DCCC /* STAWButton.m */,
 			);
 			name = UI;
-			sourceTree = "<group>";
-		};
-		9BC09CB51B2E481800C0A57C /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				9B67BCFF1B2E470900540991 /* NSDateFormatter+STFormat.h */,
-				9B67BD001B2E470900540991 /* NSDateFormatter+STFormat.m */,
-				9B67BD011B2E470900540991 /* NSString+DateFormat.h */,
-				9B67BD021B2E470900540991 /* NSString+DateFormat.m */,
-				9B67BD031B2E470900540991 /* UIColor+SRTColor.h */,
-				9B67BD041B2E470900540991 /* UIColor+SRTColor.m */,
-			);
-			name = Categories;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		9BC09CB61B2E482C00C0A57C /* SharedDefaults */ = {
@@ -410,25 +386,6 @@
 				9B8D21F81B2CF1290055633B /* SharedDefaults.m */,
 			);
 			name = SharedDefaults;
-			sourceTree = "<group>";
-		};
-		9BC09CB71B2E483F00C0A57C /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				9B67BCFA1B2E46F700540991 /* Constants.h */,
-				9B67BCFB1B2E46F700540991 /* Constants.m */,
-			);
-			name = Constants;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		9BC09CC21B2E4CF400C0A57C /* STAAlert */ = {
-			isa = PBXGroup;
-			children = (
-				9BC09CB81B2E486600C0A57C /* STAAlert.h */,
-				9BC09CB91B2E486600C0A57C /* STAAlert.m */,
-			);
-			name = STAAlert;
 			sourceTree = "<group>";
 		};
 		E085A20F6570C28A8B44257D /* Pods */ = {

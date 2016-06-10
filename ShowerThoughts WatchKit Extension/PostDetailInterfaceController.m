@@ -1,11 +1,3 @@
-//
-//  PostDetailInterfaceController.m
-//  ShowerThoughts
-//
-//  Created by Mert Akanay on 6/13/15.
-//  Copyright © 2015 Clint Chilcott. All rights reserved.
-//
-
 #import "PostDetailInterfaceController.h"
 #import "Post.h"
 

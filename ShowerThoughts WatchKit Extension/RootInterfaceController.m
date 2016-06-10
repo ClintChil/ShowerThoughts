@@ -1,15 +1,6 @@
-//
-//  InterfaceController.m
-//  ShowerThoughts WatchKit Extension
-//
-//  Created by Clint Chilcott on 5/1/15.
-//  Copyright (c) 2015 Clint Chilcott. All rights reserved.
-//
-
 #import "RootInterfaceController.h"
 #import "MainRowType.h"
 #import "Post.h"
-//#import "RedditCall.h"
 
 @interface RootInterfaceController()
 
