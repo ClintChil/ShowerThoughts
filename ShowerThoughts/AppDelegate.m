@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <RedditKit/RedditKit.h>
 
 @interface AppDelegate ()
 

@@ -9,7 +9,7 @@
 #import "RootInterfaceController.h"
 #import "MainRowType.h"
 #import "Post.h"
-#import "RedditCall.h"
+//#import "RedditCall.h"
 
 @interface RootInterfaceController()
 
@@ -35,17 +35,17 @@
     [super awakeWithContext:context];
     [self setTitle:@"Thoughts"];
     [self.moreButton setHidden:YES];
-    [RedditCall pullPostsFromRedditInBackground:^(NSArray *posts, NSError *error) {
-        if (error) {
-            self.posts = @[[Post postForError:error]];
-            NSLog(@"error: %@", error.localizedDescription);
-        }
-        else {
-            self.posts = posts;
-            [self.moreButton setHidden:NO];
-        }
-    }];
-    self.posts = @[[Post defaultPost]];
+//    [RedditCall pullPostsFromRedditInBackground:^(NSArray *posts, NSError *error) {
+//        if (error) {
+//            self.posts = @[[Post postForError:error]];
+//            NSLog(@"error: %@", error.localizedDescription);
+//        }
+//        else {
+//            self.posts = posts;
+//            [self.moreButton setHidden:NO];
+//        }
+//    }];
+//    self.posts = @[[Post defaultPost]];
 }
 
 

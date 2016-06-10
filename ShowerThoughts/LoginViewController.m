@@ -7,9 +7,6 @@
 //
 
 #import "LoginViewController.h"
-#import <AFNetworking/AFNetworking.h>
-#import <Mantle/Mantle.h>
-#import <RedditKit/RedditKit.h>
 #import "SharedDefaults.h"
 #import "STAAlert.h"
 #import "RedditCall.h"

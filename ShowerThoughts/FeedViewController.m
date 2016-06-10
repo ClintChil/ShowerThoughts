@@ -7,7 +7,6 @@
 //
 
 #import "FeedViewController.h"
-#import <RedditKit/RedditKit.h>
 #import "RedditCall.h"
 #import "FeedTableViewCell.h"
 #import "STAAlert.h"
@@ -28,15 +27,15 @@
     self.tableview.rowHeight = UITableViewAutomaticDimension;
     self.tableview.estimatedRowHeight = 66.0;
 
-    [RedditCall pullPostsFromRedditInBackground:^(NSArray *posts, NSError *error) {
-        self.posts = posts;
-        [self.tableview reloadData];
-        if (error) {
-            [STAAlert presentOneButtonAlertWithTitle:@"There seems to be a network error"
-                                             message:@"You must not have any network connection."
-                                                onVC:self];
-        }
-    }];
+//    [RedditCall pullPostsFromRedditInBackground:^(NSArray *posts, NSError *error) {
+//        self.posts = posts;
+//        [self.tableview reloadData];
+//        if (error) {
+//            [STAAlert presentOneButtonAlertWithTitle:@"There seems to be a network error"
+//                                             message:@"You must not have any network connection."
+//                                                onVC:self];
+//        }
+//    }];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
